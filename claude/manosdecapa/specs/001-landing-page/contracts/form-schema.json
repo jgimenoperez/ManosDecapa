@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Manos Decapa Contact Form Schema",
+  "description": "JSON Schema for contact form validation (FR-009)",
+  "type": "object",
+  "required": [
+    "fullName",
+    "email",
+    "phone",
+    "clientType",
+    "itemType",
+    "itemDescription"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "description": "Customer's full name",
+      "minLength": 2,
+      "maxLength": 100,
+      "pattern": "^[a-zA-Záéíóúñ\\s'-]+$",
+      "errorMessage": "Por favor ingresa tu nombre completo (2-100 caracteres, sin caracteres especiales)"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customer's email address",
+      "format": "email",
+      "maxLength": 255,
+      "errorMessage": "Por favor ingresa un email válido (ej: nombre@example.com)"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Customer's phone number (flexible international format)",
+      "minLength": 9,
+      "maxLength": 20,
+      "pattern": "^(\\+?34)?[6789]\\d{8}(?:\\s*\\d)?$|^(\\+?34)?\\s?[6789]\\d{2}\\s?\\d{3}\\s?\\d{3}$",
+      "errorMessage": "Por favor ingresa un teléfono válido (ej: +34 666 777 888 o 666777888)"
+    },
+    "clientType": {
+      "type": "string",
+      "description": "Type of client",
+      "enum": [
+        "Particular",
+        "Profesional"
+      ],
+      "errorMessage": "Por favor selecciona si eres particular o profesional"
+    },
+    "itemType": {
+      "type": "string",
+      "description": "Type of furniture/item to be stripped",
+      "enum": [
+        "Silla",
+        "Mesa",
+        "Cómoda",
+        "Puerta",
+        "Ventana",
+        "Metal",
+        "Otro"
+      ],
+      "errorMessage": "Por favor selecciona el tipo de mueble"
+    },
+    "itemDescription": {
+      "type": "string",
+      "description": "Customer's description of the furniture piece",
+      "minLength": 10,
+      "maxLength": 1000,
+      "errorMessage": "Por favor describe brevemente tu mueble (10-1000 caracteres)"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional customer message or questions",
+      "maxLength": 2000,
+      "errorMessage": "El mensaje no puede exceder 2000 caracteres"
+    },
+    "photos": {
+      "type": "array",
+      "description": "Customer-provided photos of the furniture",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 255
+          },
+          "filesize": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5242880
+          },
+          "mimeType": {
+            "type": "string",
+            "enum": [
+              "image/jpeg",
+              "image/png",
+              "image/webp"
+            ]
+          },
+          "base64": {
+            "type": "string",
+            "description": "Base64-encoded file content (optional for client-side validation)"
+          }
+        },
+        "required": [
+          "filename",
+          "filesize",
+          "mimeType"
+        ],
+        "errorMessage": "Cada foto debe ser JPEG, PNG o WebP y no exceder 5MB"
+      },
+      "errorMessage": "Máximo 5 fotos permitidas"
+    },
+    "captchaToken": {
+      "type": "string",
+      "description": "reCAPTCHA v3 token for spam prevention (optional)",
+      "minLength": 1
+    }
+  },
+  "examples": [
+    {
+      "fullName": "Juan García López",
+      "email": "juan@example.com",
+      "phone": "+34 666 777 888",
+      "clientType": "Particular",
+      "itemType": "Cómoda",
+      "itemDescription": "Cómoda de nogal de años 70 con múltiples capas de pintura marrón oscuro. Aproximadamente 1.2m x 0.8m. Deseo conocer el coste de decapado.",
+      "message": "¿Cuál es el tiempo estimado? ¿Hacen envíos fuera de Valencia?",
+      "photos": [],
+      "captchaToken": "recaptcha_token_here"
+    },
+    {
+      "fullName": "María Rodríguez",
+      "email": "maria@restauracion.es",
+      "phone": "664 555 444",
+      "clientType": "Profesional",
+      "itemType": "Metal",
+      "itemDescription": "Rejas de hierro forjado antiguo, 3 unidades. Total 2m x 1.5m aproximadamente.",
+      "message": "Necesitamos presupuesto para 10 rejas similares. ¿Tenéis descuento por volumen?",
+      "photos": [
+        {
+          "filename": "reja-1.jpg",
+          "filesize": 2048576,
+          "mimeType": "image/jpeg"
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "phoneValidation": "Flexible regex accepts +34XXXXXXXXX, +34 XXX XXX XXX, 6XXXXXXXXX, 6XX XXX XXX formats",
+    "photoOptional": "Photos are optional but recommended for accurate quotes",
+    "captchaOptional": "reCAPTCHA token provided by frontend, not required but recommended for spam prevention",
+    "internationalization": "All error messages are in Spanish (es-ES). Translate based on form language setting.",
+    "sanitization": "Server must sanitize all string fields to prevent XSS attacks"
+  }
+}

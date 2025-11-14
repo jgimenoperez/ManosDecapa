@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(pwsh:*)",
+      "Bash(powershell:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/src/components/common\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/src/hooks\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/src/utils\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/src/styles\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/tests/unit\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/tests/integration\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/tests/e2e\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/tests/contract\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/public/images/gallery\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/public/images/icons\")",
+      "Bash(__NEW_LINE__ mkdir -p \"landing-page/.github/workflows\")",
+      "Bash(__NEW_LINE__ ls -la landing-page/src/)",
+      "Bash(npm run test:unit:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

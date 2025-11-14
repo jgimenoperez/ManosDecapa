@@ -1,0 +1,48 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main, 001-landing-page ]
+  pull_request:
+    branches: [ main, 001-landing-page ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: 'landing-page/package-lock.json'
+
+    - name: Install dependencies
+      working-directory: landing-page
+      run: npm ci
+
+    - name: Lint code
+      working-directory: landing-page
+      run: npm run lint -- --max-warnings=0
+
+    - name: Run unit tests
+      working-directory: landing-page
+      run: npm run test:unit
+
+    - name: Run E2E tests
+      working-directory: landing-page
+      run: npm run test:e2e:run -- --browser=chromium
+
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./landing-page/coverage/coverage-final.json
+        flags: unittests
+        name: codecov-umbrella
