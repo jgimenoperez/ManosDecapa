@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Award, CheckCircle, Truck, ChevronDown, Sparkles, Shield, Clock } from 'lucide-react';
+import { Award, CheckCircle, Truck, ChevronDown, Sparkles, Shield, Clock, Zap, Wrench, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function HeroSection() {
@@ -108,7 +108,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.6 }}
           >
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+              <Zap className="w-5 h-5 text-accent flex-shrink-0" />
               <span>Presupuesto sin compromiso</span>
             </div>
             <div className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export function HeroSection() {
               <span>Recogida y entrega en Valencia</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-accent flex-shrink-0" />
+              <Lock className="w-5 h-5 text-accent flex-shrink-0" />
               <span>Garantía de calidad</span>
             </div>
           </motion.div>
@@ -134,8 +134,8 @@ export function HeroSection() {
               <h3 className="text-2xl font-headline font-bold text-white">¿Por qué elegirnos?</h3>
               <div className="space-y-4">
                 {[
-                  { icon: Shield, text: "Proceso seguro sin químicos agresivos" },
-                  { icon: Clock, text: "Entrega rápida garantizada" },
+                  { icon: Wrench, text: "Proceso seguro sin químicos agresivos" },
+                  { icon: Zap, text: "Entrega rápida garantizada" },
                   { icon: Award, text: "Avalados por Manos de Hada" }
                 ].map((item, i) => (
                   <motion.div

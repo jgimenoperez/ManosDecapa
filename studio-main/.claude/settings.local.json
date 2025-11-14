@@ -6,7 +6,10 @@
       "Skill(webapp-testing)",
       "Bash(python capture_screenshots.py:*)",
       "Bash(playwright install:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(pkill:*)",
+      "Bash(taskkill:*)",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": []
