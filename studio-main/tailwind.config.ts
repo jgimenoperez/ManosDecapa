@@ -71,6 +71,28 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      fontSize: {
+        // Display sizes (para héroes y títulos grandes)
+        'display-lg': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-md': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+
+        // Heading sizes
+        'h1': ['2rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+        'h2': ['1.75rem', { lineHeight: '1.3', letterSpacing: '-0.005em' }],
+        'h3': ['1.5rem', { lineHeight: '1.4' }],
+        'h4': ['1.25rem', { lineHeight: '1.4' }],
+        'h5': ['1.125rem', { lineHeight: '1.5' }],
+
+        // Body sizes
+        'body-lg': ['1.125rem', { lineHeight: '1.6' }],
+        'body-md': ['1rem', { lineHeight: '1.6' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.5' }],
+        'body-xs': ['0.75rem', { lineHeight: '1.5' }],
+
+        // Utility sizes
+        'label': ['0.875rem', { lineHeight: '1.4', letterSpacing: '0.05em' }],
+        'caption': ['0.75rem', { lineHeight: '1.4' }],
+      },
       keyframes: {
         'accordion-down': {
           from: {

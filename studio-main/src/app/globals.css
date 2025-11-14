@@ -70,13 +70,48 @@ html {
     @apply bg-background text-foreground;
   }
 
-  /* Mejora de legibilidad */
+  /* Jerarquía tipográfica mejorada */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-headline leading-tight tracking-tight mb-4;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold font-headline leading-tight tracking-tight mb-3;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold font-headline leading-tight mb-2;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold font-headline leading-tight mb-2;
+  }
+
+  h5 {
+    @apply text-lg font-semibold font-headline leading-tight mb-1;
+  }
+
+  h6 {
+    @apply text-base font-semibold font-headline leading-tight mb-1;
+  }
+
+  /* Mejora de legibilidad de párrafos */
   p {
+    @apply leading-relaxed text-base md:text-lg max-w-[65ch];
+  }
+
+  /* Listas mejoradas */
+  ul, ol {
+    @apply space-y-2;
+  }
+
+  li {
     @apply leading-relaxed;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply leading-tight tracking-tight;
+  /* Links mejorados */
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors duration-200 underline-offset-2 hover:underline;
   }
 
   /* Scroll suave mejorado */
@@ -85,7 +120,7 @@ html {
   }
 }
 
-/* Utilidades de espaciado */
+/* Utilidades de espaciado y jerarquía */
 @layer utilities {
   .section-spacing {
     @apply py-16 md:py-24 lg:py-32;
@@ -101,5 +136,60 @@ html {
 
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /* Espaciado vertical entre elementos */
+  .space-y-tight {
+    @apply space-y-2;
+  }
+
+  .space-y-normal {
+    @apply space-y-4;
+  }
+
+  .space-y-loose {
+    @apply space-y-6;
+  }
+
+  .space-y-spacious {
+    @apply space-y-8;
+  }
+
+  /* Espaciado horizontal consistente */
+  .space-x-tight {
+    @apply space-x-2;
+  }
+
+  .space-x-normal {
+    @apply space-x-4;
+  }
+
+  .space-x-loose {
+    @apply space-x-6;
+  }
+
+  /* Márgenes para headings */
+  .heading-margin {
+    @apply mt-8 md:mt-12 mb-4;
+  }
+
+  /* Contenedor con máximo ancho */
+  .container-prose {
+    @apply max-w-3xl mx-auto;
+  }
+
+  /* Separador decorativo */
+  .divider-subtle {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  /* Grid responsivo mejorado */
+  .grid-auto {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  /* Cards espaciadas */
+  .cards-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8;
   }
 }

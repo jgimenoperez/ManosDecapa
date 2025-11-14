@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { ScrollProgress } from '@/components/scroll-progress';
 
 export const metadata: Metadata = {
   title: 'Decapado de Muebles Valencia | Manos Decapa - Servicio Profesional',
@@ -24,6 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
+        <ScrollProgress />
         {children}
         <Toaster />
       </body>

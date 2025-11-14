@@ -6,6 +6,7 @@ import { ForWhomSection } from '@/components/sections/for-whom';
 import { ProcessSection } from '@/components/sections/process';
 import { WhyUsSection } from '@/components/sections/why-us';
 import { GallerySection } from '@/components/sections/gallery';
+import { TestimonialsSection } from '@/components/sections/testimonials';
 import { PricingSection } from '@/components/sections/pricing';
 import { AboutSection } from '@/components/sections/about';
 import { ContactSection } from '@/components/sections/contact';
@@ -23,6 +24,7 @@ export default function Home() {
         <ProcessSection />
         <WhyUsSection />
         <GallerySection />
+        <TestimonialsSection />
         <PricingSection />
         <AboutSection />
         <ContactSection />
