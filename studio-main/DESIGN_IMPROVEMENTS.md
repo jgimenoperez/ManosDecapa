@@ -125,7 +125,7 @@ export function HeroSection() {
           {/* Badge de experiencia */}
           <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full border border-accent/30">
             <Award className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">+20 años de experiencia</span>
+            <span className="text-sm font-medium">+10 años de experiencia</span>
           </div>
 
           {/* Título más corto y potente */}

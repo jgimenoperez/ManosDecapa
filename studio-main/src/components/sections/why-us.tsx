@@ -6,7 +6,7 @@ const reasons = [
   {
     icon: <Award className="w-10 h-10 text-accent" />,
     title: 'Experiencia',
-    description: 'Avalados por Manos de Hada, con más de 20 años de experiencia en el sector de la restauración.',
+    description: 'Avalados por Manos de Hada, con más de 10 años de experiencia en el sector de la restauración.',
   },
   {
     icon: <Zap className="w-10 h-10 text-accent" />,

@@ -10,7 +10,7 @@ export function AboutSection() {
         <div className="mt-6 text-lg text-muted-foreground space-y-4">
             <p>
                 Manos Decapa nace de la experiencia de <span className="font-bold text-primary">Manos de Hada</span>, nuestro taller de restauración
-                con más de 20 años devolviendo la vida a muebles antiguos en Valencia.
+                con más de 10 años devolviendo la vida a muebles antiguos en Valencia.
             </p>
             <p>
                 Tras años perfeccionando técnicas, ahora ofrecemos nuestro servicio especializado de decapado para quienes necesitan 

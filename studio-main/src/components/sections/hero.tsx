@@ -47,7 +47,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Award className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">+20 años de experiencia</span>
+            <span className="text-sm font-medium">+10 años de experiencia</span>
           </motion.div>
 
           {/* Título más corto y potente */}
