@@ -56,7 +56,7 @@ export const whyChooseUs = [
   {
     id: 'experience',
     title: 'Experiencia',
-    description: 'Avalados por Manos de Hada, más de 20 años en restauración de muebles antiguos en Valencia',
+    description: 'Avalados por Manos de Hada, más de 10 años en restauración de muebles antiguos en Valencia',
     icon: 'award'
   },
   {
@@ -122,7 +122,7 @@ export const formConfig = {
 export const footer = {
   phone: import.meta.env.VITE_FOOTER_PHONE || '[PLACEHOLDER]',
   email: import.meta.env.VITE_FOOTER_EMAIL || 'contact@manosdecapa.es',
-  address: 'Valencia, España',
+  address: 'Carrer Rafelbunyol, 31 bajo 3, 46530 Puçol, Valencia',
   instagram: import.meta.env.VITE_INSTAGRAM_URL || '[PLACEHOLDER]',
   facebook: import.meta.env.VITE_FACEBOOK_URL || '[PLACEHOLDER]',
   manosDehada: 'www.manosdehada.es'

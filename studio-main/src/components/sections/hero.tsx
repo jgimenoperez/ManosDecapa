@@ -113,7 +113,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <Truck className="w-5 h-5 text-accent flex-shrink-0" />
-              <span>Recogida y entrega en Valencia</span>
+              <span>Recogida y entrega en Valencia <span className="text-xs text-white/70">(según medidas y pesos)</span></span>
             </div>
             <div className="flex items-center gap-2">
               <Lock className="w-5 h-5 text-accent flex-shrink-0" />

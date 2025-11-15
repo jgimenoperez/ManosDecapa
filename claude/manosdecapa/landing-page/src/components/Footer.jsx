@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="fade-in">
             <h3 className="text-2xl font-bold mb-4">Manos Decapa</h3>
             <p className="text-white/80 mb-6 leading-relaxed">
-              Servicio profesional de decapado de muebles en Valencia. Con más de 20 años de experiencia, devolvemos la vida a tus piezas antiguas respetando su esencia original.
+              Servicio profesional de decapado de muebles en Valencia. Con más de 10 años de experiencia, devolvemos la vida a tus piezas antiguas respetando su esencia original.
             </p>
             <div className="flex gap-4">
               <a

@@ -13,19 +13,19 @@ export function Footer() {
             <p>Servicio de decapado profesional en Valencia. Devolvemos la vida a la madera.</p>
             <div className="flex space-x-4 mt-4">
               <Button asChild variant="outline" size="icon" className="bg-transparent border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                <a href="#" aria-label="Instagram"><Instagram /></a>
+                <a href="https://www.instagram.com/manosdhada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram /></a>
               </Button>
               <Button asChild variant="outline" size="icon" className="bg-transparent border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                <a href="#" aria-label="Facebook"><Facebook /></a>
+                <a href="https://www.facebook.com/manosdehadarestaura/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook /></a>
               </Button>
             </div>
           </div>
           <div className="space-y-4">
             <h3 className="text-xl font-headline font-bold text-background">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><Phone className="w-5 h-5 text-accent" /> <span>+34 123 456 789</span></li>
-              <li className="flex items-center gap-2"><Mail className="w-5 h-5 text-accent" /> <span>info@manosdecapa.es</span></li>
-              <li className="flex items-center gap-2"><MapPin className="w-5 h-5 text-accent" /> <span>Valencia, España</span></li>
+              <li className="flex items-center gap-2"><Phone className="w-5 h-5 text-accent" /> <span>+34 654 49 69 60</span></li>
+              <li className="flex items-center gap-2"><Mail className="w-5 h-5 text-accent" /> <span>fiona@manosdehada.es</span></li>
+              <li className="flex items-center gap-2"><MapPin className="w-5 h-5 text-accent" /> <span>Carrer Rafelbunyol, 31 bajo 3, 46530 Puçol, Valencia</span></li>
             </ul>
              <div className="pt-4">
                 <h4 className='font-bold text-background'>Restauración completa:</h4>

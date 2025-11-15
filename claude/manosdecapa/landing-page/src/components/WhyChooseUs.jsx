@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             Por Qué Elegirnos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Más de 20 años de experiencia en restauración de muebles antiguos
+            Más de 10 años de experiencia en restauración de muebles antiguos
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
             Avalados por Manos de Hada
           </h3>
           <p className="text-gray-700 text-lg mb-6">
-            Nacemos de la experiencia de Manos de Hada, taller especializado con más de 20 años devolviendo la vida a muebles antiguos en Valencia.
+            Nacemos de la experiencia de Manos de Hada, taller especializado con más de 10 años devolviendo la vida a muebles antiguos en Valencia.
           </p>
           <p className="text-gray-600">
             Ahora ofrecemos nuestro servicio especializado de decapado para quienes necesitan recuperar la madera original sin restauración completa.

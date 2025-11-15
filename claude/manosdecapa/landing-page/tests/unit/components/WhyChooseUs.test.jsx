@@ -12,7 +12,7 @@ describe('WhyChooseUs Component', () => {
 
   it('should render section description about experience', () => {
     render(<WhyChooseUs />)
-    const description = screen.getByText(/Más de 20 años de experiencia/)
+    const description = screen.getByText(/Más de 10 años de experiencia/)
     expect(description).toBeInTheDocument()
   })
 

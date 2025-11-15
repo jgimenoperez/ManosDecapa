@@ -44,7 +44,7 @@ const testimonials = [
     role: "Anticuario",
     avatar: "RV",
     rating: 5,
-    text: "Llevamos años trabajando con ellos. Su método de decapado por inmersión es el mejor que hemos probado, respeta la madera y los acabados son siempre perfectos.",
+    text: "Llevamos años trabajando con ellos. Su método de decapado sin químicos es el mejor que hemos probado, respeta la madera y los acabados son siempre perfectos.",
     date: "Hace 2 meses"
   }
 ];

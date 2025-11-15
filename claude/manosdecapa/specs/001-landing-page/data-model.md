@@ -390,7 +390,7 @@ Represents the 3 differentiation factors (FR-005, US1).
   {
     "id": "experience",
     "title": "Experiencia",
-    "description": "Avalados por Manos de Hada, más de 20 años en restauración de muebles antiguos en Valencia",
+    "description": "Avalados por Manos de Hada, más de 10 años en restauración de muebles antiguos en Valencia",
     "icon": "award"
   },
   {

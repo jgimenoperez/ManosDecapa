@@ -20,7 +20,7 @@ describe('ContactForm Component', () => {
     render(<ContactForm />)
     expect(screen.getByPlaceholderText('Tu nombre')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('tu@email.com')).toBeInTheDocument()
-    expect(screen.getByPlaceholderText(/\+34 600 123 456/)).toBeInTheDocument()
+    expect(screen.getByPlaceholderText(/\+ 654 49 69 60/)).toBeInTheDocument()
   })
 
   it('should render client type select field', () => {
@@ -83,7 +83,7 @@ describe('ContactForm Component', () => {
 
     const nameInput = screen.getByPlaceholderText('Tu nombre')
     const emailInput = screen.getByPlaceholderText('tu@email.com')
-    const phoneInput = screen.getByPlaceholderText(/\+34 600 123 456/)
+    const phoneInput = screen.getByPlaceholderText(/\+34  654 49 69 60/)
 
     expect(nameInput).toBeInTheDocument()
     expect(emailInput).toBeInTheDocument()

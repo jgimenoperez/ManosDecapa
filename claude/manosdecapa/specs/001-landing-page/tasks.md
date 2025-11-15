@@ -580,7 +580,7 @@ Tests MUST be written first, fail on current empty components, then implementati
   - Contact info:
     - Phone: [PLACEHOLDER] (from env)
     - Email: contact@manosdecapa.es (from env)
-    - Address: "Valencia, España"
+    - Address: "Carrer Rafelbunyol, 31 bajo 3, 46530 Puçol, Valencia"
   - Links:
     - Manos de Hada: www.manosdehada.es
     - Instagram: [PLACEHOLDER]
@@ -618,7 +618,7 @@ Tests MUST be written first, fail on current empty components, then implementati
   - footer object with:
     - phone: [PLACEHOLDER]
     - email: contact@manosdecapa.es
-    - address: Valencia, España
+    - address: Carrer Rafelbunyol, 31 bajo 3, 46530 Puçol, Valencia
     - instagram: [PLACEHOLDER]
     - facebook: [PLACEHOLDER]
     - manosDehada: www.manosdehada.es

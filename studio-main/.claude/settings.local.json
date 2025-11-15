@@ -9,7 +9,13 @@
       "Bash(npm install:*)",
       "Bash(pkill:*)",
       "Bash(taskkill:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(node test-navbar.js:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(node test-navbar-comparison.js:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

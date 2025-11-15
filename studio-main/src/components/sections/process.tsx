@@ -14,7 +14,7 @@ const steps = [
   {
     number: 3,
     title: 'Decapado',
-    description: 'Proceso profesional por inmersión que respeta la madera original.',
+    description: 'Proceso profesional sin químicos que respeta la madera original.',
   },
   {
     number: 4,
@@ -33,7 +33,7 @@ export function ProcessSection() {
         </p>
       </div>
       <div className="relative">
-        <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2" aria-hidden="true" />
+        <div className="hidden md:block absolute top-20 left-0 w-full h-0.5 bg-border -translate-y-1/2" aria-hidden="true" />
         <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
           {steps.map((step) => (
             <div key={step.number} className="text-center">

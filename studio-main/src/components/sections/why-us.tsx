@@ -11,7 +11,7 @@ const reasons = [
   {
     icon: <Zap className="w-10 h-10 text-accent" />,
     title: 'Tecnología Avanzada',
-    description: 'Utilizamos un método de decapado profesional por inmersión que no daña la madera.',
+    description: 'Utilizamos un método de decapado profesional sin químicos que no daña la madera.',
   },
   {
     icon: <ShieldCheck className="w-10 h-10 text-accent" />,

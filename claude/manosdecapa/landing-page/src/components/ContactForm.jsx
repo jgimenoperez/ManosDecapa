@@ -115,7 +115,7 @@ export default function ContactForm() {
               </label>
               <input
                 type="tel"
-                placeholder="+34 600 123 456 o 600 123 456"
+                placeholder="+34  654 49 69 60"
                 className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
                   errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'
                 }`}

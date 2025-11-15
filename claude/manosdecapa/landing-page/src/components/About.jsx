@@ -9,7 +9,7 @@ export default function About() {
 
           <div className="bg-background rounded-lg p-8 md:p-12">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              <strong>Manos Decapa</strong> nace de la experiencia de <strong>Manos de Hada</strong>, taller de restauración con más de 20 años devolviendo la vida a muebles antiguos en Valencia.
+              <strong>Manos Decapa</strong> nace de la experiencia de <strong>Manos de Hada</strong>, taller de restauración con más de 10 años devolviendo la vida a muebles antiguos en Valencia.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
