@@ -15,7 +15,12 @@
       "Bash(node test-navbar.js:*)",
       "Bash(npx playwright install chromium)",
       "Bash(node test-navbar-comparison.js:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(node -e:*)",
+      "Bash(curl:*)",
+      "Bash(node test-design-review.mjs:*)",
+      "Bash(node:*)",
+      "Bash(timeout /t 10 /nobreak)"
     ],
     "deny": [],
     "ask": []

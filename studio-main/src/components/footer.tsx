@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="space-y-4">
-            <Logo className="text-accent" />
+            <Logo variant="footer" className="text-accent" />
             <p>Servicio de decapado profesional en Valencia. Devolvemos la vida a la madera.</p>
             <div className="flex space-x-4 mt-4">
               <Button asChild variant="outline" size="icon" className="bg-transparent border-accent text-accent hover:bg-accent hover:text-accent-foreground">

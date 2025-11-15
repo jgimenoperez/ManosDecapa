@@ -55,7 +55,7 @@ export function Header() {
         : "border-border/40 bg-background/60 backdrop-blur-sm"
     )}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Logo />
+        <Logo className="h-full" />
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);

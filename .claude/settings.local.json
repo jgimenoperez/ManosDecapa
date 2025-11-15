@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(node test-logo.mjs:*)",
+      "Bash(node test-logo-after.mjs:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
