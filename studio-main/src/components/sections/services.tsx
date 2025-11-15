@@ -2,23 +2,47 @@
 
 import { Section } from '@/components/section';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Paintbrush, DoorOpen, ShieldHalf } from 'lucide-react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const services = [
   {
-    icon: <Paintbrush className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/images/wood-stripping-primary.svg"
+        alt="Decapado de Madera"
+        width={56}
+        height={56}
+        className="w-14 h-14"
+      />
+    ),
     title: 'Decapado de Muebles de Madera',
     description: 'Eliminamos pintura, barniz y lacas de todo tipo de muebles respetando la madera original.',
   },
   {
-    icon: <DoorOpen className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/images/antique-door-primary.svg"
+        alt="Puerta Antigua"
+        width={56}
+        height={56}
+        className="w-14 h-14"
+      />
+    ),
     title: 'Puertas y Ventanas Antiguas',
     description: 'Recuperamos carpintería antigua dejándola lista para un nuevo acabado.',
   },
   {
-    icon: <ShieldHalf className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/images/metal-railing-primary.svg"
+        alt="Elementos Metálicos"
+        width={56}
+        height={56}
+        className="w-14 h-14"
+      />
+    ),
     title: 'Elementos Metálicos Decorativos',
     description: 'Decapado de rejas, barandillas y elementos decorativos de metal para devolverles su esplendor.',
   },
@@ -86,7 +110,7 @@ export function ServicesSection() {
             <Card className="text-center shadow-md hover:shadow-xl transition-shadow duration-300 group h-full">
               <CardHeader>
                 <motion.div
-                  className="mx-auto bg-primary/10 p-4 rounded-full w-fit"
+                  className="mx-auto bg-primary/20 p-5 rounded-full w-fit"
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6, type: "spring" }}
                 >
