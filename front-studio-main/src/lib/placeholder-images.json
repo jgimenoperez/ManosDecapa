@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A beautifully stripped wooden cabinet showing the natural wood grain.",
+      "imageUrl": "https://images.unsplash.com/photo-1673924967772-05d3e6d7ae0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdHJpcHBlZCUyMHdvb2QlMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzYzMTA2Njg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped wood furniture"
+    },
+    {
+      "id": "gallery-1-before",
+      "description": "An old chair with peeling green paint.",
+      "imageUrl": "https://images.unsplash.com/photo-1610015943703-2bc01fbb2730?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b2xkJTIwcGFpbnRlZCUyMGNoYWlyfGVufDB8fHx8MTc2MzEwNjY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old painted chair"
+    },
+    {
+      "id": "gallery-1-after",
+      "description": "The same chair after stripping, showing clean wood.",
+      "imageUrl": "https://images.unsplash.com/photo-1755426225472-c91c439170a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHJpcHBlZCUyMHdvb2QlMjBjaGFpcnxlbnwwfHx8fDE3NjMxMDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped wood chair"
+    },
+    {
+      "id": "gallery-2-before",
+      "description": "A vintage dresser covered in thick white varnish.",
+      "imageUrl": "https://images.unsplash.com/photo-1621262402468-a1c27d6ba468?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx2YXJuaXNoZWQlMjBkcmVzc2VyfGVufDB8fHx8MTc2MzEwNjY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "varnished dresser"
+    },
+    {
+      "id": "gallery-2-after",
+      "description": "The same dresser with its natural oak wood revealed.",
+      "imageUrl": "https://images.unsplash.com/photo-1630267987342-7259e37bded9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHJpcHBlZCUyMG9hayUyMGRyZXNzZXJ8ZW58MHx8fHwxNzYzMTA2Njg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped oak dresser"
+    },
+    {
+      "id": "gallery-3-before",
+      "description": "An antique door with layers of paint.",
+      "imageUrl": "https://images.unsplash.com/photo-1558690194-2da31cb221ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvbGQlMjBwYWludGVkJTIwZG9vcnxlbnwwfHx8fDE3NjMxMDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old painted door"
+    },
+    {
+      "id": "gallery-3-after",
+      "description": "The door stripped back to its original pine.",
+      "imageUrl": "https://images.unsplash.com/photo-1493067798314-3bcde8650e45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHJpcHBlZCUyMHBpbmUlMjBkb29yfGVufDB8fHx8MTc2MzEwNjY4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped pine door"
+    },
+    {
+      "id": "gallery-4-before",
+      "description": "A small side table with a dark, chipped finish.",
+      "imageUrl": "https://images.unsplash.com/photo-1628693082694-f819116fac03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGlwcGVkJTIwc2lkZSUyMHRhYmxlfGVufDB8fHx8MTc2MzEwNjY4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chipped side table"
+    },
+    {
+      "id": "gallery-4-after",
+      "description": "The side table now with a smooth, natural wood finish.",
+      "imageUrl": "https://images.unsplash.com/photo-1595589296403-f046a210b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdHJpcHBlZCUyMHNpZGUlMjB0YWJsZXxlbnwwfHx8fDE3NjMxMDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped side table"
+    },
+    {
+      "id": "gallery-5-before",
+      "description": "A set of window shutters with flaking blue paint.",
+      "imageUrl": "https://images.unsplash.com/photo-1616243026667-cd292d879dff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFpbnRlZCUyMHdpbmRvdyUyMHNodXR0ZXJzfGVufDB8fHx8MTc2MzEwNjY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "painted window shutters"
+    },
+    {
+      "id": "gallery-5-after",
+      "description": "The shutters restored to their beautiful natural wood state.",
+      "imageUrl": "https://images.unsplash.com/photo-1545034251-92d616f2d585?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdHJpcHBlZCUyMHdvb2QlMjBzaHV0dGVyc3xlbnwwfHx8fDE3NjMxMDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped wood shutters"
+    },
+    {
+      "id": "gallery-6-before",
+      "description": "A metal headboard with rust and old paint.",
+      "imageUrl": "https://images.unsplash.com/photo-1656285523078-b77363624310?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxydXN0eSUyMG1ldGFsJTIwaGVhZGJvYXJkfGVufDB8fHx8MTc2MzEwNjY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rusty metal headboard"
+    },
+    {
+      "id": "gallery-6-after",
+      "description": "The metal headboard cleaned and stripped, ready for a new finish.",
+      "imageUrl": "https://images.unsplash.com/photo-1649209481156-2f2d0b2e0b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJpcHBlZCUyMG1ldGFsJTIwaGVhZGJvYXJkfGVufDB8fHx8MTc2MzEwNjY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stripped metal headboard"
+    }
+  ]
+}
