@@ -53,19 +53,57 @@ export function ContactSection() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
 
-    // Simular envío del formulario
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // Preparar FormData para enviar al Worker
+      const formData = new FormData();
+      formData.append('nombre', values.fullName);
+      formData.append('email', values.email);
+      formData.append('telefono', values.phone || '');
+      formData.append('mensaje', `Tipo de cliente: ${values.clientType}\nPieza: ${values.pieceType}\n\n${values.message}`);
 
-    console.log(values);
-    toast({
-      title: "¡Presupuesto solicitado!",
-      description: "Te responderemos en menos de 24 horas. Gracias por confiar en Manos Decapa.",
-      duration: 5000,
-    });
+      // Agregar imágenes
+      uploadedFiles.forEach((file) => {
+        formData.append('imagenes', file);
+      });
 
-    setIsSubmitting(false);
-    form.reset();
-    setUploadedFiles([]);
+      // Enviar al Worker de Cloudflare
+      const response = await fetch(
+        'https://manos-decapa-contact-worker-production.manosdevtroll.workers.dev/contact',
+        {
+          method: 'POST',
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "¡Presupuesto solicitado!",
+          description: "Te responderemos en menos de 24 horas. Gracias por confiar en Manos Decapa.",
+          duration: 5000,
+        });
+        form.reset();
+        setUploadedFiles([]);
+      } else {
+        toast({
+          title: "Error al enviar",
+          description: data.error || "Ocurrió un error al procesar tu solicitud. Intenta nuevamente.",
+          variant: "destructive",
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      console.error('Error enviando formulario:', error);
+      toast({
+        title: "Error de conexión",
+        description: "No pudimos conectar con el servidor. Verifica tu conexión e intenta de nuevo.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

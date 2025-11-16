@@ -6,7 +6,15 @@
       "Bash(npx playwright install chromium)",
       "Bash(node test-logo.mjs:*)",
       "Bash(node test-logo-after.mjs:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 10 node:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(unset:*)",
+      "Bash(timeout 15 node:*)",
+      "Bash(npx wrangler deploy:*)"
     ],
     "deny": [],
     "ask": []
