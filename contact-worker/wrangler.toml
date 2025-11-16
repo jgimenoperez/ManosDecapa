@@ -5,7 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 # Production environment
 [env.production]
-vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAIL = "fiona@manosdecapa.es", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa" }
+vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa" }
 
 [[env.production.r2_buckets]]
 binding = "R2_BUCKET"
@@ -13,7 +13,7 @@ bucket_name = "manos-decapa-images"
 
 # Development environment - include RESEND_API_KEY for local testing
 [env.development]
-vars = { DOMAIN = "localhost", ADMIN_EMAIL = "fiona@manosdecapa.es", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", RESEND_API_KEY = "re_j2asSDQi_5F3noANhZkZP4xE8fPoi6oKL" }
+vars = { DOMAIN = "localhost", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", RESEND_API_KEY = "re_j2asSDQi_5F3noANhZkZP4xE8fPoi6oKL" }
 
 [[env.development.r2_buckets]]
 binding = "R2_BUCKET"
