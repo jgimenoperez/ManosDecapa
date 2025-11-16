@@ -1,0 +1,23 @@
+{
+  "name": "manos-decapa-contact-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for contact form handling with image upload and email notifications",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "zod": "^3.22.4",
+    "resend": "^3.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "wrangler": "^3.26.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  }
+}

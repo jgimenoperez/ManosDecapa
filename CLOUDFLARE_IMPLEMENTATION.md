@@ -267,8 +267,8 @@ ADMIN_EMAIL=tu-email@tudominio.com
 ## 🎯 Hitos de implementación
 
 ### **Hito 1: Setup Cloudflare**
-- [ ] Crear R2 Bucket
-- [ ] Obtener API Token de Cloudflare
+- [X] Crear R2 Bucket
+- [X] Obtener API Token de Cloudflare
 - [ ] Obtener API Key de Resend
 - [ ] Documenter credenciales en `.env`
 
