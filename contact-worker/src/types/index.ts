@@ -45,4 +45,6 @@ export interface WorkerEnv {
   FROM_EMAIL: string;
   FROM_NAME: string;
   ALLOWED_ORIGINS: string;
+  CLOUDFLARE_ACCOUNT_ID: string;
+  R2_PUBLIC_URL: string;
 }

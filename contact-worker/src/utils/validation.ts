@@ -28,8 +28,14 @@ const textSchema = z.object({
 });
 
 // Validación para archivos
+// Nota: Usamos z.any() en lugar de z.instanceof(File) porque en Workers,
+// los File objects pueden no pasar la instanceof check debido a contexto de ejecución
 const fileSchema = z
-  .instanceof(File)
+  .any()
+  .refine(
+    (file) => file && file.size !== undefined,
+    'Archivo inválido'
+  )
   .refine(
     (file) => ['image/jpeg', 'image/png', 'image/webp'].includes(file.type),
     'Solo se permiten imágenes JPG, PNG o WebP'

@@ -27,7 +27,7 @@ function generateFileName(originalName: string): string {
 export async function uploadImageToR2(
   file: File,
   bucket: R2Bucket,
-  domain: string
+  publicUrl: string
 ): Promise<string> {
   try {
     // Validar que sea un archivo
@@ -65,8 +65,9 @@ export async function uploadImageToR2(
       },
     });
 
-    // Construir URL pública del archivo
-    const fileUrl = `https://${domain}/file/upload/${fileName}`;
+    // Construir URL pública del archivo en R2
+    // Usa la URL pública configurada en el entorno
+    const fileUrl = `${publicUrl}/${fileName}`;
 
     console.log(`✅ Imagen subida: ${fileUrl}`);
     return fileUrl;
@@ -83,7 +84,7 @@ export async function uploadImageToR2(
 export async function uploadImagesToR2(
   files: File[],
   bucket: R2Bucket,
-  domain: string
+  publicUrl: string
 ): Promise<string[]> {
   try {
     if (!files || files.length === 0) {
@@ -97,7 +98,7 @@ export async function uploadImagesToR2(
 
     // Subir cada imagen en paralelo
     const uploadPromises = files.map((file) =>
-      uploadImageToR2(file, bucket, domain)
+      uploadImageToR2(file, bucket, publicUrl)
     );
 
     const urls = await Promise.all(uploadPromises);

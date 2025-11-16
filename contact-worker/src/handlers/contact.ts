@@ -48,24 +48,42 @@ export async function processContactForm(
 
     // Paso 3: Subir imágenes a R2
     console.log('📤 Subiendo imágenes a R2...');
+    console.log('📎 Archivos recibidos:', validatedData.imagenes?.length || 0);
+
+    // Log detalles de cada imagen
+    if (validatedData.imagenes && validatedData.imagenes.length > 0) {
+      for (let i = 0; i < validatedData.imagenes.length; i++) {
+        const img = validatedData.imagenes[i];
+        console.log(`  Imagen ${i + 1}: ${(img as any).name || 'sin-nombre'}, Tipo: ${(img as any).type}, Tamaño: ${(img as any).size} bytes`);
+      }
+    }
+
     let imageUrls: string[] = [];
 
     if (validatedData.imagenes && validatedData.imagenes.length > 0) {
       try {
+        console.log('🔄 Iniciando upload a R2...');
+        console.log('📦 R2_BUCKET:', env.R2_BUCKET ? 'presente' : 'undefined');
+        console.log('🔗 R2_PUBLIC_URL:', env.R2_PUBLIC_URL);
+
         imageUrls = await uploadImagesToR2(
-          validatedData.imagenes,
+          validatedData.imagenes as File[],
           env.R2_BUCKET,
-          env.DOMAIN
+          env.R2_PUBLIC_URL
         );
-        console.log(`✓ ${imageUrls.length} imágenes subidas`);
+        console.log(`✓ ${imageUrls.length} imágenes subidas correctamente`);
+        console.log('🔗 URLs generadas:', imageUrls);
       } catch (uploadError) {
         const errorMsg = uploadError instanceof Error ? uploadError.message : 'Error desconocido';
         console.error(`❌ Error subiendo imágenes: ${errorMsg}`);
+        console.error('📋 Stack:', uploadError);
         return {
           success: false,
           error: `Error al procesar imágenes: ${errorMsg}`,
         };
       }
+    } else {
+      console.log('⚠️ No hay imágenes para subir');
     }
 
     // Paso 4: Enviar emails

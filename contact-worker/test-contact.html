@@ -123,12 +123,14 @@
 
                 // Agregar archivos
                 const files = document.getElementById('imagenes').files;
+                console.log('📎 Archivos seleccionados:', files.length);
                 for (let file of files) {
+                    console.log('📁 Archivo:', file.name, 'Tamaño:', file.size, 'Tipo:', file.type);
                     formData.append('imagenes', file);
                 }
 
-                // Enviar al Worker local
-                const result = await fetch('http://127.0.0.1:8787/contact', {
+                // Enviar al Worker en Cloudflare
+                const result = await fetch('https://manos-decapa-contact-worker-production.manosdevtroll.workers.dev/contact', {
                     method: 'POST',
                     body: formData,
                 });
