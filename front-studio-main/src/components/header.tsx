@@ -10,12 +10,12 @@ import { Logo } from '@/components/logo';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#home', label: 'Inicio' },
-  { href: '#services', label: 'Servicios' },
-  { href: '#process', label: 'Proceso' },
-  { href: '#gallery', label: 'Galería' },
-  { href: '#pricing', label: 'Precios' },
-  { href: '#about', label: 'Sobre Nosotros' },
+  { href: '/', label: 'Inicio' },
+  { href: '/#services', label: 'Servicios' },
+  { href: '/#process', label: 'Proceso' },
+  { href: '/#gallery', label: 'Galería' },
+  { href: '/#pricing', label: 'Precios' },
+  { href: '/#about', label: 'Sobre Nosotros' },
 ];
 
 export function Header() {
@@ -28,16 +28,25 @@ export function Header() {
       setHasScrolled(window.scrollY > 50);
 
       // Detectar sección activa
-      const sections = navLinks.map(link => link.href.substring(1));
       const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+      // Si estamos en el top, marcar como home
+      if (scrollPosition < 100) {
+        setActiveSection('');
+        return;
+      }
+
+      // Buscar en los navLinks qué sección está activa
+      for (const link of navLinks) {
+        const sectionId = link.href.replace('/#', '').replace('/', '');
+        if (sectionId === '' || sectionId === 'services' || sectionId === 'process' || sectionId === 'gallery' || sectionId === 'pricing' || sectionId === 'about') {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              setActiveSection(sectionId);
+              break;
+            }
           }
         }
       }
@@ -58,7 +67,8 @@ export function Header() {
         <Logo className="h-full" />
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
+            const sectionId = link.href.replace('/#', '').replace('/', '');
+            const isActive = activeSection === sectionId;
 
             return (
               <Link
@@ -86,7 +96,7 @@ export function Header() {
         </nav>
         <div className="hidden md:block">
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#contact">Solicitar Presupuesto</Link>
+            <Link href="/#contact">Solicitar Presupuesto</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -108,7 +118,8 @@ export function Header() {
                 </div>
                 <nav className="flex flex-col space-y-2 mt-8 px-4">
                   {navLinks.map((link, index) => {
-                    const isActive = activeSection === link.href.substring(1);
+                    const sectionId = link.href.replace('/#', '').replace('/', '');
+                    const isActive = activeSection === sectionId;
                     return (
                       <motion.div
                         key={link.href}
@@ -138,7 +149,7 @@ export function Header() {
                     className="mt-6"
                   >
                     <Button asChild size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                      <Link href="#contact" onClick={() => setIsMenuOpen(false)}>Solicitar Presupuesto</Link>
+                      <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>Solicitar Presupuesto</Link>
                     </Button>
                   </motion.div>
                 </nav>

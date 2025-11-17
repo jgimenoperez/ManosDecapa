@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
+import { CookieConsent } from '@/components/cookie-consent';
 
 export const metadata: Metadata = {
   title: 'Decapado de Muebles Valencia | Manos Decapa - Servicio Profesional',
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background text-foreground">
         <ScrollProgress />
         {children}
+        <CookieConsent />
         <Toaster />
       </body>
     </html>

@@ -1,0 +1,179 @@
+PANEL DE CONSENTIMIENTO DE COOKIES «PD COOKIE CONSENT»
+1. Funcionalidad que inserta un panel de consentimiento de cookies y bloquea los
+elementos que pudieran insertarlas
+«PD Cookie Consent» es una librería JavaScript a través de la cual se pretende facilitar el bloqueo
+de aquellos elementos del DOM que pudieran incrustar cookies y sirve para que el técnico del
+sitio web pueda insertar una ventana emergente (banner) que avise al visitante sobre la
+existencia de cookies, además de facilitar un medio para la gestión de aquellos elementos que
+pudieran generarlas, bloqueándolos y evitando que las generen hasta el posterior desbloqueo por
+parte del visitante.
+2. ¿Cómo insertar la librería en nuestro sitio web?
+MUY IMPORTANTE
+PASO 1: insertar la siguiente librería y sus estilos entre las etiquetas quedando el script de la
+librería por encima de cualquier otro "script" o "link" que pudiera haber entre dichas
+etiquetas:
+<head>...</head>
+Si no se cumple este paso tal como se describe, «PD Cookie Consent» no funcionará
+correctamente.
+
+<link rel="stylesheet" href="https://pdcc.gdpr.es/pdcc.min.css">
+<script charset="utf-8" src="https://pdcc.gdpr.es/pdcc.min.js"></script>
+<script type="text/javascript">
+PDCookieConsent.config({
+"brand": {
+"dev" : true,
+"name": "AMALTEA PRIVACY",
+"url" : "https://amalteaconsultoria.es",
+"websiteOwner" : ""
+},
+"showRejectButton": true,
+"cookiePolicyLink": "",
+"hideModalIn": [""],
+"styles": {
+"primaryButton": {
+"bgColor" : "#EEEEEE",
+"txtColor": "#333333"
+},
+"secondaryButton": {
+"bgColor" : "#EEEEEE",
+"txtColor": "#333333"
+},
+"rejectButton": {
+"bgColor": "#EEEEEE",
+"txtColor": "#333333"
+
+FASTDOIT, S.L.
+
+2
+
+FASTDOIT, S.L.
+C/BRUSELAS, 10 - 12530 BURRIANA (Castelló) ESPAÑA
+
+}
+}
+});
+</script>
+
+MUY IMPORTANTE
+PASO 2: en caso de que no exista, poner la URL de la Política de cookies entre las comillas de
+las siguientes etiquetas para que se muestre el acceso directo con toda la información sobre las
+cookies:
+"cookiePolicyLink": "http://...............",
+"hideModalIn": ["http://..............."],
+Si no se cumple este paso tal como se describe, el banner de consentimiento no será legítimo.
+NOTA: Si el sitio web ha sido desarrollado a través de un CMS como WordPress, Ghost, Shopify,
+Magento, Prestashop, Joomla, Drupal u otro similar es importante asegurarse de que también se
+cumpla el Paso 1.
+En caso de utilizar un CMS, la mejor opción y la cual nos permitirá cumplir con el Paso 1 de
+forma segura es modificar el tema o plantillas del sitio web, por ejemplo, en el caso de
+WordPress, creando un «child theme».
+Consulte la documentación destinada a desarrolladores que ofrece cada una de estas
+plataformas.
+MUY IMPORTANTE
+PASO 3: la librería ofrece una propiedad CSS para acceder al banner cuando este se ha
+cerrado y cualquier elemento que la contenga actuará como un botón que abrirá el panel.
+Tan solo deberemos escoger un elemento cualquiera del DOM, como por ejemplo un enlace, e
+insertarle la propiedad (class=”pdcc-open-modal”).
+<a href="#" class="pdcc-open-modal">Panel Cookies</a>
+Una vez el visitante haga clic en el enlace, o en otro elemento que contenga la propiedad ya
+mencionada, se abrirá la vista de Configuración del panel «PD Cookie Consent».
+
+3. ¿Cómo funciona «PD Cookie Consent»?
+Cuando un visitante accede al sitio web, la librería «PD Cookie Consent» observa cada uno de los
+elementos existentes en la página visitada y, si alguno de estos cumple los requisitos necesarios
+para ser bloqueado, se bloquea.
+Una vez observados todos los elementos de la página, la librería mostrará el panel «PD Cookie
+
+FASTDOIT, S.L.
+
+3
+
+FASTDOIT, S.L.
+C/BRUSELAS, 10 - 12530 BURRIANA (Castelló) ESPAÑA
+Consent» y generará una cookie de sesión nombrada «pd_cc», necesaria para el correcto
+funcionamiento de la página.
+NOTA: El «panel» no aparecerá automáticamente cuando existan únicamente cookies técnicas y
+funcionales. Para que el «panel» aparezca es necesario que, o bien la librería haya bloqueado algún
+elemento que pudiera insertar cookies, o bien se haya hecho uso del método
+«PDCookieConsent.blockList()», que se detalla en el apartado 3 de la Documentación Técnica.
+
+En la primera vista del panel, el visitante del sitio web podrá:
+1. Leer el aviso que informa sobre las cookies.
+2. Hacer clic en el enlace de la «Política de cookies».
+3. Aceptar todas las cookies del sitio web haciendo clic en «Aceptar».
+4. Rechazar todas las cookies del sitio web haciendo clic en «Rechazar».
+5. Ir a la vista de configuración haciendo clic en «Configurar».
+Si el visitante del sitio web pulsa el botón «Configurar», obtendrá una nueva vista:
+
+En la vista de configuración el visitante podrá:
+
+FASTDOIT, S.L.
+
+4
+
+FASTDOIT, S.L.
+C/BRUSELAS, 10 - 12530 BURRIANA (Castelló) ESPAÑA
+
+1. Volver a la vista anterior pulsando el enlace «<- Volver atrás».
+2. Visualizar la lista con todos los dominios no permitidos, pudiendo:
+Aceptarlos de forma independiente.
+Rechazarlos de forma independiente.
+Visualizar aquellos que son nuevos y no se encontraban en la lista en una antigua
+visualización. Aparece el texto «(nuevo)» a su lado.
+3. Aceptar todos los dominios a la vez pulsando el botón «Aceptar todas».
+4. Rechazar todos los dominios a la vez pulsando el botón «Rechazar todas».
+5. Guardar los cambios realizados mediante el botón «Guardar configuración».
+
+4. Mensajes informativos sobre los elementos bloqueados
+Además del panel «PD Cookie Consent», la librería también proporciona un mensaje que
+aparecerá en la parte superior del sitio web e informará al visitante de los elementos
+visuales que hayan sido bloqueados y que, en consecuencia, no se estén visualizando.
+
+Ante este mensaje el visitante podrá:
+Informarse sobre el contenido bloqueado y que no se está visualizando, incluyendo la lista
+de los elementos bloqueados (en el caso de la imagen proporcionada, YouTube).
+En relación con la lista de elementos bloqueados podrá efectuar las siguientes acciones:
+Aceptar todos los elementos bloqueados de la página visitada haciendo clic en
+«Aceptar todas», quedando estos activos en el resto del sitio web (si existiesen).
+Una vez pulsado el botón se ocultará el mensaje.
+Abrir la vista de configuración pulsando el botón «Configurar», pudiendo efectuar
+cualesquiera de las acciones ya mencionadas en este mismo documento.
+
+MUY IMPORTANTE
+El «mensaje» enuncia principalmente los «iframe» bloqueados.
+Para que se tengan en cuenta los «script» es necesario definir la propiedad «report» con el
+valor «true» en «PDCookieConsent.blockList()». Para más información, consulte el apartado «3.
+Bloquear elementos del DOM para evitar que generen cookies» del documento de información
+técnica.
+NOTA: El «mensaje» solo aparecerá en aquellas páginas en las que existan elementos que
+hayan sido bloqueados y afecten al aspecto visual del sitio web o a funcionalidades para la
+interacción con este.
+
+5. Información técnica
+Para entender cómo funciona la librería «PD Cookie Consent» es importante saber que esta no
+captura ni bloquea ningún tipo de Cookie. «PD Cookie Consent» no gestiona cookies, gestiona
+
+FASTDOIT, S.L.
+
+5
+
+FASTDOIT, S.L.
+C/BRUSELAS, 10 - 12530 BURRIANA (Castelló) ESPAÑA
+aquellos elementos que son responsables de insertar cookies en el sitio web (iframes, scripts y
+noscripts), todos descritos en la documentación técnica.
+Cuando un sitio web se carga en el navegador, este genera unos elementos que son los
+responsables de dar funcionalidades, mostrar imágenes, vídeos, etc. Es a través de estos
+elementos que se generan e instalan multitud de cookies de todos los tipos.
+Durante el proceso de carga del sitio web, la librería va observando cada uno de los elementos
+que se cargan. En el momento en que uno de estos elementos cargados corresponde a un
+iframe, script y noscript, la librería empieza un proceso de análisis.
+Si el elemento analizado contiene una cadena de texto prohibida, se bloquea para evitar su
+carga. La intención de evitar su carga es la de no permitir que puedan insertarse cookies en el
+sitio web sin el consentimiento del usuario. Es por ello que cuando «PD Cookie Consent», por
+ejemplo, bloquea un vídeo de YouTube, este no se visualiza hasta que el visitante del sitio web
+permite la activación del elemento bloqueado, en este caso, un iframe.
+Las cadenas de texto que facilitan el bloqueo automático de elementos están definidas en la
+propia librería. Es posible, también, definir cadenas propias a través de un método que deberá
+insertar el desarrollador del sitio web; este último paso es ideal para poder bloquear aquellos
+elementos que no haya detectado la librería e incluso desbloquear aquellos que la librería
+bloquee y no sea necesario hacerlo.

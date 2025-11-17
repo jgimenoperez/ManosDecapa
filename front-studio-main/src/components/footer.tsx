@@ -36,8 +36,31 @@ export function Footer() {
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.477447297713!2d-0.312239823628126!3d39.616452403957275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60413b1ee496e9%3A0xa818d88b0054f79f!2sManos%20de%20hada!5e0!3m2!1ses!2ses!4v1763105725777!5m2!1ses!2ses" width="100%" height="250" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        <div className="mt-12 py-6 border-t border-background/20 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Manos Decapa. Todos los derechos reservados.</p>
+        <div className="mt-12 py-6 border-t border-background/20">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm mb-6 flex-wrap">
+            <Link href="/aviso-legal" className="text-accent hover:underline">
+              Aviso Legal
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/politica-privacidad" className="text-accent hover:underline">
+              Política de Privacidad
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/politica-cookies" className="text-accent hover:underline">
+              Política de Cookies
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/#contact" className="text-accent hover:underline">
+              Contacto
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <a href="https://www.manosdehada.es" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+              Restauración Completa
+            </a>
+          </div>
+          <div className="text-center text-sm text-background/60">
+            <p>&copy; {new Date().getFullYear()} Manos Decapa. Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>
