@@ -23,7 +23,8 @@
       "Bash(git commit:*)",
       "Bash(node:*)",
       "Bash(git checkout:*)",
-      "Bash(wrangler tail:*)"
+      "Bash(wrangler tail:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []
