@@ -170,20 +170,26 @@ function buildAdminEmailHTML(
           }
           .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);
             color: white;
-            padding: 12px 28px;
-            border-radius: 6px;
+            padding: 12px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             margin-top: 16px;
-            border: none;
+            border: 2px solid #F4A460;
             cursor: pointer;
             font-size: 14px;
-            transition: opacity 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(244, 164, 96, 0.3);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
           }
           .cta-button:hover {
-            opacity: 0.9;
+            box-shadow: 0 5px 15px rgba(244, 164, 96, 0.5);
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #F4A460 0%, #8B4513 100%);
           }
           @media (max-width: 600px) {
             .container {
@@ -370,20 +376,25 @@ function buildConfirmationEmailHTML(nombre: string): string {
           }
           .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);
             color: white;
-            padding: 14px 40px;
+            padding: 16px 48px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 16px;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            border: none;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            border: 2px solid #F4A460;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(244, 164, 96, 0.3);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
           }
           .cta-button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 164, 96, 0.5);
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #F4A460 0%, #8B4513 100%);
           }
           .features {
             display: flex;
