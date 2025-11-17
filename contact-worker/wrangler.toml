@@ -5,7 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 # Production environment
 [env.production]
-vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev", RESEND_API_KEY = "re_j2asSDQi_5F3noANhZkZP4xE8fPoi6oKL" }
+vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev" }
 
 [[env.production.r2_buckets]]
 binding = "R2_BUCKET"
@@ -13,7 +13,7 @@ bucket_name = "manos-decapa-images"
 
 # Development environment - include RESEND_API_KEY for local testing
 [env.development]
-vars = { DOMAIN = "localhost", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", RESEND_API_KEY = "re_j2asSDQi_5F3noANhZkZP4xE8fPoi6oKL", CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev" }
+vars = { DOMAIN = "localhost", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa",  CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev" }
 
 [[env.development.r2_buckets]]
 binding = "R2_BUCKET"
