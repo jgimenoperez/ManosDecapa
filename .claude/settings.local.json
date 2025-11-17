@@ -14,7 +14,9 @@
       "Bash(wrangler deploy:*)",
       "Bash(unset:*)",
       "Bash(timeout 15 node:*)",
-      "Bash(npx wrangler deploy:*)"
+      "Bash(npx wrangler deploy:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(npm run logs:*)"
     ],
     "deny": [],
     "ask": []

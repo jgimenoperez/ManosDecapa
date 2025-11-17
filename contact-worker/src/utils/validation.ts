@@ -49,7 +49,7 @@ const fileSchema = z
 export const contactFormSchema = textSchema.extend({
   imagenes: z
     .array(fileSchema)
-    .max(3, 'Se permite un máximo de 3 imágenes')
+    .max(5, 'Se permite un máximo de 5 imágenes')
     .optional()
     .default([]),
 });
@@ -82,7 +82,7 @@ export function validateImages(files: unknown) {
   try {
     const schema = z
       .array(fileSchema)
-      .max(3, 'Se permite un máximo de 3 imágenes')
+      .max(5, 'Se permite un máximo de 5 imágenes')
       .optional()
       .default([]);
 

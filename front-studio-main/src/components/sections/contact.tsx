@@ -319,7 +319,7 @@ export function ContactSection() {
                                   <span className="font-semibold">Haz clic para subir</span> o arrastra archivos
                                 </p>
                                 <p className="text-xs text-muted-foreground mt-1">
-                                  PNG, JPG hasta 10MB
+                                  PNG, JPG hasta 10MB (máx. 5 imágenes)
                                 </p>
                               </div>
                               <input

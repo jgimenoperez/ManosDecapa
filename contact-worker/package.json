@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "npm run build && echo '✅ Build completado. Desplegando a producción...' && wrangler deploy --env production && echo '🚀 ¡Despliegue completado con éxito!' && echo '📝 URL: https://manos-decapa-contact-worker-production.manosdevtroll.workers.dev'",
     "build": "wrangler build",
     "test": "vitest",
     "logs": "wrangler tail --env production"

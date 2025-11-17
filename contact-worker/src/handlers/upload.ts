@@ -92,8 +92,8 @@ export async function uploadImagesToR2(
     }
 
     // Validar cantidad máxima de archivos
-    if (files.length > 3) {
-      throw new Error('Máximo 3 imágenes permitidas');
+    if (files.length > 5) {
+      throw new Error('Máximo 5 imágenes permitidas');
     }
 
     // Subir cada imagen en paralelo
