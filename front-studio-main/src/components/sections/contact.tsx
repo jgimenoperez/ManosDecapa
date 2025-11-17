@@ -106,9 +106,26 @@ export function ContactSection() {
     }
   }
 
+  const MAX_IMAGES = 5;
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setUploadedFiles(Array.from(e.target.files));
+      const newFiles = Array.from(e.target.files);
+      const totalFiles = uploadedFiles.length + newFiles.length;
+
+      if (totalFiles > MAX_IMAGES) {
+        toast({
+          title: "Límite de imágenes alcanzado",
+          description: `Solo puedes subir un máximo de ${MAX_IMAGES} imágenes. Ya tienes ${uploadedFiles.length} imagen(es) cargada(s).`,
+          variant: "destructive",
+          duration: 4000,
+        });
+        // Limitar a solo las imágenes que caben
+        const availableSlots = MAX_IMAGES - uploadedFiles.length;
+        setUploadedFiles([...uploadedFiles, ...newFiles.slice(0, availableSlots)]);
+      } else {
+        setUploadedFiles([...uploadedFiles, ...newFiles]);
+      }
     }
   };
 
@@ -312,14 +329,18 @@ export function ContactSection() {
                         </FormLabel>
                         <FormControl>
                           <div className="space-y-3">
-                            <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer bg-muted/30 hover:bg-muted/50 transition-colors">
+                            <label className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
+                              uploadedFiles.length >= MAX_IMAGES
+                                ? 'border-destructive/50 bg-destructive/10 hover:bg-destructive/20 opacity-50 cursor-not-allowed'
+                                : 'border-border bg-muted/30 hover:bg-muted/50'
+                            }`}>
                               <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                 <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
                                 <p className="text-sm text-muted-foreground">
                                   <span className="font-semibold">Haz clic para subir</span> o arrastra archivos
                                 </p>
                                 <p className="text-xs text-muted-foreground mt-1">
-                                  PNG, JPG hasta 10MB (máx. 5 imágenes)
+                                  PNG, JPG hasta 5MB cada una
                                 </p>
                               </div>
                               <input
@@ -328,8 +349,24 @@ export function ContactSection() {
                                 accept="image/*"
                                 className="hidden"
                                 onChange={handleFileUpload}
+                                disabled={uploadedFiles.length >= MAX_IMAGES}
                               />
                             </label>
+
+                            {/* Información del límite de imágenes */}
+                            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-3 text-sm">
+                              <p className="text-blue-900 dark:text-blue-100">
+                                <span className="font-semibold">Límite de imágenes:</span> Puedes subir hasta <strong>5 imágenes</strong>
+                              </p>
+                              <p className="text-blue-800 dark:text-blue-200 text-xs mt-1">
+                                Imágenes cargadas: <strong>{uploadedFiles.length}</strong> / {MAX_IMAGES}
+                              </p>
+                              {uploadedFiles.length >= MAX_IMAGES && (
+                                <p className="text-orange-700 dark:text-orange-300 text-xs mt-2 font-medium">
+                                  ⚠️ Has alcanzado el límite máximo de imágenes. Elimina alguna si necesitas añadir más.
+                                </p>
+                              )}
+                            </div>
 
                             {/* Preview de archivos subidos */}
                             <AnimatePresence>

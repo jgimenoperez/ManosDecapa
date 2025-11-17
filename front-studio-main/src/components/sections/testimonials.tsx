@@ -51,7 +51,7 @@ const testimonials = [
 
 const trustIndicators = [
   { number: "500+", label: "Piezas restauradas" },
-  { number: "20+", label: "Años de experiencia" },
+  { number: "10+", label: "Años de experiencia" },
   { number: "4.9", label: "Valoración media" },
   { number: "98%", label: "Clientes satisfechos" }
 ];
