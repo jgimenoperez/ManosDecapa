@@ -16,7 +16,12 @@
       "Bash(timeout 15 node:*)",
       "Bash(npx wrangler deploy:*)",
       "Bash(npm run deploy:*)",
-      "Bash(npm run logs:*)"
+      "Bash(npm run logs:*)",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRediseño de plantillas de email con identidad visual de Manos Decapa\n\nCambios realizados:\n- Email para admin: Nuevo diseño con gradiente marrón/naranja, \n  iconos descriptivos, sección de imágenes mejorada\n- Email de confirmación: Diseño premium con animaciones, \n  información de tiempos de respuesta, botón CTA\n- Colores: Paleta Manos Decapa (#8B4513, #D2691E, #F4A460, #2C1810, #FFF8DC)\n- Tipografía: Poppins (headlines) y PT Sans (body)\n- Diseño responsivo para mobile con media queries\n- Mejora de UX con dividers, info boxes y features highlights\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []
