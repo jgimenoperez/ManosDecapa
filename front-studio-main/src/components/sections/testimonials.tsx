@@ -2,7 +2,6 @@
 
 import { Section } from '@/components/section';
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -16,36 +15,36 @@ import {
 
 const testimonials = [
   {
-    name: "María González",
+    name: "Aida Garrido",
     role: "Particular",
-    avatar: "MG",
+    avatar: "/images/avatar-aida.jpg",
     rating: 5,
-    text: "Llevé una cómoda heredada de mi abuela que tenía varias capas de pintura. El resultado fue increíble, la madera quedó perfecta y sin ningún daño. Totalmente recomendable.",
-    date: "Hace 2 semanas"
+    text: "Hacen maravillas!!! De unos muebles que tenia pensado tirar los convierten en los más bonitos ! Mucha profesionalidad y sobre todo buenísima atención ! Los recomiendo al 100%!!! Encantada con mis muebles restaurados !!!",
+    date: "11 de agosto de 2022"
   },
   {
-    name: "Carlos Martínez",
-    role: "Carpintería Martínez",
-    avatar: "CM",
-    rating: 5,
-    text: "Trabajo con ellos regularmente para mis proyectos de restauración. Son profesionales, rápidos y los resultados siempre son impecables. El servicio para profesionales es excelente.",
-    date: "Hace 1 mes"
-  },
-  {
-    name: "Ana Rodríguez",
+    name: "Susana Gimenez",
     role: "Particular",
-    avatar: "AR",
+    avatar: "/images/avatar-susana.jpg",
     rating: 5,
-    text: "Compré unas puertas antiguas en un mercadillo y no sabía cómo quitarles toda la pintura. Me recomendaron Manos Decapa y acerté. Precio justo y trabajo impecable.",
-    date: "Hace 3 semanas"
+    text: "Fiona muy amable, atenta y profesional. Tenía dudas sobre el estilo que quería dar al mueble y en todo momento me aconsejó y me propuso ideas. Un trabajo muy cuidado. Calidad precio, excelente!! Recomiendo 100%",
+    date: "23 de marzo de 2022"
   },
   {
-    name: "Restauraciones Vintage",
+    name: "MEGS",
+    role: "Particular",
+    avatar: "/images/avatar-megs.jpg",
+    rating: 5,
+    text: "Manos de Hada es un taller de Restauración situado en la población de Puçol (Valencia).Fiona, es la dueña del Taller que junto a su marido,hacen muy fácil... convertir piezas antiguas en auténticas joyas.Creatividad y buen gusto por parte de la Restauradora.Siempre sabe darle, ese toque profesional y de calidad.Es la mejor opción para recuperar y modernizar tus muebles.También se pueden realizar Cursos de Restauración los sábados.",
+    date: "29 de marzo de 2022"
+  },
+  {
+    name: "Fernando Palacios Puyalon",
     role: "Anticuario",
-    avatar: "RV",
+    avatar: "/images/avatar-fernando.jpg",
     rating: 5,
-    text: "Llevamos años trabajando con ellos. Su método de decapado sin químicos es el mejor que hemos probado, respeta la madera y los acabados son siempre perfectos.",
-    date: "Hace 2 meses"
+    text: "Muy recomendable, excelente profesional, trato exquisito tanto con las personas, cómo con los muebles precios competitivos 😊🎇🎇",
+    date: "9 de julio de 2022"
   }
 ];
 
@@ -126,11 +125,23 @@ export function TestimonialsSection() {
 
                       {/* Author info */}
                       <div className="flex items-center gap-4 pt-4 border-t border-border">
-                        <Avatar className="w-12 h-12">
-                          <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
-                            {testimonial.avatar}
-                          </AvatarFallback>
-                        </Avatar>
+                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-primary flex items-center justify-center">
+                          {testimonial.avatar ? (
+                            <img
+                              src={testimonial.avatar}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement!.textContent = testimonial.name.charAt(0);
+                              }}
+                            />
+                          ) : (
+                            <span className="text-white font-semibold text-lg">
+                              {testimonial.name.charAt(0)}
+                            </span>
+                          )}
+                        </div>
                         <div className="flex-grow">
                           <p className="font-semibold text-foreground">{testimonial.name}</p>
                           <p className="text-sm text-muted-foreground">{testimonial.role}</p>
