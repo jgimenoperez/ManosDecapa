@@ -604,3 +604,58 @@ export async function sendConfirmationEmail(
     throw new Error(`Error enviando confirmación: ${errorMessage}`);
   }
 }
+
+/**
+ * Añade un contacto a la base de datos de Resend
+ */
+export async function addContactToResend(
+  nombre: string,
+  email: string,
+  audienceId: string,
+  apiKey: string
+): Promise<{ id: string }> {
+  const resend = new Resend(apiKey);
+
+  try {
+    // Dividir nombre en firstName y lastName
+    const nameParts = nombre.trim().split(' ');
+    const firstName = nameParts[0] || nombre;
+    const lastName = nameParts.slice(1).join(' ') || '';
+
+    console.log(`📋 Intentando crear contacto en Resend:`);
+    console.log(`   Email: ${email}`);
+    console.log(`   FirstName: ${firstName}`);
+    console.log(`   LastName: ${lastName}`);
+    console.log(`   AudienceId: ${audienceId}`);
+    console.log(`   API Key presente: ${apiKey ? 'Sí' : 'No'}`);
+
+    const response = await resend.contacts.create({
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      unsubscribed: false,
+      audienceId: audienceId,
+    });
+
+    console.log(`📋 Respuesta de Resend:`, JSON.stringify(response, null, 2));
+
+    if (!response.data?.id) {
+      throw new Error('No se recibió ID de contacto de Resend');
+    }
+
+    console.log(`✅ Contacto añadido a Resend: ${response.data.id} (${email})`);
+    return { id: response.data.id };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+    console.error(`❌ Error añadiendo contacto a Resend: ${errorMessage}`);
+    console.error(`📋 Error completo:`, error);
+
+    // Si el contacto ya existe, no es un error crítico
+    if (errorMessage.includes('already exists') || errorMessage.includes('duplicate')) {
+      console.log(`⚠️ El contacto ${email} ya existe en la base de datos de Resend`);
+      return { id: 'existing-contact' };
+    }
+
+    throw new Error(`Error añadiendo contacto: ${errorMessage}`);
+  }
+}

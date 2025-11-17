@@ -47,4 +47,5 @@ export interface WorkerEnv {
   ALLOWED_ORIGINS: string;
   CLOUDFLARE_ACCOUNT_ID: string;
   R2_PUBLIC_URL: string;
+  RESEND_AUDIENCE_ID: string;
 }

@@ -1,6 +1,6 @@
 import { validateContactForm } from '../utils/validation';
 import { uploadImagesToR2 } from './upload';
-import { sendAdminEmail, sendConfirmationEmail } from './email';
+import { sendAdminEmail, sendConfirmationEmail, addContactToResend } from './email';
 import { ContactResponse, WorkerEnv } from '../types/index';
 
 /**
@@ -8,7 +8,8 @@ import { ContactResponse, WorkerEnv } from '../types/index';
  * 1. Valida datos
  * 2. Sube imágenes a R2
  * 3. Envía emails
- * 4. Retorna respuesta
+ * 4. Añade contacto a Resend
+ * 5. Retorna respuesta
  */
 export async function processContactForm(
   formData: FormData,
@@ -124,7 +125,28 @@ export async function processContactForm(
       };
     }
 
-    // Paso 5: Retornar respuesta exitosa
+    // Paso 5: Añadir contacto a Resend (con delay para evitar rate limiting)
+    console.log('📋 Añadiendo contacto a la base de datos de Resend...');
+
+    try {
+      // Delay de 1 segundo para evitar el rate limit de Resend (2 requests/segundo)
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      await addContactToResend(
+        validatedData.nombre,
+        validatedData.email,
+        env.RESEND_AUDIENCE_ID,
+        env.RESEND_API_KEY
+      );
+      console.log('✓ Contacto añadido a Resend correctamente');
+    } catch (contactError) {
+      // No es crítico si falla la adición del contacto, solo lo loggeamos
+      const errorMsg = contactError instanceof Error ? contactError.message : 'Error desconocido';
+      console.error(`⚠️ Error añadiendo contacto a Resend (no crítico): ${errorMsg}`);
+      // Continuamos con el flujo normal
+    }
+
+    // Paso 6: Retornar respuesta exitosa
     const contactId = `contact-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     console.log(`✅ Contacto procesado exitosamente: ${contactId}`);
 
