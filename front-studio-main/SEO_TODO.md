@@ -139,12 +139,12 @@
 - [x] **Archivo**: `src/app/page.tsx` ✅ COMPLETADO
 
 ### 3.5 Optimizar alt texts de imágenes
-- [ ] Revisar `placeholder-images.ts`
-- [ ] Agregar keywords en todas las descripciones
-- [ ] Incluir localización (Valencia, Puçol)
-- [ ] Hacer descriptivos pero naturales
-- [ ] Ejemplo: "Cómoda antigua antes del decapado profesional en Valencia"
-- [ ] **Archivo**: `src/lib/placeholder-images.ts`
+- [x] Revisar `placeholder-images.json`
+- [x] Agregar keywords en todas las descripciones
+- [x] Incluir localización (Valencia, Puçol)
+- [x] Hacer descriptivos pero naturales
+- [x] Ejemplo: "Cómoda antigua antes del decapado profesional en Valencia"
+- [x] **Archivo**: `src/lib/placeholder-images.json` ✅ COMPLETADO
 
 ### 3.6 Mejorar About Section
 - [x] Agregar H2 "Sobre Manos Decapa - Especialistas en Decapado en Valencia"
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (17 de 42 tareas completadas - 40.5%)
+**Status**: 🟢 En Progreso (18 de 42 tareas completadas - 42.9%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (17 tareas - 40.5%):**
+✅ **COMPLETADAS (18 tareas - 42.9%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -687,12 +687,13 @@
 10. Tarea 3.2 - Services Section optimizada "Servicios de Decapado en Valencia"
 11. Tarea 3.3 - Sección FAQ visual con Accordion component (10 FAQs)
 12. Tarea 3.4 - Agregar FAQ a página principal
-13. Tarea 3.6 - About Section optimizada con keywords locales
-14. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
-15. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
-16. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
-17. Tarea 7.1 - Google Search Console verificado por DNS
+13. Tarea 3.5 - Alt texts de imágenes optimizados en placeholder-images.json (19/11/2025)
+14. Tarea 3.6 - About Section optimizada con keywords locales
+15. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
+16. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
+17. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
+18. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Optimizar alt texts de imágenes + crear manifest.json
+⏭️ **EN PROGRESO:** Próxima tarea = Crear manifest.json PWA
 
-⏳ **PENDIENTES:** 25 tareas (59.5%)
+⏳ **PENDIENTES:** 24 tareas (57.1%)
