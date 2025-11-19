@@ -159,12 +159,12 @@
 ## ⚡ FASE 4: OPTIMIZACIÓN TÉCNICA (Semana 4-5)
 
 ### 4.1 Optimizar carga de fuentes
-- [ ] Reemplazar Google Fonts CDN por `next/font/google`
-- [ ] Crear variables CSS para fuentes
-- [ ] Configurar `display: 'swap'` para todos
-- [ ] Actualizar `tailwind.config.ts`
-- [ ] Remover links de Google Fonts del HTML
-- [ ] **Archivos**: `src/app/layout.tsx`, `tailwind.config.ts`
+- [x] Reemplazar Google Fonts CDN por `next/font/google`
+- [x] Crear variables CSS para fuentes
+- [x] Configurar `display: 'swap'` para todos
+- [x] Actualizar `tailwind.config.ts`
+- [x] Remover links de Google Fonts del HTML
+- [x] **Archivos**: `src/app/layout.tsx`, `tailwind.config.ts` ✅ COMPLETADO
 
 ### 4.2 Habilitar optimización de imágenes
 - [ ] Evaluar si usar `output: 'export'` o SSR
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (18 de 42 tareas completadas - 42.9%)
+**Status**: 🟢 En Progreso (19 de 42 tareas completadas - 45.2%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (18 tareas - 42.9%):**
+✅ **COMPLETADAS (19 tareas - 45.2%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -689,11 +689,12 @@
 12. Tarea 3.4 - Agregar FAQ a página principal
 13. Tarea 3.5 - Alt texts de imágenes optimizados en placeholder-images.json (19/11/2025)
 14. Tarea 3.6 - About Section optimizada con keywords locales
-15. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
-16. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
-17. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
-18. Tarea 7.1 - Google Search Console verificado por DNS
+15. Tarea 4.1 - Optimizar carga de fuentes con next/font/google (19/11/2025)
+16. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
+17. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
+18. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
+19. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Crear manifest.json PWA
+⏭️ **EN PROGRESO:** Próxima tarea = Configurar Google Analytics 4
 
-⏳ **PENDIENTES:** 24 tareas (57.1%)
+⏳ **PENDIENTES:** 23 tareas (54.8%)
