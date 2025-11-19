@@ -167,18 +167,20 @@
 - [x] **Archivos**: `src/app/layout.tsx`, `tailwind.config.ts` ✅ COMPLETADO
 
 ### 4.2 Habilitar optimización de imágenes
-- [ ] Evaluar si usar `output: 'export'` o SSR
-- [ ] Si SSR: cambiar `images.unoptimized: false`
-- [ ] Si export: pre-optimizar imágenes o usar CDN
-- [ ] Configurar formatos (AVIF, WebP)
-- [ ] Configurar device sizes correctos
-- [ ] **Archivo**: `next.config.ts`
+- [x] Evaluar output: 'export' (static) - confirmado
+- [x] Configurar remotePatterns para Unsplash, placehold.co, picsum
+- [x] Configurar formatos (AVIF, WebP)
+- [x] Configurar deviceSizes y imageSizes
+- [x] Agregar lazy loading en gallery
+- [x] Agregar sizes responsivos
+- [x] Configurar quality en imágenes críticas
+- [x] **Archivo**: `next.config.ts`, `gallery.tsx`, `hero.tsx` ✅ COMPLETADO
 
 ### 4.3 Implementar lazy loading explícito
-- [ ] Agregar `loading="lazy"` a imágenes gallery
-- [ ] Agregar `loading="lazy"` a imágenes below-the-fold
-- [ ] Configurar `sizes` en imágenes responsivas
-- [ ] **Archivos**: `src/components/sections/gallery.tsx`, etc.
+- [x] Agregar `loading="lazy"` a imágenes gallery
+- [x] Configurar `sizes` en imágenes responsivas
+- [x] Usar sizes para optimización responsive
+- [x] **Archivos**: `src/components/sections/gallery.tsx` ✅ COMPLETADO
 
 ### 4.4 Optimizar Framer Motion
 - [ ] Usar `useReducedMotion` para accesibilidad
@@ -668,13 +670,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (20 de 42 tareas completadas - 47.6%)
+**Status**: 🟢 En Progreso (22 de 42 tareas completadas - 52.4%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (20 tareas - 47.6%):**
+✅ **COMPLETADAS (22 tareas - 52.4%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -690,12 +692,14 @@
 13. Tarea 3.5 - Alt texts de imágenes optimizados en placeholder-images.json (19/11/2025)
 14. Tarea 3.6 - About Section optimizada con keywords locales
 15. Tarea 4.1 - Optimizar carga de fuentes con next/font/google (19/11/2025)
-16. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
-17. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
-18. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
-19. Tarea 7.1 - Google Search Console verificado por DNS
-20. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
+16. Tarea 4.2 - Optimizar imágenes con lazy loading y formatos modernos (19/11/2025)
+17. Tarea 4.3 - Implementar lazy loading explícito y sizes responsivos (19/11/2025)
+18. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
+19. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
+20. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
+21. Tarea 7.1 - Google Search Console verificado por DNS
+22. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
 
-⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.2 (Optimizar imágenes) o Tarea 7.5 (Lighthouse)
+⏭️ **EN PROGRESO:** Próxima tarea = Tarea 7.5 (Lighthouse Performance Testing)
 
-⏳ **PENDIENTES:** 22 tareas (52.4%)
+⏳ **PENDIENTES:** 20 tareas (47.6%)
