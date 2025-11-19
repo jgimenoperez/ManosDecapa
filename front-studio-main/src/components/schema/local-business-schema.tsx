@@ -8,7 +8,7 @@ export function LocalBusinessSchema() {
     description:
       'Servicio profesional de decapado de muebles en Valencia. Especialistas en recuperación de madera antigua sin químicos agresivos. +10 años de experiencia.',
     url: 'https://www.manosdecapa.es',
-    telephone: '+34654496960',
+    telephone: '+34 654 49 69 60',
     email: 'fiona@manosdehada.es',
     logo: 'https://www.manosdecapa.es/images/logo.png',
     image: 'https://www.manosdecapa.es/images/og-image.jpg',

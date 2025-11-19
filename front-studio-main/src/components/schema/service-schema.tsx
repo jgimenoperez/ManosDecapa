@@ -11,7 +11,7 @@ export function ServiceSchema() {
       '@id': 'https://www.manosdecapa.es/#organization',
       name: 'Manos Decapa',
       url: 'https://www.manosdecapa.es',
-      telephone: '+34654496960',
+      telephone: '+34 654 49 69 60',
     },
     serviceType: 'Decapado de Muebles',
     areaServed: [
