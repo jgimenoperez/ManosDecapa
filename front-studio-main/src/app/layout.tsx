@@ -122,6 +122,18 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${poppins.variable} ${ptSans.variable}`}>
       <head>
+        {/* Preconnect para optimizar carga de recursos externos */}
+
+        {/* Google Maps - Para mapa de ubicación en contacto */}
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Google Analytics - Para rastreo de eventos */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+
+        {/* Unsplash CDN - Para imágenes placeholder */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <GoogleAnalytics />
