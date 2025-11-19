@@ -26,7 +26,7 @@ import { useToast } from '@/hooks/use-toast';
 const formSchema = z.object({
   fullName: z.string().min(2, { message: 'El nombre debe tener al menos 2 caracteres.' }),
   email: z.string().email({ message: 'Por favor, introduce un email válido.' }),
-  phone: z.string().optional(),
+  phone: z.string().min(9, { message: 'Por favor, introduce un teléfono válido.' }),
   clientType: z.enum(['particular', 'profesional']),
   pieceType: z.string().min(2, { message: 'Por favor, describe la pieza.' }),
   message: z.string().min(10, { message: 'El mensaje debe tener al menos 10 caracteres.' }),
@@ -81,7 +81,7 @@ export function ContactSection() {
         toast({
           title: "¡Presupuesto solicitado!",
           description: "Te responderemos en menos de 24 horas. Gracias por confiar en Manos Decapa.",
-          duration: 5000,
+          duration: 8000,
         });
 
         // Mostrar aviso adicional sobre spam después de 1 segundo
@@ -99,7 +99,7 @@ export function ContactSection() {
           title: "Error al enviar",
           description: data.error || "Ocurrió un error al procesar tu solicitud. Intenta nuevamente.",
           variant: "destructive",
-          duration: 5000,
+          duration: 8000,
         });
       }
     } catch (error) {
@@ -252,7 +252,7 @@ export function ContactSection() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Teléfono (Opcional)</FormLabel>
+                          <FormLabel>Teléfono</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Tu número de teléfono"
