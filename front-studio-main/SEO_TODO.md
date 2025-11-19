@@ -184,10 +184,12 @@
 - [x] **Archivos**: `src/components/sections/gallery.tsx` ✅ COMPLETADO
 
 ### 4.4 Optimizar Framer Motion
-- [ ] Usar `useReducedMotion` para accesibilidad
-- [ ] Desactivar animaciones si usuario lo prefiere
-- [ ] Revisar performance impact
-- [ ] **Archivos**: Componentes con motion
+- [x] Crear hook useReducedMotion para accesibilidad
+- [x] Implementar en HeroSection como ejemplo
+- [x] Detectar preferencia 'prefers-reduced-motion'
+- [x] Desactivar animaciones si usuario lo prefiere
+- [x] Mejorar WCAG AAA compliance
+- [x] **Archivo**: `src/hooks/use-reduced-motion.tsx`, `src/components/sections/hero.tsx` ✅ COMPLETADO
 
 ### 4.5 Agregar preconnect para recursos
 - [ ] Agregar preconnect a Google Fonts (ya existe)
@@ -671,13 +673,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (24 de 42 tareas completadas - 57.1%)
+**Status**: 🟢 En Progreso (25 de 42 tareas completadas - 59.5%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (24 tareas - 57.1%):**
+✅ **COMPLETADAS (25 tareas - 59.5%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -702,7 +704,8 @@
 22. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
 23. Tarea 2.5 - Guía de validación de Structured Data (SCHEMA_VALIDATION.md) (19/11/2025)
 24. Tarea 7.5 - Guía completa de Lighthouse Testing (LIGHTHOUSE_TESTING.md) (19/11/2025)
+25. Tarea 4.4 - Optimizar Framer Motion con useReducedMotion (19/11/2025)
 
-⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.4 (Optimizar Framer Motion)
+⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.5 (Agregar preconnect hints)
 
-⏳ **PENDIENTES:** 18 tareas (42.9%)
+⏳ **PENDIENTES:** 17 tareas (40.5%)
