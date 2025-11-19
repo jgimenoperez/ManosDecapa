@@ -7,9 +7,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Award, CheckCircle, Truck, ChevronDown, Sparkles, Shield, Clock, Zap, Wrench, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+  const reducedMotion = useReducedMotion();
 
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-white overflow-hidden">
@@ -37,9 +39,9 @@ export function HeroSection() {
         {/* Lado izquierdo - Contenido principal */}
         <motion.div
           className="space-y-6"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: reducedMotion ? 0 : -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: reducedMotion ? 0 : 0.7 }}
         >
           {/* Badge de experiencia */}
           <motion.div
