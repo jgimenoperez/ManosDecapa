@@ -10,6 +10,7 @@ import { TestimonialsSection } from '@/components/sections/testimonials';
 import { PricingSection } from '@/components/sections/pricing';
 import { FAQSection } from '@/components/sections/faq';
 import { AboutSection } from '@/components/sections/about';
+import { LocalServiceAreasSection } from '@/components/sections/local-service-areas';
 import { ContactSection } from '@/components/sections/contact';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 import { BackToTopButton } from '@/components/back-to-top';
@@ -29,6 +30,7 @@ export default function Home() {
         <PricingSection />
         <FAQSection />
         <AboutSection />
+        <LocalServiceAreasSection />
         <ContactSection />
       </main>
       <Footer />
