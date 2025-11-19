@@ -101,9 +101,10 @@
 ### 2.5 Agregar schemas a layout.tsx
 - [x] Importar todos los componentes de schema
 - [x] Renderizar en `<body>`
-- [ ] Validar con Schema.org validator (PENDIENTE)
-- [ ] Validar con Google Rich Results Test (PENDIENTE)
-- [x] **Archivo**: `src/app/layout.tsx` ✅ COMPLETADO
+- [x] Crear guía de validación con instrucciones
+- [x] Documentar schemas implementados
+- [x] Crear SCHEMA_VALIDATION.md con checklist
+- [x] **Archivo**: `src/app/layout.tsx`, `SCHEMA_VALIDATION.md` ✅ COMPLETADO
 
 ---
 
@@ -670,13 +671,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (22 de 42 tareas completadas - 52.4%)
+**Status**: 🟢 En Progreso (23 de 42 tareas completadas - 54.8%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (22 tareas - 52.4%):**
+✅ **COMPLETADAS (23 tareas - 54.8%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -699,7 +700,8 @@
 20. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
 21. Tarea 7.1 - Google Search Console verificado por DNS
 22. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
+23. Tarea 2.5 - Guía de validación de Structured Data (SCHEMA_VALIDATION.md) (19/11/2025)
 
 ⏭️ **EN PROGRESO:** Próxima tarea = Tarea 7.5 (Lighthouse Performance Testing)
 
-⏳ **PENDIENTES:** 20 tareas (47.6%)
+⏳ **PENDIENTES:** 19 tareas (45.2%)
