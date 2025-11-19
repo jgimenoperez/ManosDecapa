@@ -8,6 +8,7 @@ import { WhyUsSection } from '@/components/sections/why-us';
 import { GallerySection } from '@/components/sections/gallery';
 import { TestimonialsSection } from '@/components/sections/testimonials';
 import { PricingSection } from '@/components/sections/pricing';
+import { FAQSection } from '@/components/sections/faq';
 import { AboutSection } from '@/components/sections/about';
 import { ContactSection } from '@/components/sections/contact';
 import { WhatsAppButton } from '@/components/whatsapp-button';
@@ -26,6 +27,7 @@ export default function Home() {
         <GallerySection />
         <TestimonialsSection />
         <PricingSection />
+        <FAQSection />
         <AboutSection />
         <ContactSection />
       </main>

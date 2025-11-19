@@ -125,18 +125,18 @@
 - [ ] **Archivo**: `src/components/sections/services.tsx`
 
 ### 3.3 Crear sección FAQ
-- [ ] Crear `src/components/sections/faq.tsx`
-- [ ] Usar componente Accordion
-- [ ] Incluir 8-10 FAQs (usar las del FAQ Schema)
-- [ ] Optimizar respuestas con keywords
-- [ ] Agregar a `page.tsx` entre Pricing y About
-- [ ] **Archivo**: `src/components/sections/faq.tsx`
+- [x] Crear `src/components/sections/faq.tsx`
+- [x] Usar componente Accordion
+- [x] Incluir 10 FAQs (usar las del FAQ Schema)
+- [x] Optimizar respuestas con keywords
+- [x] Agregar a `page.tsx` entre Pricing y About
+- [x] **Archivo**: `src/components/sections/faq.tsx` ✅ COMPLETADO
 
 ### 3.4 Agregar FAQ a página principal
-- [ ] Importar FAQSection en `page.tsx`
-- [ ] Colocar antes de AboutSection
-- [ ] Configurar ID para navegación
-- [ ] **Archivo**: `src/app/page.tsx`
+- [x] Importar FAQSection en `page.tsx`
+- [x] Colocar antes de AboutSection
+- [x] Configurar ID para navegación
+- [x] **Archivo**: `src/app/page.tsx` ✅ COMPLETADO
 
 ### 3.5 Optimizar alt texts de imágenes
 - [ ] Revisar `placeholder-images.ts`
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (9 de 42 tareas completadas - 21.4%)
+**Status**: 🟢 En Progreso (11 de 42 tareas completadas - 26.2%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (9 tareas - 21.4%):**
+✅ **COMPLETADAS (11 tareas - 26.2%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -683,8 +683,10 @@
 6. Tarea 2.2 - Service Schema con 3 servicios principales y precios
 7. Tarea 2.3 - BreadcrumbList Schema reutilizable
 8. Tarea 2.4 - FAQ Schema con 10 FAQs optimizadas
-9. Tarea 7.1 - Google Search Console verificado por DNS
+9. Tarea 3.3 - Sección FAQ visual con Accordion component
+10. Tarea 3.4 - Agregar FAQ a página principal
+11. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Crear sección FAQ visual o Optimizar Hero H1
+⏭️ **EN PROGRESO:** Próxima tarea = Optimizar Hero H1 con keywords locales
 
-⏳ **PENDIENTES:** 33 tareas (78.6%)
+⏳ **PENDIENTES:** 31 tareas (73.8%)
