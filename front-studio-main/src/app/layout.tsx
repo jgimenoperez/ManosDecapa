@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Poppins, PT_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
@@ -6,6 +7,23 @@ import { CookieConsent } from '@/components/cookie-consent';
 import { LocalBusinessSchema } from '@/components/schema/local-business-schema';
 import { ServiceSchema } from '@/components/schema/service-schema';
 import { FAQSchema } from '@/components/schema/faq-schema';
+
+// Optimizar carga de fuentes con next/font/google
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-headline',
+  weight: ['700'],
+  display: 'swap',
+  preload: true,
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '700'],
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.manosdecapa.es'),
@@ -101,14 +119,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${poppins.variable} ${ptSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=PT+Sans:wght@400;700&family=Great+Vibes:wght@400&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <LocalBusinessSchema />
