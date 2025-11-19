@@ -83,6 +83,15 @@ export function ContactSection() {
           description: "Te responderemos en menos de 24 horas. Gracias por confiar en Manos Decapa.",
           duration: 5000,
         });
+
+        // Mostrar aviso adicional sobre spam después de 1 segundo
+        setTimeout(() => {
+          toast({
+            title: "Revisa tu email",
+            description: "Si no ves el email de confirmación en los próximos minutos, revisa tu carpeta de SPAM. A veces nuestros emails se clasifican erróneamente.",
+            duration: 8000,
+          });
+        }, 1000);
         form.reset();
         setUploadedFiles([]);
       } else {

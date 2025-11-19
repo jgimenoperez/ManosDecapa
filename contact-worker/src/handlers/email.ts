@@ -281,6 +281,7 @@ function buildAdminEmailHTML(
 
 /**
  * Construye el HTML del email de confirmación para el usuario
+ * Versión simplificada para evitar spam filters
  */
 function buildConfirmationEmailHTML(nombre: string): string {
   return `
@@ -290,245 +291,93 @@ function buildConfirmationEmailHTML(nombre: string): string {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
           body {
-            font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #2C1810;
+            font-family: Arial, sans-serif;
+            color: #333;
             line-height: 1.6;
-            background-color: #FFF8DC;
           }
           .container {
             max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.1);
+            margin: 0;
+            background-color: #f9f9f9;
+            padding: 20px;
           }
           .header {
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            background-color: #8B4513;
             color: white;
-            padding: 40px 32px;
+            padding: 20px;
             text-align: center;
-            border-bottom: 4px solid #F4A460;
-          }
-          .header-icon {
-            font-size: 64px;
-            margin-bottom: 16px;
-            display: block;
-            animation: pulse 2s ease-in-out infinite;
-          }
-          @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
           }
           .header h1 {
             margin: 0;
-            font-size: 32px;
-            font-weight: bold;
-            font-family: 'Poppins', sans-serif;
-          }
-          .header-subtitle {
-            font-size: 14px;
-            opacity: 0.95;
-            margin-top: 8px;
-            font-weight: 300;
+            font-size: 24px;
           }
           .content {
-            padding: 40px 32px;
-            text-align: center;
-          }
-          .greeting {
-            font-size: 20px;
-            color: #8B4513;
-            margin-bottom: 20px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            padding: 20px;
+            margin-top: 0;
           }
           .message {
-            font-size: 16px;
-            color: #2C1810;
-            line-height: 1.8;
-            margin-bottom: 16px;
-          }
-          .highlight {
-            color: #D2691E;
-            font-weight: 600;
-          }
-          .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #F4A460, transparent);
-            margin: 32px 0;
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0;
           }
           .info-box {
-            background-color: #FFF8DC;
-            border-left: 4px solid #F4A460;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-          }
-          .info-box h3 {
-            color: #8B4513;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
-          .info-box p {
-            color: #2C1810;
-            font-size: 14px;
-          }
-          .cta-section {
-            margin: 32px 0;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8B4513;
+            padding: 15px;
+            margin: 15px 0;
           }
           .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            background-color: #8B4513;
             color: white;
-            padding: 14px 40px;
-            border-radius: 8px;
+            padding: 12px 30px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            border: none;
-            cursor: pointer;
-          }
-          .cta-button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-          }
-          .features {
-            display: flex;
-            justify-content: space-around;
-            margin: 28px 0;
-            padding: 20px;
-            background-color: #FFF8DC;
-            border-radius: 8px;
-            flex-wrap: wrap;
-          }
-          .feature {
-            text-align: center;
-            flex: 1;
-            min-width: 120px;
-            padding: 10px;
-          }
-          .feature-icon {
-            font-size: 32px;
-            margin-bottom: 8px;
-          }
-          .feature-text {
-            font-size: 12px;
-            color: #8B4513;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            border-radius: 4px;
+            margin-top: 15px;
           }
           .footer {
-            background-color: #2C1810;
-            color: #FFF8DC;
-            padding: 28px 32px;
+            background-color: #f9f9f9;
+            padding: 15px;
             text-align: center;
             font-size: 12px;
-            line-height: 1.8;
-          }
-          .footer-brand {
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 8px;
-            font-family: 'Poppins', sans-serif;
-          }
-          .footer-tagline {
-            opacity: 0.8;
-            font-size: 12px;
-            font-style: italic;
-          }
-          .social-links {
-            margin-top: 12px;
-            font-size: 12px;
-          }
-          @media (max-width: 600px) {
-            .container {
-              margin: 0;
-              border-radius: 0;
-            }
-            .header {
-              padding: 32px 24px;
-            }
-            .content {
-              padding: 28px 24px;
-            }
-            .header h1 {
-              font-size: 28px;
-            }
-            .greeting {
-              font-size: 18px;
-            }
-            .features {
-              flex-direction: row;
-              gap: 8px;
-            }
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 0;
           }
         </style>
       </head>
       <body>
         <div class="container">
           <div class="header">
-            <span class="header-icon">✅</span>
-            <h1>¡Presupuesto Solicitado!</h1>
-            <p class="header-subtitle">Hemos recibido tu solicitud correctamente</p>
+            <h1>Solicitud Recibida</h1>
           </div>
 
           <div class="content">
-            <div class="greeting">¡Hola ${escapeHTML(nombre)}!</div>
+            <p class="message">Hola ${escapeHTML(nombre)},</p>
 
-            <div class="message">
-              Gracias por confiar en <span class="highlight">Manos Decapa</span>. Hemos recibido tu solicitud de presupuesto correctamente.
-            </div>
+            <p class="message">
+              Hemos recibido tu solicitud de presupuesto correctamente. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en menos de 24 horas.
+            </p>
 
             <div class="info-box">
-              <h3>⏱️ ¿Cuánto tiempo tardamos?</h3>
-              <p>Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en menos de <span class="highlight">24 horas</span> con un presupuesto personalizado.</p>
+              <p style="margin: 0; font-weight: bold;">Siguiente paso</p>
+              <p style="margin: 5px 0 0 0;">Nos pondremos en contacto por correo electrónico con un presupuesto personalizado.</p>
             </div>
 
-            <div class="features">
-              <div class="feature">
-                <div class="feature-icon">💰</div>
-                <div class="feature-text">100% Gratuito</div>
-              </div>
-              <div class="feature">
-                <div class="feature-icon">📋</div>
-                <div class="feature-text">Sin Compromiso</div>
-              </div>
-              <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <div class="feature-text">Personalizado</div>
-              </div>
-            </div>
+            <p class="message">
+              Si necesitas añadir más información o tienes preguntas, puedes responder directamente a este email.
+            </p>
 
-            <div class="divider"></div>
-
-            <div class="message" style="margin-top: 20px;">
-              Si necesitas añadir más información o cambiar algo de tu solicitud, no dudes en <span class="highlight">responder a este email</span>.
-            </div>
-
-            <div class="cta-section">
-              <p style="font-size: 12px; color: #8B4513; margin-bottom: 16px;">EXPLORA NUESTROS SERVICIOS</p>
-              <a href="https://manosdecapa.es" class="cta-button">Visita Nuestra Web</a>
-            </div>
+            <center>
+              <a href="https://manosdecapa.es" class="cta-button">Visita nuestra web</a>
+            </center>
           </div>
 
           <div class="footer">
-            <div class="footer-brand">✨ Manos De Capa ✨</div>
-            <div class="footer-tagline">Devolvemos la vida a la madera</div>
-            <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255, 248, 220, 0.2);">
-              <p style="font-size: 11px; opacity: 0.7;">Este es un email automatizado. Por favor, no respondas datos sensibles.</p>
-            </div>
+            <p>Manos De Capa - Devolvemos la vida a la madera</p>
+            <p style="margin-top: 10px; color: #999; font-size: 11px;">Este es un email automatizado. Por favor, no respondas con datos sensibles.</p>
           </div>
         </div>
       </body>
@@ -633,8 +482,9 @@ export async function sendConfirmationEmail(
     const response = await resend.emails.send({
       from: `${fromName} <${fromEmail}>`,
       to: email,
-      subject: '✅ Hemos recibido tu mensaje',
+      subject: 'Confirmación de presupuesto - Manos De Capa',
       html,
+      reply_to: 'contacto@manosdecapa.es',
     });
 
     console.log(`📋 Respuesta Resend confirmación:`, JSON.stringify(response, null, 2));
