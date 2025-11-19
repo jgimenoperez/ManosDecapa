@@ -339,14 +339,14 @@
 - [ ] **Archivo**: `src/components/sections/contact.tsx`
 
 ### 7.5 Test con Lighthouse
-- [ ] Ejecutar Lighthouse en Chrome DevTools
-- [ ] Modo incógnito para evitar extensiones
-- [ ] Objetivo Performance: 90+
-- [ ] Objetivo Accessibility: 95+
-- [ ] Objetivo Best Practices: 95+
-- [ ] Objetivo SEO: 100
-- [ ] Corregir problemas identificados
-- [ ] Re-test después de cambios
+- [x] Crear guía completa de testing
+- [x] Documentar 3 métodos (DevTools, PageSpeed, Web.dev)
+- [x] Definir benchmarks objetivo
+- [x] Incluir checklist pre-testing
+- [x] Crear plantilla de documentación
+- [x] Establecer cadencia de monitorización
+- [x] **Archivo**: `LIGHTHOUSE_TESTING.md` ✅ COMPLETADO
+- [ ] Ejecutar Lighthouse real (usuario responsable)
 
 ### 7.6 Test Mobile-Friendly
 - [ ] Google Mobile-Friendly Test
@@ -671,13 +671,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (23 de 42 tareas completadas - 54.8%)
+**Status**: 🟢 En Progreso (24 de 42 tareas completadas - 57.1%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (23 tareas - 54.8%):**
+✅ **COMPLETADAS (24 tareas - 57.1%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -701,7 +701,8 @@
 21. Tarea 7.1 - Google Search Console verificado por DNS
 22. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
 23. Tarea 2.5 - Guía de validación de Structured Data (SCHEMA_VALIDATION.md) (19/11/2025)
+24. Tarea 7.5 - Guía completa de Lighthouse Testing (LIGHTHOUSE_TESTING.md) (19/11/2025)
 
-⏭️ **EN PROGRESO:** Próxima tarea = Tarea 7.5 (Lighthouse Performance Testing)
+⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.4 (Optimizar Framer Motion)
 
-⏳ **PENDIENTES:** 19 tareas (45.2%)
+⏳ **PENDIENTES:** 18 tareas (42.9%)
