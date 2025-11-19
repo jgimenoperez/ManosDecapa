@@ -3,6 +3,9 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
 import { CookieConsent } from '@/components/cookie-consent';
+import { LocalBusinessSchema } from '@/components/schema/local-business-schema';
+import { ServiceSchema } from '@/components/schema/service-schema';
+import { FAQSchema } from '@/components/schema/faq-schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.manosdecapa.es'),
@@ -108,6 +111,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
+        <LocalBusinessSchema />
+        <ServiceSchema />
+        <FAQSchema />
         <ScrollProgress />
         {children}
         <CookieConsent />

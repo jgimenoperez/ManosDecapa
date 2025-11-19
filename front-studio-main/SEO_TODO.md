@@ -65,45 +65,45 @@
 ## 🔗 FASE 2: SCHEMA MARKUP / STRUCTURED DATA (Semana 2-3)
 
 ### 2.1 Implementar LocalBusiness Schema
-- [ ] Crear `src/components/schema/local-business-schema.tsx`
-- [ ] Configurar Name, URL, telefono, email
-- [ ] Agregar dirección (PostalAddress)
-- [ ] Agregar coordenadas (GeoCoordinates)
-- [ ] Agregar horarios (OpeningHoursSpecification)
-- [ ] Agregar áreas de servicio (areaServed)
-- [ ] Agregar redes sociales (sameAs)
-- [ ] Configurar priceRange
-- [ ] Agregar a `layout.tsx`
-- [ ] **Archivo**: `src/components/schema/local-business-schema.tsx`
+- [x] Crear `src/components/schema/local-business-schema.tsx`
+- [x] Configurar Name, URL, telefono, email
+- [x] Agregar dirección (PostalAddress)
+- [x] Agregar coordenadas (GeoCoordinates)
+- [x] Agregar horarios (OpeningHoursSpecification)
+- [x] Agregar áreas de servicio (areaServed) - 6 ciudades
+- [x] Agregar redes sociales (sameAs)
+- [x] Configurar priceRange
+- [x] Agregar a `layout.tsx`
+- [x] **Archivo**: `src/components/schema/local-business-schema.tsx` ✅ COMPLETADO
 
 ### 2.2 Implementar Service Schema
-- [ ] Crear `src/components/schema/service-schema.tsx`
-- [ ] Agregar servicios principales (muebles, puertas, metales)
-- [ ] Incluir descripciones con keywords
-- [ ] Agregar precios orientativos
-- [ ] Vincular con LocalBusiness
-- [ ] Agregar a `layout.tsx`
-- [ ] **Archivo**: `src/components/schema/service-schema.tsx`
+- [x] Crear `src/components/schema/service-schema.tsx`
+- [x] Agregar servicios principales (muebles, puertas, metales)
+- [x] Incluir descripciones con keywords
+- [x] Agregar precios orientativos
+- [x] Vincular con LocalBusiness
+- [x] Agregar a `layout.tsx`
+- [x] **Archivo**: `src/components/schema/service-schema.tsx` ✅ COMPLETADO
 
 ### 2.3 Implementar BreadcrumbList Schema
-- [ ] Crear `src/components/schema/breadcrumb-schema.tsx`
-- [ ] Crear componente reutilizable
-- [ ] Usar en páginas principales
-- [ ] **Archivo**: `src/components/schema/breadcrumb-schema.tsx`
+- [x] Crear `src/components/schema/breadcrumb-schema.tsx`
+- [x] Crear componente reutilizable
+- [ ] Usar en páginas principales (pendiente en páginas internas)
+- [x] **Archivo**: `src/components/schema/breadcrumb-schema.tsx` ✅ COMPLETADO
 
 ### 2.4 Implementar FAQ Schema
-- [ ] Crear `src/components/schema/faq-schema.tsx`
-- [ ] Compilar 8-10 FAQs sobre decapado
-- [ ] Incluir keywords en preguntas/respuestas
-- [ ] Agregar a `layout.tsx`
-- [ ] **Archivo**: `src/components/schema/faq-schema.tsx`
+- [x] Crear `src/components/schema/faq-schema.tsx`
+- [x] Compilar 10 FAQs sobre decapado
+- [x] Incluir keywords en preguntas/respuestas
+- [x] Agregar a `layout.tsx`
+- [x] **Archivo**: `src/components/schema/faq-schema.tsx` ✅ COMPLETADO
 
 ### 2.5 Agregar schemas a layout.tsx
-- [ ] Importar todos los componentes de schema
-- [ ] Renderizar en `<body>` o `<head>`
-- [ ] Validar con Schema.org validator
-- [ ] Validar con Google Rich Results Test
-- [ ] **Archivo**: `src/app/layout.tsx`
+- [x] Importar todos los componentes de schema
+- [x] Renderizar en `<body>`
+- [ ] Validar con Schema.org validator (PENDIENTE)
+- [ ] Validar con Google Rich Results Test (PENDIENTE)
+- [x] **Archivo**: `src/app/layout.tsx` ✅ COMPLETADO
 
 ---
 
@@ -590,12 +590,12 @@
 
 ## 🎯 PRIORIDAD Y ORDEN DE EJECUCIÓN
 
-### Semana 1-2: CRÍTICO
+### Semana 1-2: CRÍTICO ✅ (5 de 7 completadas)
 1. ✅ Tarea 1.1 - Metadata layout.tsx (HECHO ✅ - 19/11/2025)
 2. ✅ Tarea 1.2 - robots.txt (HECHO ✅ - 19/11/2025)
 3. ✅ Tarea 1.3 - sitemap.ts (HECHO ✅ - 19/11/2025)
-4. [ ] Tarea 2.1 - LocalBusiness schema (PENDIENTE)
-5. [ ] Tarea 3.1 - Optimizar Hero H1 (PENDIENTE)
+4. ✅ Tarea 2.1 - LocalBusiness schema (HECHO ✅ - 19/11/2025)
+5. [ ] Tarea 3.1 - Optimizar Hero H1 (PENDIENTE - CRÍTICO)
 6. ✅ Tarea 7.1 - Google Search Console (HECHO ✅ - verificado por DNS)
 7. [ ] Tarea 6.1 - Google Business Profile (PENDIENTE)
 
@@ -668,19 +668,23 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (5 de 42 tareas completadas - 11.9%)
+**Status**: 🟢 En Progreso (9 de 42 tareas completadas - 21.4%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (5 tareas - 11.9%):**
+✅ **COMPLETADAS (9 tareas - 21.4%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
 4. Tarea 1.6 - Imágenes Open Graph profesionales (og-image.jpg + twitter-image.jpg)
-5. Tarea 7.1 - Google Search Console verificado por DNS
+5. Tarea 2.1 - LocalBusiness Schema con 6 ciudades, horarios, coordenadas
+6. Tarea 2.2 - Service Schema con 3 servicios principales y precios
+7. Tarea 2.3 - BreadcrumbList Schema reutilizable
+8. Tarea 2.4 - FAQ Schema con 10 FAQs optimizadas
+9. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Crear manifest.json (PWA) o LocalBusiness Schema
+⏭️ **EN PROGRESO:** Próxima tarea = Crear sección FAQ visual o Optimizar Hero H1
 
-⏳ **PENDIENTES:** 37 tareas (88.1%)
+⏳ **PENDIENTES:** 33 tareas (78.6%)
