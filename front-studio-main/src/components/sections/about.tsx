@@ -6,15 +6,20 @@ export function AboutSection() {
   return (
     <Section id="about" className="bg-muted/50">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-headline">Sobre Nosotros</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-headline">Sobre Manos Decapa - Especialistas en Decapado en Valencia</h2>
         <div className="mt-6 text-lg text-muted-foreground space-y-4">
             <p>
                 Manos Decapa nace de la experiencia de <span className="font-bold text-primary">Manos de Hada</span>, nuestro taller de restauración
-                con más de 10 años devolviendo la vida a muebles antiguos en Valencia.
+                de muebles con más de <span className="font-semibold">10 años devolviendo la vida a piezas antiguas en Valencia y Puçol</span>.
             </p>
             <p>
-                Tras años perfeccionando técnicas, ahora ofrecemos nuestro servicio especializado de decapado para quienes necesitan 
-                recuperar la madera original sin necesidad de una restauración completa.
+                Tras años perfeccionando técnicas de <span className="font-semibold">decapado profesional sin químicos agresivos</span>, ahora ofrecemos nuestro servicio
+                especializado de <span className="font-semibold">decapado de madera</span> para quienes necesitan recuperar la belleza original de sus
+                <span className="font-semibold">muebles antiguos</span> sin necesidad de una restauración completa.
+            </p>
+            <p>
+                Nuestro compromiso es garantizar un servicio de calidad, con respeto por la integridad de la madera y el medio ambiente,
+                en toda el <span className="font-semibold">área metropolitana de Valencia</span>.
             </p>
         </div>
         <div className="mt-8 p-6 bg-background rounded-lg shadow-sm border">

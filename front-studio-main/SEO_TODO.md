@@ -110,19 +110,19 @@
 ## 📝 FASE 3: OPTIMIZACIÓN DE CONTENIDO (Semana 3-4)
 
 ### 3.1 Optimizar Hero Section
-- [ ] Cambiar H1 a "Decapado Profesional de Muebles en Valencia"
-- [ ] Agregar location en H1 o subtítulo
-- [ ] Asegurar keyword "Valencia" visible
-- [ ] Incluir CTA claro (presupuesto, contacto)
-- [ ] Mejorar subtítulo con keywords secundarias
-- [ ] **Archivo**: `src/components/sections/hero.tsx`
+- [x] Cambiar H1 a "Decapado Profesional de Muebles en Valencia"
+- [x] Agregar location en H1 y subtítulo
+- [x] Asegurar keywords "Valencia" y "Puçol" visibles
+- [x] Incluir CTA claro (presupuesto, contacto)
+- [x] Mejorar subtítulo con keywords secundarias
+- [x] **Archivo**: `src/components/sections/hero.tsx` ✅ COMPLETADO
 
 ### 3.2 Optimizar Services Section
-- [ ] Cambiar H2 a "Servicios de Decapado en Valencia"
-- [ ] Incluir keywords en descriptions
-- [ ] Agregar "Valencia" o "profesional" en títulos de servicios
-- [ ] Mejorar copy con beneficios locales
-- [ ] **Archivo**: `src/components/sections/services.tsx`
+- [x] Cambiar H2 a "Servicios de Decapado en Valencia"
+- [x] Incluir keywords en descriptions
+- [x] Agregar "Valencia", "Puçol" y "profesional" en servicios
+- [x] Mejorar copy con beneficios locales y keywords
+- [x] **Archivo**: `src/components/sections/services.tsx` ✅ COMPLETADO
 
 ### 3.3 Crear sección FAQ
 - [x] Crear `src/components/sections/faq.tsx`
@@ -147,12 +147,12 @@
 - [ ] **Archivo**: `src/lib/placeholder-images.ts`
 
 ### 3.6 Mejorar About Section
-- [ ] Agregar H2 "Sobre Manos Decapa - Especialistas en Decapado en Valencia"
-- [ ] Incorporar keywords naturalmente
-- [ ] Mencionar ubicación (Valencia, Puçol)
-- [ ] Mencionar experiencia (+10 años)
-- [ ] Agregar método "sin químicos agresivos"
-- [ ] **Archivo**: `src/components/sections/about.tsx`
+- [x] Agregar H2 "Sobre Manos Decapa - Especialistas en Decapado en Valencia"
+- [x] Incorporar keywords naturalmente
+- [x] Mencionar ubicación (Valencia, Puçol)
+- [x] Mencionar experiencia (+10 años)
+- [x] Agregar método "sin químicos agresivos"
+- [x] **Archivo**: `src/components/sections/about.tsx` ✅ COMPLETADO
 
 ---
 
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (11 de 42 tareas completadas - 26.2%)
+**Status**: 🟢 En Progreso (14 de 42 tareas completadas - 33.3%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (11 tareas - 26.2%):**
+✅ **COMPLETADAS (14 tareas - 33.3%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -683,10 +683,13 @@
 6. Tarea 2.2 - Service Schema con 3 servicios principales y precios
 7. Tarea 2.3 - BreadcrumbList Schema reutilizable
 8. Tarea 2.4 - FAQ Schema con 10 FAQs optimizadas
-9. Tarea 3.3 - Sección FAQ visual con Accordion component
-10. Tarea 3.4 - Agregar FAQ a página principal
-11. Tarea 7.1 - Google Search Console verificado por DNS
+9. Tarea 3.1 - Hero Section optimizada con H1 y keywords "Valencia" + "Decapado Profesional"
+10. Tarea 3.2 - Services Section optimizada "Servicios de Decapado en Valencia"
+11. Tarea 3.3 - Sección FAQ visual con Accordion component (10 FAQs)
+12. Tarea 3.4 - Agregar FAQ a página principal
+13. Tarea 3.6 - About Section optimizada con keywords locales
+14. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Optimizar Hero H1 con keywords locales
+⏭️ **EN PROGRESO:** Próxima tarea = Optimizar alt texts de imágenes o crear manifest.json
 
-⏳ **PENDIENTES:** 31 tareas (73.8%)
+⏳ **PENDIENTES:** 28 tareas (66.7%)

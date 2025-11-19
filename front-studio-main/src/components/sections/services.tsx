@@ -11,40 +11,40 @@ const services = [
     icon: (
       <Image
         src="/images/wood-stripping-primary.svg"
-        alt="Decapado de Madera"
+        alt="Decapado profesional de madera en Valencia"
         width={56}
         height={56}
         className="w-14 h-14"
       />
     ),
     title: 'Decapado de Muebles de Madera',
-    description: 'Eliminamos pintura, barniz y lacas de todo tipo de muebles respetando la madera original.',
+    description: 'Eliminamos pintura, barniz y lacas de todo tipo de muebles respetando la madera original. Método profesional sin químicos agresivos. Servicio disponible en Valencia y Puçol.',
   },
   {
     icon: (
       <Image
         src="/images/antique-door-primary.svg"
-        alt="Puerta Antigua"
+        alt="Decapado de puertas antiguas en Valencia"
         width={56}
         height={56}
         className="w-14 h-14"
       />
     ),
-    title: 'Puertas y Ventanas Antiguas',
-    description: 'Recuperamos carpintería antigua dejándola lista para un nuevo acabado.',
+    title: 'Decapado de Puertas y Ventanas Antiguas',
+    description: 'Recuperamos carpintería antigua dejándola lista para un nuevo acabado. Especialistas en restauración de maderas nobles. Decapado profesional sin dañar el material.',
   },
   {
     icon: (
       <Image
         src="/images/metal-railing-primary.svg"
-        alt="Elementos Metálicos"
+        alt="Decapado de elementos metálicos decorativos"
         width={56}
         height={56}
         className="w-14 h-14"
       />
     ),
-    title: 'Elementos Metálicos Decorativos',
-    description: 'Decapado de rejas, barandillas y elementos decorativos de metal para devolverles su esplendor.',
+    title: 'Decapado de Elementos Metálicos',
+    description: 'Decapado de rejas, barandillas y elementos decorativos de metal para devolverles su esplendor original. Recuperamos el brillo y protegemos el material.',
   },
 ];
 
@@ -84,7 +84,7 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold font-headline"
         >
-          Nuestros Servicios
+          Servicios de Decapado en Valencia
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ export function ServicesSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-muted-foreground mt-2 max-w-2xl mx-auto"
         >
-          Descubre cómo podemos transformar tus piezas.
+          Ofrecemos decapado profesional para muebles, puertas y elementos metálicos. Método sin químicos agresivos, garantizado.
         </motion.p>
       </div>
 

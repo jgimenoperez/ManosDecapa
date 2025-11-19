@@ -50,26 +50,26 @@ export function HeroSection() {
             <span className="text-sm font-medium">+10 años de experiencia</span>
           </motion.div>
 
-          {/* Título más corto y potente */}
+          {/* Título optimizado para SEO local */}
           <motion.h1
             className="text-5xl md:text-7xl font-bold font-headline leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            Devolvemos la
-            <span className="block text-accent mt-2">Vida a la Madera</span>
+            Decapado Profesional
+            <span className="block text-accent mt-2">de Muebles en Valencia</span>
           </motion.h1>
 
-          {/* Subtítulo más enfocado en beneficios */}
+          {/* Subtítulo optimizado con keywords y propuesta de valor */}
           <motion.p
             className="text-xl md:text-2xl max-w-xl text-gray-200"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Decapado profesional que recupera la belleza natural de tus muebles antiguos.
-            <span className="block mt-2 text-accent font-semibold">Sin dañar la madera original.</span>
+            Recuperamos la madera original de tus muebles antiguos en <span className="font-semibold text-white">Puçol, Valencia</span>.
+            <span className="block mt-2 text-accent font-semibold">Sin químicos agresivos • +10 años de experiencia</span>
           </motion.p>
 
           {/* CTAs con jerarquía clara */}
