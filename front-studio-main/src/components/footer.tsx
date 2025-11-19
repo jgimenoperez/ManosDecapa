@@ -64,8 +64,8 @@ export function Footer() {
           <div className="mt-8 pt-6 border-t border-background/20 flex flex-col items-center justify-center gap-2">
             <p className="text-background/60 text-xs">Desarrollado por</p>
             <a href="https://naranjait.es/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img src="https://naranjait.es/images/naranja-it-logo-v5.svg" alt="Naranaja IT" className="h-6 w-auto" />
-              <span className="text-accent hover:underline text-sm font-medium">Naranaja IT</span>
+              <img src="https://naranjait.es/images/naranja-it-logo-v5.svg" alt="Naranja IT" className="h-6 w-auto" />
+              <span className="text-accent hover:underline text-sm font-medium">Naranja IT</span>
             </a>
           </div>
         </div>
