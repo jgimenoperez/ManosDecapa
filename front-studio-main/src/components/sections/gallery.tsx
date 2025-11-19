@@ -95,6 +95,9 @@ export function GallerySection() {
                         data-ai-hint={pair.after.imageHint}
                         fill
                         className="object-cover transition-opacity duration-500 ease-in-out"
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={80}
                       />
 
                       {/* Imagen ANTES */}
@@ -109,6 +112,9 @@ export function GallerySection() {
                             ? (isRevealed ? "opacity-0" : "opacity-100")
                             : "opacity-100 group-hover:opacity-0"
                         )}
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={80}
                       />
 
                       {/* Overlay con etiquetas */}
