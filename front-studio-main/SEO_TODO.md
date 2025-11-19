@@ -279,11 +279,11 @@
 - [ ] **Archivo**: `src/components/schema/local-business-schema.tsx`
 
 ### 6.4 Agregar contenido local a página principal
-- [ ] Crear sección "Servicio en Valencia y Alrededores"
-- [ ] Mencionar localidades servidas
-- [ ] Destacar recogida y entrega
-- [ ] Incluir mapa o lista de ciudades
-- [ ] **Archivo**: `src/app/page.tsx` o nueva sección
+- [x] Crear sección "Servicio en Valencia y Alrededores"
+- [x] Mencionar localidades servidas (6 ciudades)
+- [x] Destacar recogida y entrega
+- [x] Incluir lista de ciudades con descripciones
+- [x] **Archivo**: `src/components/sections/local-service-areas.tsx` ✅ COMPLETADO
 
 ### 6.5 Garantizar NAP consistency
 - [ ] Verificar Name en todos los lugares
