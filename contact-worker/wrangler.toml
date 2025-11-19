@@ -2,10 +2,11 @@ name = "manos-decapa-contact-worker"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
+account_id = "df4054b48d287ad7d72f1713fde9fd03"
 
 # Production environment
 [env.production]
-vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev", RESEND_AUDIENCE_ID = "c53f3a35-d134-45ff-9c8c-c0a888d909ed" }
+vars = { DOMAIN = "manosdecapa.es", ADMIN_EMAILS = "fiona@manosdehada.es,jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa", CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev", RESEND_AUDIENCE_ID = "c53f3a35-d134-45ff-9c8c-c0a888d909ed" }
 
 [[env.production.r2_buckets]]
 binding = "R2_BUCKET"
@@ -13,7 +14,7 @@ bucket_name = "manos-decapa-images"
 
 # Development environment - include RESEND_API_KEY for local testing
 [env.development]
-vars = { DOMAIN = "localhost", ADMIN_EMAIL = "jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa",  CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev", RESEND_AUDIENCE_ID = "c53f3a35-d134-45ff-9c8c-c0a888d909ed" }
+vars = { DOMAIN = "localhost", ADMIN_EMAILS = "fiona@manosdehada.es,jgimenoperez@gmail.com", FROM_EMAIL = "noreply@manosdecapa.es", FROM_NAME = "Manos De Capa",  CLOUDFLARE_ACCOUNT_ID = "df4054b48d287ad7d72f1713fde9fd03", R2_PUBLIC_URL = "https://pub-2957c3a6cf4e4d328c6f78441b075db5.r2.dev", RESEND_AUDIENCE_ID = "c53f3a35-d134-45ff-9c8c-c0a888d909ed" }
 
 [[env.development.r2_buckets]]
 binding = "R2_BUCKET"

@@ -1,12 +1,30 @@
 import { Resend } from 'resend';
 
+/**
+ * Valida que una URL de imagen sea accesible (sin descargarla)
+ */
+export async function validateImageUrl(imageUrl: string): Promise<boolean> {
+  try {
+    const response = await fetch(imageUrl, { method: 'HEAD' });
+    const isAccessible = response.ok;
+    if (!isAccessible) {
+      console.warn(`⚠️ Imagen no accesible: ${imageUrl} (Status: ${response.status})`);
+    }
+    return isAccessible;
+  } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : 'Error desconocido';
+    console.warn(`⚠️ Error validando imagen ${imageUrl}: ${errorMsg}`);
+    return false;
+  }
+}
+
 interface EmailParams {
   nombre: string;
   email: string;
   telefono: string;
   mensaje: string;
   imageUrls: string[];
-  adminEmail: string;
+  adminEmails: string[];
   fromEmail: string;
   fromName: string;
 }
@@ -534,6 +552,7 @@ function escapeHTML(text: string): string {
 
 /**
  * Envía email al admin con los datos del contacto
+ * Soporta envío a múltiples direcciones de email
  */
 export async function sendAdminEmail(
   params: EmailParams,
@@ -550,19 +569,45 @@ export async function sendAdminEmail(
   );
 
   try {
-    const response = await resend.emails.send({
-      from: `${params.fromName} <${params.fromEmail}>`,
-      to: params.adminEmail,
-      subject: `📧 Nuevo contacto de ${params.nombre}`,
-      html,
-    });
+    // Enviar a cada email de admin de forma secuencial con delays para evitar rate limiting
+    const allIds: string[] = [];
 
-    if (!response.data?.id) {
-      throw new Error('No se recibió ID de email de Resend');
+    for (let i = 0; i < params.adminEmails.length; i++) {
+      const adminEmail = params.adminEmails[i];
+
+      try {
+        const response = await resend.emails.send({
+          from: `${params.fromName} <${params.fromEmail}>`,
+          to: adminEmail,
+          subject: `📧 Nuevo contacto de ${params.nombre}`,
+          html,
+        });
+
+        if (!response.data?.id) {
+          console.error(`⚠️ No se obtuvo ID para email a ${adminEmail}:`, response);
+          continue;
+        }
+
+        allIds.push(response.data.id);
+        console.log(`✅ Email admin enviado a ${adminEmail}: ${response.data.id}`);
+
+        // Delay de 250ms entre envíos para evitar rate limit
+        if (i < params.adminEmails.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 250));
+        }
+      } catch (emailError) {
+        const errorMsg = emailError instanceof Error ? emailError.message : 'Error desconocido';
+        console.error(`❌ Error enviando email a ${adminEmail}: ${errorMsg}`);
+        throw emailError;
+      }
     }
 
-    console.log(`✅ Email admin enviado: ${response.data.id}`);
-    return { id: response.data.id };
+    if (allIds.length === 0) {
+      throw new Error('No se enviaron emails a ningún destinatario');
+    }
+
+    console.log(`✅ Emails admin enviados a ${allIds.length}/${params.adminEmails.length} destinatarios: ${allIds.join(', ')}`);
+    return { id: allIds[0] }; // Retornar el primer ID como referencia
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
     console.error(`❌ Error enviando email admin: ${errorMessage}`);
@@ -592,8 +637,11 @@ export async function sendConfirmationEmail(
       html,
     });
 
+    console.log(`📋 Respuesta Resend confirmación:`, JSON.stringify(response, null, 2));
+
     if (!response.data?.id) {
-      throw new Error('No se recibió ID de email de Resend');
+      const errorMsg = response.error ? JSON.stringify(response.error) : 'Sin data.id';
+      throw new Error(`No se recibió ID de email de Resend: ${errorMsg}`);
     }
 
     console.log(`✅ Email confirmación enviado a ${email}: ${response.data.id}`);
@@ -601,6 +649,7 @@ export async function sendConfirmationEmail(
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
     console.error(`❌ Error enviando email confirmación: ${errorMessage}`);
+    console.error(`📋 Error completo:`, error);
     throw new Error(`Error enviando confirmación: ${errorMessage}`);
   }
 }

@@ -91,7 +91,9 @@ export async function processContactForm(
     console.log('📧 Enviando emails...');
 
     try {
-      // Email al admin
+      // Email al admin - parsear múltiples emails separados por comas
+      const adminEmails = env.ADMIN_EMAILS.split(',').map(email => email.trim()).filter(email => email);
+
       await sendAdminEmail(
         {
           nombre: validatedData.nombre,
@@ -99,12 +101,15 @@ export async function processContactForm(
           telefono: validatedData.telefono,
           mensaje: validatedData.mensaje,
           imageUrls,
-          adminEmail: env.ADMIN_EMAIL,
+          adminEmails,
           fromEmail: env.FROM_EMAIL,
           fromName: env.FROM_NAME,
         },
         env.RESEND_API_KEY
       );
+
+      // Delay de 1 segundo entre email del admin y confirmación para evitar rate limiting
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Email de confirmación al usuario
       await sendConfirmationEmail(

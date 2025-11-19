@@ -41,7 +41,7 @@ export interface WorkerEnv {
   R2_BUCKET: R2Bucket;
   RESEND_API_KEY: string;
   DOMAIN: string;
-  ADMIN_EMAIL: string;
+  ADMIN_EMAILS: string;
   FROM_EMAIL: string;
   FROM_NAME: string;
   ALLOWED_ORIGINS: string;
