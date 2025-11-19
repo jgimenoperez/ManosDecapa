@@ -68,7 +68,7 @@ export function ContactSection() {
 
       // Enviar al Worker de Cloudflare
       const response = await fetch(
-        'https://manos-decapa-contact-worker-production.manosdevtroll.workers.dev/contact',
+        'https://api.manosdecapa.es/contact',
         {
           method: 'POST',
           body: formData,
