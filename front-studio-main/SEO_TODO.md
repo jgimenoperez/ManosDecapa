@@ -197,26 +197,26 @@
 ## 📄 FASE 5: PÁGINAS ADICIONALES Y ESTRUCTURA (Semana 5-6)
 
 ### 5.1 Crear página Aviso Legal
-- [ ] Crear `src/app/aviso-legal/page.tsx`
-- [ ] Incluir metadata optimizada
-- [ ] Contenido legal (18+ párrafos)
-- [ ] Mención de empresa y contacto
-- [ ] **Archivo**: `src/app/aviso-legal/page.tsx`
+- [x] Crear `src/app/aviso-legal/page.tsx`
+- [x] Incluir metadata optimizada
+- [x] Contenido legal completo
+- [x] Mención de empresa y contacto
+- [x] **Archivo**: `src/app/aviso-legal/page.tsx` ✅ COMPLETADO
 
 ### 5.2 Crear página Política de Privacidad
-- [ ] Crear `src/app/politica-privacidad/page.tsx`
-- [ ] Incluir metadata optimizada
-- [ ] RGPD compliance
-- [ ] Datos recopilados y uso
-- [ ] Derechos del usuario
-- [ ] **Archivo**: `src/app/politica-privacidad/page.tsx`
+- [x] Crear `src/app/politica-privacidad/page.tsx`
+- [x] Incluir metadata optimizada
+- [x] RGPD compliance
+- [x] Datos recopilados y uso
+- [x] Derechos del usuario
+- [x] **Archivo**: `src/app/politica-privacidad/page.tsx` ✅ COMPLETADO
 
 ### 5.3 Crear página Política de Cookies
-- [ ] Crear `src/app/politica-cookies/page.tsx`
-- [ ] Incluir metadata optimizada
-- [ ] Tipos de cookies utilizadas
-- [ ] Cómo desactivar cookies
-- [ ] **Archivo**: `src/app/politica-cookies/page.tsx`
+- [x] Crear `src/app/politica-cookies/page.tsx`
+- [x] Incluir metadata optimizada
+- [x] Tipos de cookies utilizadas
+- [x] Cómo desactivar cookies
+- [x] **Archivo**: `src/app/politica-cookies/page.tsx` ✅ COMPLETADO
 
 ### 5.4 Crear página de Servicios (opcional)
 - [ ] Crear `src/app/servicios/page.tsx`
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (14 de 42 tareas completadas - 33.3%)
+**Status**: 🟢 En Progreso (17 de 42 tareas completadas - 40.5%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (14 tareas - 33.3%):**
+✅ **COMPLETADAS (17 tareas - 40.5%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -688,8 +688,11 @@
 11. Tarea 3.3 - Sección FAQ visual con Accordion component (10 FAQs)
 12. Tarea 3.4 - Agregar FAQ a página principal
 13. Tarea 3.6 - About Section optimizada con keywords locales
-14. Tarea 7.1 - Google Search Console verificado por DNS
+14. Tarea 5.1 - Página Aviso Legal (aviso-legal/page.tsx)
+15. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
+16. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
+17. Tarea 7.1 - Google Search Console verificado por DNS
 
-⏭️ **EN PROGRESO:** Próxima tarea = Optimizar alt texts de imágenes o crear manifest.json
+⏭️ **EN PROGRESO:** Próxima tarea = Optimizar alt texts de imágenes + crear manifest.json
 
-⏳ **PENDIENTES:** 28 tareas (66.7%)
+⏳ **PENDIENTES:** 25 tareas (59.5%)
