@@ -192,10 +192,11 @@
 - [x] **Archivo**: `src/hooks/use-reduced-motion.tsx`, `src/components/sections/hero.tsx` ✅ COMPLETADO
 
 ### 4.5 Agregar preconnect para recursos
-- [ ] Agregar preconnect a Google Fonts (ya existe)
-- [ ] Agregar preconnect a Google Maps
-- [ ] Agregar dns-prefetch a Google Analytics
-- [ ] **Archivo**: `src/app/layout.tsx`
+- [x] Agregar preconnect a Google Maps (maps.googleapis.com, maps.gstatic.com)
+- [x] Agregar preconnect a Google Analytics (GTM, GA4)
+- [x] Agregar preconnect a Unsplash CDN (imágenes)
+- [x] Mantener preconnect Google Fonts (ya existe)
+- [x] **Archivo**: `src/app/layout.tsx` ✅ COMPLETADO
 
 ---
 
@@ -673,13 +674,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (25 de 42 tareas completadas - 59.5%)
+**Status**: 🟢 En Progreso (26 de 42 tareas completadas - 61.9%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (25 tareas - 59.5%):**
+✅ **COMPLETADAS (26 tareas - 61.9%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -705,7 +706,8 @@
 23. Tarea 2.5 - Guía de validación de Structured Data (SCHEMA_VALIDATION.md) (19/11/2025)
 24. Tarea 7.5 - Guía completa de Lighthouse Testing (LIGHTHOUSE_TESTING.md) (19/11/2025)
 25. Tarea 4.4 - Optimizar Framer Motion con useReducedMotion (19/11/2025)
+26. Tarea 4.5 - Agregar preconnect hints para Google Maps, GA4, Unsplash (19/11/2025)
 
-⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.5 (Agregar preconnect hints)
+⏭️ **EN PROGRESO:** Próxima tarea = Tarea 8.1 (Primer blog post) o Tarea 6.4 (Contenido local)
 
-⏳ **PENDIENTES:** 17 tareas (40.5%)
+⏳ **PENDIENTES:** 16 tareas (38.1%)
