@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
 import { CookieConsent } from '@/components/cookie-consent';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { LocalBusinessSchema } from '@/components/schema/local-business-schema';
 import { ServiceSchema } from '@/components/schema/service-schema';
 import { FAQSchema } from '@/components/schema/faq-schema';
@@ -123,6 +124,7 @@ export default function RootLayout({
       <head>
       </head>
       <body className="font-body antialiased bg-background text-foreground">
+        <GoogleAnalytics />
         <LocalBusinessSchema />
         <ServiceSchema />
         <FAQSchema />
