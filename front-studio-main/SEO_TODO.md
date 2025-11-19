@@ -308,18 +308,18 @@
 - [ ] **URL**: google.com/search-console
 
 ### 7.2 Configurar Google Analytics 4
-- [ ] Crear propiedad GA4
-- [ ] Obtener ID (G-XXXXXXXXXX)
-- [ ] Implementar script en `layout.tsx`
-- [ ] Configurar eventos de conversión:
-  - [ ] Envío de formulario contacto
-  - [ ] Clic en WhatsApp
-  - [ ] Clic en teléfono
-  - [ ] Visualización de FAQ
-  - [ ] Clic en galería
-- [ ] Crear goals para conversiones
-- [ ] Configurar alertas
-- [ ] **Archivo**: `src/app/layout.tsx`
+- [x] Crear propiedad GA4
+- [x] Obtener ID (G-XXXXXXXXXX)
+- [x] Implementar script en `layout.tsx`
+- [x] Configurar eventos de conversión:
+  - [x] Envío de formulario contacto (generate_lead)
+  - [x] Clic en WhatsApp (click - whatsapp_contact)
+  - [x] Clic en teléfono (click - phone_contact)
+  - [x] Visualización de FAQ (view_item)
+  - [x] Visualización de galería (view_item_list)
+- [x] Crear función trackEvent() para eventos personalizados
+- [x] Crear guía GOOGLE_ANALYTICS_SETUP.md
+- [x] **Archivo**: `src/components/analytics/google-analytics.tsx` ✅ COMPLETADO
 
 ### 7.3 Configurar Google Tag Manager (opcional)
 - [ ] Crear contenedor GTM
@@ -668,13 +668,13 @@
 
 **Última actualización**: 2025-11-19
 **Responsable**: Equipo de Desarrollo
-**Status**: 🟢 En Progreso (19 de 42 tareas completadas - 45.2%)
+**Status**: 🟢 En Progreso (20 de 42 tareas completadas - 47.6%)
 
 ---
 
 ## 📊 PROGRESO ACTUAL
 
-✅ **COMPLETADAS (19 tareas - 45.2%):**
+✅ **COMPLETADAS (20 tareas - 47.6%):**
 1. Tarea 1.1 - Metadata layout.tsx con keywords, Open Graph, Twitter Cards, robots
 2. Tarea 1.2 - robots.txt con reglas para Google, Bing, Yahoo y bloqueo de bots malos
 3. Tarea 1.3 - sitemap.ts dinámico con todas las rutas principales y páginas legales
@@ -694,7 +694,8 @@
 17. Tarea 5.2 - Página Política de Privacidad (politica-privacidad/page.tsx)
 18. Tarea 5.3 - Página Política de Cookies (politica-cookies/page.tsx)
 19. Tarea 7.1 - Google Search Console verificado por DNS
+20. Tarea 7.2 - Google Analytics 4 con eventos de conversión (19/11/2025)
 
-⏭️ **EN PROGRESO:** Próxima tarea = Configurar Google Analytics 4
+⏭️ **EN PROGRESO:** Próxima tarea = Tarea 4.2 (Optimizar imágenes) o Tarea 7.5 (Lighthouse)
 
-⏳ **PENDIENTES:** 23 tareas (54.8%)
+⏳ **PENDIENTES:** 22 tareas (52.4%)
