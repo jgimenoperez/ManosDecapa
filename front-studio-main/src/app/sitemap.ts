@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.manosdecapa.es'
   const lastModified = new Date()
@@ -67,6 +69,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Service pages - high priority for SEO
+    {
+      url: `${baseUrl}/servicios`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/proceso`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ubicacion`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Legal pages - lower priority but important for crawling
     {
       url: `${baseUrl}/aviso-legal`,
@@ -86,30 +107,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    // Future pages (when created)
-    // {
-    //   url: `${baseUrl}/servicios`,
-    //   lastModified,
-    //   changeFrequency: 'monthly',
-    //   priority: 0.8,
-    // },
-    // {
-    //   url: `${baseUrl}/proceso`,
-    //   lastModified,
-    //   changeFrequency: 'monthly',
-    //   priority: 0.7,
-    // },
-    // {
-    //   url: `${baseUrl}/ubicacion`,
-    //   lastModified,
-    //   changeFrequency: 'monthly',
-    //   priority: 0.7,
-    // },
-    // {
-    //   url: `${baseUrl}/blog`,
-    //   lastModified,
-    //   changeFrequency: 'weekly',
-    //   priority: 0.8,
-    // },
   ]
 }

@@ -10,31 +10,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ServicesPageSchema } from '@/components/schema/services-page-schema';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-
-// Metadata para SEO
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.manosdecapa.es'),
-  title: 'Servicios de Decapado | Manos Decapa - Puçol, Valencia',
-  description:
-    'Servicios profesionales de decapado de muebles en Valencia. Especializados en muebles, puertas, ventanas y elementos metálicos. Presupuesto gratis en 24h. Sin químicos agresivos.',
-  keywords: [
-    'servicios decapado Valencia',
-    'decapado de muebles',
-    'decapado de puertas',
-    'decapado profesional',
-    'restauración de muebles',
-    'decapante para madera',
-    'decapado de ventanas',
-    'decapado de elementos metálicos',
-  ],
-  openGraph: {
-    title: 'Servicios de Decapado Profesional | Manos Decapa',
-    description: 'Descubre nuestros servicios de decapado profesional en Valencia. Muebles, puertas, ventanas y más.',
-    url: 'https://www.manosdecapa.es/servicios',
-    type: 'website',
-  },
-};
 
 const containerVariants = {
   hidden: { opacity: 0 },

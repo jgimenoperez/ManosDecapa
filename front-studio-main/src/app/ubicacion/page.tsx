@@ -8,28 +8,6 @@ import { MapPin, Phone, Mail, Clock, Car, Train } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { LocationPageSchema } from '@/components/schema/location-page-schema';
-import type { Metadata } from 'next';
-
-// Metadata para SEO
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.manosdecapa.es'),
-  title: 'Nuestra Ubicación en Valencia | Manos Decapa',
-  description:
-    'Visitanos en Puçol, Valencia. Ubicación del taller de Manos Decapa. Cómo llegar en coche o transporte público. Horarios de atención y contacto.',
-  keywords: [
-    'ubicación Manos Decapa',
-    'taller decapado Valencia',
-    'dirección Puçol',
-    'cómo llegar Manos Decapa',
-    'ubicación decapado Valencia',
-  ],
-  openGraph: {
-    title: 'Nuestra Ubicación | Manos Decapa - Puçol, Valencia',
-    description: 'Visita nuestro taller en Puçol, Valencia. Ubicación exacta, cómo llegar y contacto directo.',
-    url: 'https://www.manosdecapa.es/ubicacion',
-    type: 'website',
-  },
-};
 
 const containerVariants = {
   hidden: { opacity: 0 },

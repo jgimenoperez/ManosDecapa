@@ -20,29 +20,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ProcessPageSchema } from '@/components/schema/process-page-schema';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-
-// Metadata para SEO
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.manosdecapa.es'),
-  title: 'Nuestro Proceso de Decapado | Manos Decapa - Método Profesional',
-  description:
-    'Conoce nuestro proceso de decapado profesional paso a paso. Métodos seguros, sin químicos agresivos. Garantía de calidad. +10 años de experiencia en Valencia.',
-  keywords: [
-    'proceso decapado',
-    'decapado paso a paso',
-    'método decapado madera',
-    'técnica decapado profesional',
-    'decapado sin químicos',
-    'restauración muebles proceso',
-  ],
-  openGraph: {
-    title: 'Nuestro Proceso de Decapado Profesional | Manos Decapa',
-    description: 'Descubre cómo realizamos el decapado profesional de forma segura y efectiva.',
-    url: 'https://www.manosdecapa.es/proceso',
-    type: 'website',
-  },
-};
 
 const containerVariants = {
   hidden: { opacity: 0 },
