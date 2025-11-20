@@ -24,7 +24,8 @@
       "Skill(canvas-design)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nImplementar fundamentos SEO técnico - Fase 1\n\n- Actualizar metadata en layout.tsx con title, description optimizados para posicionamiento local\n- Agregar Open Graph tags completos (og:title, og:description, og:image, og:url, og:type)\n- Agregar Twitter Card tags con dimensiones correctas\n- Incluir 12 keywords estratégicas para decapado en Valencia\n- Agregar robots directive, canonical URL, author y publisher\n- Configurar icons para favicon y apple-touch-icon\n\n- Crear robots.txt con reglas para Google, Bing, Yahoo, DuckDuckGo\n- Bloquear bots maliciosos (AhrefsBot, SemrushBot, MJ12bot, etc)\n- Incluir referencia a sitemap.xml\n- Configurar crawl-delay y request-rate\n\n- Crear sitemap.ts dinámico que genera sitemap.xml automáticamente\n- Incluir ruta principal (priority: 1.0)\n- Incluir todas las secciones con anchors (#services, #gallery, #pricing, etc)\n- Incluir páginas legales (aviso-legal, politica-privacidad, politica-cookies)\n- Comentadas rutas futuras para servicios, proceso y blog\n\n- Generar imágenes Open Graph profesionales:\n  * og-image.jpg (1200x630px) para Facebook, LinkedIn, WhatsApp\n  * twitter-image.jpg (1200x600px) para Twitter/X\n  * Diseño con paleta de colores de marca (marrón, chocolate, naranja)\n  * Incluir CTA, teléfono, sitio web y beneficios principales\n\n- Crear SEO_TODO.md con plan completo de 8 fases y 42 tareas prioritarias\n- Configurar checklist técnico SEO final\n- Establecer métricas de éxito y cronograma estimado\n\n🔍 SEO Fase 1 completada: 5 de 42 tareas (11.9%)\n\n🤖 Generated with Claude Code\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(git rev-list:*)"
+      "Bash(git rev-list:*)",
+      "Bash(lsof:*)"
     ],
     "deny": [],
     "ask": []
