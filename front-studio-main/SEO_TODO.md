@@ -286,17 +286,18 @@
 - [x] **Archivo**: `src/components/sections/local-service-areas.tsx` ✅ COMPLETADO
 
 ### 6.5 Garantizar NAP consistency
-- [ ] Verificar Name en todos los lugares
-- [ ] Verificar Address idéntica en:
-  - [ ] Footer
-  - [ ] Schema markup
-  - [ ] Google Business Profile
-  - [ ] Páginas legales
-- [ ] Verificar Phone idéntico
+- [x] Verificar Name en todos los lugares ✅
+- [x] Verificar Address idéntica en:
+  - [x] Footer ✅
+  - [x] Schema markup ✅
+  - [x] Páginas legales ✅
+- [x] Verificar Phone idéntico (estandarizado a +34 654 49 69 60) ✅
+- [x] Crear NAP_CONSISTENCY_REPORT.md documentando todo ✅
 - [ ] Registrar en directorios locales:
   - [ ] Páginas Amarillas
   - [ ] Yelp España
   - [ ] Directorios locales Valencia
+- [x] **Archivo**: `NAP_CONSISTENCY_REPORT.md` ✅ COMPLETADO
 
 ---
 
