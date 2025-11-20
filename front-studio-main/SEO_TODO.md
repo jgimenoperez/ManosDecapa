@@ -273,10 +273,18 @@
 - [ ] **Archivo**: `src/app/ubicacion/page.tsx`
 
 ### 6.3 Implementar marcado de áreas de servicio
-- [ ] Actualizar LocalBusiness schema con areaServed array
-- [ ] Incluir: Valencia, Puçol, Sagunto, Paterna
-- [ ] Validar con Google Rich Results Test
-- [ ] **Archivo**: `src/components/schema/local-business-schema.tsx`
+- [x] Actualizar LocalBusiness schema con areaServed array detallado ✅
+- [x] Incluir: Valencia, Puçol, Sagunto, Paterna, Burjassot, Moncada (6 ciudades) ✅
+- [x] Agregar descripción específica para cada ciudad ✅
+- [x] Incluir Wikipedia @id para contexto semántico ✅
+- [x] Agregar areaServedRadius para Puçol (5km) ✅
+- [x] Mejorar serviceArea con GeoCoordinates ✅
+- [x] Agregar areaServedAddress ✅
+- [x] Expandir contactPoint array ✅
+- [x] Agregar foundingDate y numberOfEmployees ✅
+- [x] Crear SCHEMA_AREAS_SERVED_REPORT.md con documentación ✅
+- [ ] Validar con Google Rich Results Test (próximo paso)
+- [x] **Archivo**: `src/components/schema/local-business-schema.tsx` ✅ COMPLETADO
 
 ### 6.4 Agregar contenido local a página principal
 - [x] Crear sección "Servicio en Valencia y Alrededores"
