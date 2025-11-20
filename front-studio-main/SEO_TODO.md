@@ -265,12 +265,19 @@
 - [ ] **Platform**: Google Business Profile
 
 ### 6.2 Crear página de ubicación
-- [ ] Crear `src/app/ubicacion/page.tsx`
-- [ ] H1 "Nuestra Ubicación en Valencia"
-- [ ] Mapa embebido más grande
-- [ ] Información de contacto completa
-- [ ] Cómo llegar desde diferentes zonas
-- [ ] **Archivo**: `src/app/ubicacion/page.tsx`
+- [x] Crear `src/app/ubicacion/page.tsx` con página completa ✅
+- [x] H1 "Nuestra Ubicación en Valencia" ✅
+- [x] Mapa embebido Google Maps (500px) ✅
+- [x] Información de contacto completa (teléfono, email, dirección) ✅
+- [x] Cómo llegar desde diferentes zonas (coche + transporte público) ✅
+- [x] Tarjetas de información (dirección, contacto, horarios, servicios) ✅
+- [x] Zona de servicio con 6 ciudades ✅
+- [x] CTA buttons (Llamar + WhatsApp) ✅
+- [x] Schema markup con BreadcrumbList + Place schema ✅
+- [x] Metadata optimizada para SEO local ✅
+- [x] Animaciones con Framer Motion ✅
+- [x] Crear LOCATION_PAGE_REPORT.md con documentación ✅
+- [x] **Archivos**: `src/app/ubicacion/page.tsx`, `src/components/schema/location-page-schema.tsx` ✅ COMPLETADO
 
 ### 6.3 Implementar marcado de áreas de servicio
 - [x] Actualizar LocalBusiness schema con areaServed array detallado ✅
