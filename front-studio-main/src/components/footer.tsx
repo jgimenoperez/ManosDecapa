@@ -46,6 +46,10 @@ export function Footer() {
               Proceso
             </Link>
             <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/proyectos" className="text-accent hover:underline font-medium">
+              Proyectos
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
             <Link href="/ubicacion" className="text-accent hover:underline font-medium">
               Ubicación
             </Link>
