@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/servicios', label: 'Servicios' },
   { href: '/proceso', label: 'Proceso' },
   { href: '/proyectos', label: 'Proyectos' },
+  { href: '/testimonios', label: 'Testimonios' },
   { href: '/ubicacion', label: 'Ubicación' },
   { href: '/#gallery', label: 'Galería' },
   { href: '/#pricing', label: 'Precios' },
