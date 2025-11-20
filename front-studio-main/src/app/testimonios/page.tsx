@@ -6,6 +6,10 @@ import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { TestimonialsPageSchema } from '@/components/schema/testimonials-page-schema';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { WhatsAppButton } from '@/components/whatsapp-button';
+import { BackToTopButton } from '@/components/back-to-top';
 
 interface Testimonial {
   id: number;
@@ -241,7 +245,9 @@ export default function TestimonialsPage() {
   return (
     <>
       <TestimonialsPageSchema testimonials={testimonials} averageRating={parseFloat(avgRating)} />
-      <main className="min-h-screen bg-background">
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow bg-background">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-accent/10 to-background">
           <div className="container mx-auto px-4">
@@ -468,7 +474,11 @@ export default function TestimonialsPage() {
             </motion.div>
           </div>
         </section>
-      </main>
+        </main>
+        <Footer />
+        <WhatsAppButton />
+        <BackToTopButton />
+      </div>
     </>
   );
 }
