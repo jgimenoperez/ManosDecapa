@@ -38,24 +38,36 @@ export function Footer() {
         </div>
         <div className="mt-12 py-6 border-t border-background/20">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm mb-6 flex-wrap">
-            <Link href="/aviso-legal" className="text-accent hover:underline">
-              Aviso Legal
+            <Link href="/servicios" className="text-accent hover:underline font-medium">
+              Servicios
             </Link>
             <span className="hidden sm:inline text-background/40">•</span>
-            <Link href="/politica-privacidad" className="text-accent hover:underline">
-              Política de Privacidad
+            <Link href="/proceso" className="text-accent hover:underline font-medium">
+              Proceso
             </Link>
             <span className="hidden sm:inline text-background/40">•</span>
-            <Link href="/politica-cookies" className="text-accent hover:underline">
-              Política de Cookies
+            <Link href="/ubicacion" className="text-accent hover:underline font-medium">
+              Ubicación
             </Link>
             <span className="hidden sm:inline text-background/40">•</span>
             <Link href="/#contact" className="text-accent hover:underline">
               Contacto
             </Link>
             <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/aviso-legal" className="text-accent hover:underline">
+              Aviso Legal
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/politica-privacidad" className="text-accent hover:underline">
+              Privacidad
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
+            <Link href="/politica-cookies" className="text-accent hover:underline">
+              Cookies
+            </Link>
+            <span className="hidden sm:inline text-background/40">•</span>
             <a href="https://www.manosdehada.es" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-              Restauración Completa
+              Restauración
             </a>
           </div>
           <div className="text-center text-sm text-background/60">
