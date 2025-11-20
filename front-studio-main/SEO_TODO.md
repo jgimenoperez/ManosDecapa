@@ -261,6 +261,7 @@
 ## 🗺️ FASE 6: LOCAL SEO Y GOOGLE BUSINESS (Semana 6)
 
 ### 6.1 Configurar Google Business Profile
+- [ ] ⏳ **DEFERRED - MÁS ADELANTE**
 - [ ] Reclamar/verificar perfil
 - [ ] Completar información básica:
   - [ ] Nombre: Manos Decapa
@@ -335,6 +336,7 @@
 ## 📊 FASE 7: MONITORIZACIÓN Y HERRAMIENTAS (Semana 7)
 
 ### 7.1 Configurar Google Search Console
+- [ ] ⏳ **DEFERRED - MÁS ADELANTE**
 - [ ] Crear/reclamar propiedad
 - [ ] Verificar dominio
 - [ ] Enviar sitemap.xml
@@ -349,7 +351,7 @@
 - [x] Crear propiedad GA4
 - [x] Obtener ID (G-XXXXXXXXXX)
 - [x] Implementar script en `layout.tsx`
-- [x] Configurar eventos de conversión:
+- [~] Configurar eventos de conversión (⏳ PARCIAL - Detalles para más adelante):
   - [x] Envío de formulario contacto (generate_lead)
   - [x] Clic en WhatsApp (click - whatsapp_contact)
   - [x] Clic en teléfono (click - phone_contact)
@@ -357,9 +359,13 @@
   - [x] Visualización de galería (view_item_list)
 - [x] Crear función trackEvent() para eventos personalizados
 - [x] Crear guía GOOGLE_ANALYTICS_SETUP.md
-- [x] **Archivo**: `src/components/analytics/google-analytics.tsx` ✅ COMPLETADO
+- [~] **Archivo**: `src/components/analytics/google-analytics.tsx` ✅ CÓDIGO CREADO - Setup completo deferred
+- [ ] ⏳ **Validar eventos real-time en producción (MÁS ADELANTE)**
+- [ ] ⏳ **Configurar goals y conversion tracking (MÁS ADELANTE)**
+- [ ] ⏳ **Crear dashboard de reporting (MÁS ADELANTE)**
 
 ### 7.3 Configurar Google Tag Manager (opcional)
+- [ ] ⏳ **DEFERRED - MÁS ADELANTE** (OPCIONAL)
 - [ ] Crear contenedor GTM
 - [ ] Implementar script
 - [ ] Crear tags para eventos
@@ -367,10 +373,12 @@
 - [ ] Publicar cambios
 
 ### 7.4 Implementar eventos de conversión
-- [ ] Agregar evento en submit de contacto
-- [ ] Agregar evento en clic de WhatsApp
-- [ ] Agregar evento en clic de teléfono
+- [ ] ⏳ **DEFERRED - MÁS ADELANTE**
+- [ ] Agregar evento en submit de contacto (validar real-time)
+- [ ] Agregar evento en clic de WhatsApp (validar real-time)
+- [ ] Agregar evento en clic de teléfono (validar real-time)
 - [ ] Validar con Network tab
+- [ ] Monitorear en GA4 dashboard
 - [ ] **Archivo**: `src/components/sections/contact.tsx`
 
 ### 7.5 Test con Lighthouse
@@ -381,9 +389,11 @@
 - [x] Crear plantilla de documentación
 - [x] Establecer cadencia de monitorización
 - [x] **Archivo**: `LIGHTHOUSE_TESTING.md` ✅ COMPLETADO
-- [ ] Ejecutar Lighthouse real (usuario responsable)
+- [ ] ⏳ **Ejecutar Lighthouse real en producción (MÁS ADELANTE)**
+- [ ] ⏳ **Monitorear scores semanalmente (MÁS ADELANTE)**
 
 ### 7.6 Test Mobile-Friendly
+- [ ] ⏳ **DEFERRED - MÁS ADELANTE**
 - [ ] Google Mobile-Friendly Test
 - [ ] Test en múltiples dispositivos
 - [ ] Verificar touch targets (48x48px mín)
@@ -394,6 +404,7 @@
 ---
 
 ## 📚 FASE 8: CONTENIDO Y LINK BUILDING (Ongoing)
+### ⏳ **TODAS LAS TAREAS DEFERRED - MÁS ADELANTE**
 
 ### 8.1 Crear contenido de blog (Mensual)
 - [ ] Mes 1: "Guía Completa del Decapado de Muebles"
