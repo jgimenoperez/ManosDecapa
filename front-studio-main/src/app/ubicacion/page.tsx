@@ -8,6 +8,7 @@ import { MapPin, Phone, Mail, Clock, Car, Train } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { LocationPageSchema } from '@/components/schema/location-page-schema';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,6 +39,10 @@ export default function UbicacionPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <LocationPageSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Inicio', url: 'https://www.manosdecapa.es' },
+        { name: 'Ubicación', url: 'https://www.manosdecapa.es/ubicacion' },
+      ]} />
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}

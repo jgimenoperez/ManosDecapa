@@ -19,6 +19,7 @@ import {
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ProcessPageSchema } from '@/components/schema/process-page-schema';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import Link from 'next/link';
 
 const containerVariants = {
@@ -170,6 +171,10 @@ export default function ProcesoPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <ProcessPageSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Inicio', url: 'https://www.manosdecapa.es' },
+        { name: 'Proceso', url: 'https://www.manosdecapa.es/proceso' },
+      ]} />
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}

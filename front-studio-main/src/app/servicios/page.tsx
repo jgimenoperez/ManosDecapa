@@ -9,6 +9,7 @@ import { CheckCircle, Clock, Zap, Shield, ArrowRight, Sparkles } from 'lucide-re
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ServicesPageSchema } from '@/components/schema/services-page-schema';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import Link from 'next/link';
 
 const containerVariants = {
@@ -118,6 +119,10 @@ export default function ServiciosPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <ServicesPageSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Inicio', url: 'https://www.manosdecapa.es' },
+        { name: 'Servicios', url: 'https://www.manosdecapa.es/servicios' },
+      ]} />
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
