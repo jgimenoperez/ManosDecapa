@@ -97,7 +97,7 @@ html {
 
   /* Mejora de legibilidad de párrafos */
   p {
-    @apply leading-relaxed text-base md:text-lg max-w-[65ch];
+    @apply  text-base md:text-lg ;
   }
 
   /* Listas mejoradas */
