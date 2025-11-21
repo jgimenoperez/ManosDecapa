@@ -406,18 +406,16 @@ export default function ProyectosPage() {
             <h2 className="text-2xl font-bold font-headline mb-4">Filtrar por Categoría</h2>
             <div className="flex flex-wrap gap-2">
               <Button
-                variant={filterCategory === null ? 'default' : 'outline'}
                 onClick={() => setFilterCategory(null)}
-                className={filterCategory === null ? 'bg-accent hover:bg-accent/90' : ''}
+                className={filterCategory === null ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/40 font-semibold' : 'bg-background text-foreground hover:bg-background border-2 border-accent/30 hover:border-accent/60 font-medium'}
               >
                 Todos ({projects.length})
               </Button>
               {categories.map((category) => (
                 <Button
                   key={category}
-                  variant={filterCategory === category ? 'default' : 'outline'}
                   onClick={() => setFilterCategory(category)}
-                  className={filterCategory === category ? 'bg-accent hover:bg-accent/90' : ''}
+                  className={filterCategory === category ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/40 font-semibold' : 'bg-background text-foreground hover:bg-background border-2 border-accent/30 hover:border-accent/60 font-medium'}
                 >
                   {category} (
                   {projects.filter((p) => p.category === category).length})
@@ -428,10 +426,11 @@ export default function ProyectosPage() {
 
           {/* Projects Grid */}
           <motion.div
+            key={filterCategory}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
             initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            animate="visible"
           >
             {filteredProjects.map((project) => (
               <ProjectCard

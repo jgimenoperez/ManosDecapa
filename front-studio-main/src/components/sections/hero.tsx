@@ -72,7 +72,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
           >
-            <span style={{ fontFamily: 'Great Vibes', fontSize: '48px' }} className="text-white drop-shadow-lg">
+            <span className="text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-great-vibes)', fontSize: '48px' }}>
               Manos Decapa
             </span>
           </motion.div>

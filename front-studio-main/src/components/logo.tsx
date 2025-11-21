@@ -57,7 +57,7 @@ export function Logo({ className, variant = 'default' }: LogoProps) {
             'text-background',
             'group-hover:text-accent'
           )}
-          style={{ fontFamily: 'Great Vibes' }}
+          style={{ fontFamily: 'var(--font-great-vibes)' }}
         >
           Manos Decapa
         </span>
@@ -110,7 +110,7 @@ export function Logo({ className, variant = 'default' }: LogoProps) {
           'group-hover:text-accent',
           'hidden sm:inline'
         )}
-        style={{ fontFamily: 'Great Vibes' }}
+        style={{ fontFamily: 'var(--font-great-vibes)' }}
       >
         Manos Decapa
       </span>

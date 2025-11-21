@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, PT_Sans } from 'next/font/google';
+import { Poppins, PT_Sans, Great_Vibes } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
@@ -22,6 +22,14 @@ const ptSans = PT_Sans({
   subsets: ['latin'],
   variable: '--font-body',
   weight: ['400', '700'],
+  display: 'swap',
+  preload: true,
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  variable: '--font-great-vibes',
+  weight: ['400'],
   display: 'swap',
   preload: true,
 });
@@ -126,7 +134,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${poppins.variable} ${ptSans.variable}`}>
+    <html lang="es" className={`${poppins.variable} ${ptSans.variable} ${greatVibes.variable}`}>
       <head>
         {/* Preconnect para optimizar carga de recursos externos */}
 
