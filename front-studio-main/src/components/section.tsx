@@ -19,7 +19,7 @@ export function Section({ id, className, children, variant = 'default' }: Sectio
     <section
       id={id}
       className={cn(
-        "py-16 md:py-24 lg:py-32 scroll-mt-16", // Espaciado consistente y mayor
+        "py-12 md:py-16 lg:py-20 scroll-mt-16", // Espaciado reducido
         variants[variant],
         className
       )}

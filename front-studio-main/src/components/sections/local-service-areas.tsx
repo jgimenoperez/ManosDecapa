@@ -191,12 +191,12 @@ export function LocalServiceAreasSection() {
 
       {/* Nota SEO local */}
       <motion.div
-        className="mt-12 p-6 bg-muted rounded-lg border border-border"
+        className="mt-8 p-6 bg-muted rounded-lg border border-border mx-auto max-w-4xl"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <p className="text-sm text-muted-foreground text-center">
+        <p className="text-sm text-muted-foreground text-center leading-relaxed mx-auto max-w-3xl">
           <strong>Servicio en toda el área metropolitana de Valencia:</strong> Puçol,
           Valencia, Sagunto, Paterna, Burjassot, Moncada y alrededores.{' '}
           <strong>Decapado profesional sin químicos agresivos.</strong> Contacta con
