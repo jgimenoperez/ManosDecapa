@@ -9,7 +9,6 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { ZoomIn, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const galleryPairs = [
@@ -61,8 +60,8 @@ export function GallerySection() {
         <h2 className="text-3xl md:text-4xl font-bold font-headline">Galería Antes y Después</h2>
         <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
           {isMobile
-            ? "Toca las imágenes para ver el antes y después. Mantén presionado para ampliar."
-            : "Pasa el ratón sobre las imágenes para ver la magia. Haz clic para ampliar."}
+            ? "Toca las imágenes para ver el antes y después."
+            : "Haz clic en las imágenes para ampliar y ver toda la magia."}
         </p>
       </motion.div>
 
@@ -82,8 +81,14 @@ export function GallerySection() {
             >
               <Card
                 className="overflow-hidden group cursor-pointer relative h-full hover:shadow-xl transition-shadow duration-300"
-                onClick={() => isMobile ? toggleReveal(index) : null}
-                onDoubleClick={() => setLightboxImage(pair.after?.imageUrl || null)}
+                onClick={(e) => {
+                  if (isMobile) {
+                    toggleReveal(index);
+                  } else {
+                    // En desktop, abrir el lightbox con la imagen de después
+                    setLightboxImage(pair.after?.imageUrl || null);
+                  }
+                }}
               >
                 <CardContent className="p-0">
                   <AspectRatio ratio={3 / 2}>
@@ -150,19 +155,6 @@ export function GallerySection() {
                         </motion.div>
                       </div>
 
-                      {/* Icono de ampliar */}
-                      <motion.button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setLightboxImage(pair.after?.imageUrl || null);
-                        }}
-                        className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
-                        aria-label="Ampliar imagen"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ZoomIn className="w-5 h-5" />
-                      </motion.button>
 
                       {/* Indicador de tap en mobile */}
                       {isMobile && !isRevealed && (
@@ -192,26 +184,15 @@ export function GallerySection() {
 
       {/* Lightbox mejorado */}
       <Dialog open={!!lightboxImage} onOpenChange={(open) => !open && setLightboxImage(null)}>
-        <DialogContent className="max-w-5xl p-0 bg-black/95 border-0">
+        <DialogContent className="max-w-5xl p-0 bg-black/95 border-0 [&_button]:w-10 [&_button]:h-10 [&_button]:flex [&_button]:items-center [&_button]:justify-center [&_button_svg]:w-6 [&_button_svg]:h-6 [&_button]:bg-white/30 [&_button]:hover:bg-white/50">
           <DialogTitle className="sr-only">Imagen ampliada de la galería</DialogTitle>
           <div className="relative">
             {lightboxImage && (
-              <>
-                <img
-                  src={lightboxImage}
-                  alt="Vista ampliada"
-                  className="w-full h-auto max-h-[85vh] object-contain"
-                />
-                <motion.button
-                  onClick={() => setLightboxImage(null)}
-                  className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
-                  aria-label="Cerrar"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <X className="w-6 h-6" />
-                </motion.button>
-              </>
+              <img
+                src={lightboxImage}
+                alt="Vista ampliada"
+                className="w-full h-auto max-h-[85vh] object-contain"
+              />
             )}
           </div>
         </DialogContent>
