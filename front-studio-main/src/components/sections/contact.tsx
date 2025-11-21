@@ -195,8 +195,8 @@ export function ContactSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Card className="shadow-lg border-none">
-            <CardContent className="pt-8">
+          <Card className="shadow-xl border-0 bg-gradient-to-br from-background via-background to-primary/5">
+            <CardContent className="pt-8 px-8">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   {/* Nombre y Email */}
@@ -214,7 +214,7 @@ export function ContactSection() {
                             <Input
                               placeholder="Tu nombre y apellidos"
                               {...field}
-                              className="transition-all focus:ring-2 focus:ring-accent"
+                              className="transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background"
                             />
                           </FormControl>
                           <FormMessage />
@@ -236,7 +236,7 @@ export function ContactSection() {
                               placeholder="tu@email.com"
                               type="email"
                               {...field}
-                              className="transition-all focus:ring-2 focus:ring-accent"
+                              className="transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background"
                             />
                           </FormControl>
                           <FormMessage />
@@ -257,7 +257,7 @@ export function ContactSection() {
                             <Input
                               placeholder="Tu número de teléfono"
                               {...field}
-                              className="transition-all focus:ring-2 focus:ring-accent"
+                              className="transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background"
                             />
                           </FormControl>
                           <FormMessage />
@@ -272,7 +272,7 @@ export function ContactSection() {
                           <FormLabel>Tipo de cliente</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="transition-all focus:ring-2 focus:ring-accent">
+                              <SelectTrigger className="transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background">
                                 <SelectValue placeholder="Selecciona una opción" />
                               </SelectTrigger>
                             </FormControl>
@@ -298,7 +298,7 @@ export function ContactSection() {
                           <Input
                             placeholder="Ej: Cómoda, 4 sillas, puerta de entrada..."
                             {...field}
-                            className="transition-all focus:ring-2 focus:ring-accent"
+                            className="transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background"
                           />
                         </FormControl>
                         <FormMessage />
@@ -316,7 +316,7 @@ export function ContactSection() {
                         <FormControl>
                           <Textarea
                             placeholder="Describe la pieza, sus medidas aproximadas y cualquier detalle que consideres importante."
-                            className="resize-y min-h-[120px] transition-all focus:ring-2 focus:ring-accent"
+                            className="resize-y min-h-[120px] transition-all focus:ring-2 focus:ring-accent bg-muted/40 border-border/60 hover:border-border hover:bg-muted/60 focus:bg-background"
                             {...field}
                           />
                         </FormControl>
@@ -338,18 +338,20 @@ export function ContactSection() {
                         </FormLabel>
                         <FormControl>
                           <div className="space-y-3">
-                            <label className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
+                            <label className={`flex flex-col items-center justify-center w-full h-40 border-2 border-dashed rounded-xl cursor-pointer transition-all duration-300 ${
                               uploadedFiles.length >= MAX_IMAGES
-                                ? 'border-destructive/50 bg-destructive/10 hover:bg-destructive/20 opacity-50 cursor-not-allowed'
-                                : 'border-border bg-muted/30 hover:bg-muted/50'
+                                ? 'border-destructive/40 bg-destructive/8 hover:bg-destructive/12 opacity-50 cursor-not-allowed'
+                                : 'border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50'
                             }`}>
-                              <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
-                                <p className="text-sm text-muted-foreground">
-                                  <span className="font-semibold">Haz clic para subir</span> o arrastra archivos
+                              <div className="flex flex-col items-center justify-center pt-6 pb-8">
+                                <div className="p-3 bg-primary/15 rounded-full mb-4">
+                                  <Upload className="w-8 h-8 text-primary" />
+                                </div>
+                                <p className="text-sm text-foreground font-medium">
+                                  <span className="text-primary">Haz clic para subir</span> o arrastra archivos
                                 </p>
-                                <p className="text-xs text-muted-foreground mt-1">
-                                  PNG, JPG hasta 5MB cada una
+                                <p className="text-xs text-muted-foreground mt-2">
+                                  PNG, JPG, hasta 5MB cada una
                                 </p>
                               </div>
                               <input
@@ -363,16 +365,25 @@ export function ContactSection() {
                             </label>
 
                             {/* Información del límite de imágenes */}
-                            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-3 text-sm">
-                              <p className="text-blue-900 dark:text-blue-100">
-                                <span className="font-semibold">Límite de imágenes:</span> Puedes subir hasta <strong>5 imágenes</strong>
+                            <div className="bg-primary/8 border border-primary/20 rounded-lg p-4 text-sm">
+                              <p className="text-foreground font-medium flex items-center gap-2">
+                                <ImageIcon className="w-4 h-4 text-primary" />
+                                Límite de imágenes: <strong>hasta 5 fotos</strong>
                               </p>
-                              <p className="text-blue-800 dark:text-blue-200 text-xs mt-1">
-                                Imágenes cargadas: <strong>{uploadedFiles.length}</strong> / {MAX_IMAGES}
-                              </p>
+                              <div className="flex items-center justify-between mt-3">
+                                <p className="text-muted-foreground text-xs">
+                                  Cargadas: <strong className="text-foreground">{uploadedFiles.length}</strong> / {MAX_IMAGES}
+                                </p>
+                                <div className="w-24 h-1.5 bg-muted rounded-full overflow-hidden">
+                                  <div
+                                    className="h-full bg-primary transition-all duration-300"
+                                    style={{ width: `${(uploadedFiles.length / MAX_IMAGES) * 100}%` }}
+                                  />
+                                </div>
+                              </div>
                               {uploadedFiles.length >= MAX_IMAGES && (
-                                <p className="text-orange-700 dark:text-orange-300 text-xs mt-2 font-medium">
-                                  ⚠️ Has alcanzado el límite máximo de imágenes. Elimina alguna si necesitas añadir más.
+                                <p className="text-amber-700 dark:text-amber-300 text-xs mt-3 font-medium flex items-center gap-2">
+                                  <span>⚠️</span> Límite alcanzado. Elimina alguna para añadir más.
                                 </p>
                               )}
                             </div>
@@ -392,7 +403,7 @@ export function ContactSection() {
                                       initial={{ opacity: 0, x: -20 }}
                                       animate={{ opacity: 1, x: 0 }}
                                       exit={{ opacity: 0, x: -20 }}
-                                      className="flex items-center justify-between p-3 bg-muted rounded-lg border border-border"
+                                      className="flex items-center justify-between p-4 bg-primary/8 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
                                     >
                                       <div className="flex items-center gap-3">
                                         <ImageIcon className="w-5 h-5 text-accent flex-shrink-0" />
