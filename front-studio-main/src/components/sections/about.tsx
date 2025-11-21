@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function AboutSection() {
   return (
-    <Section id="about" className="bg-muted/50">
+    <Section id="about" className="bg-accent/10 border-y border-accent/20">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-headline">Sobre Manos Decapa - Especialistas en Decapado en Valencia</h2>
         <div className="mt-6 text-lg text-muted-foreground space-y-4">
