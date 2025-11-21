@@ -65,6 +65,18 @@ export function HeroSection() {
             <span className="block text-accent mt-2">de Muebles en Valencia</span>
           </motion.h1>
 
+          {/* Nombre marca con Great Vibes */}
+          <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+          >
+            <span style={{ fontFamily: 'Great Vibes', fontSize: '48px' }} className="text-white drop-shadow-lg">
+              Manos Decapa
+            </span>
+          </motion.div>
+
           {/* Subtítulo optimizado con keywords y propuesta de valor */}
           <motion.p
             className="text-xl md:text-2xl max-w-xl text-gray-200"
