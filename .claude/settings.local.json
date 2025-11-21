@@ -24,7 +24,10 @@
       "Bash(node:*)",
       "Bash(git checkout:*)",
       "Bash(wrangler tail:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(timeout 180 bash -c \"while ps aux | grep -q ''npm run build''; do sleep 2; done; echo ''Build complete''\")",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

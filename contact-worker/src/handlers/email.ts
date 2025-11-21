@@ -281,7 +281,7 @@ function buildAdminEmailHTML(
 
 /**
  * Construye el HTML del email de confirmación para el usuario
- * Versión simplificada para evitar spam filters
+ * Diseño minimalista moderno con identidad visual de Manos Decapa
  */
 function buildConfirmationEmailHTML(nombre: string): string {
   return `
@@ -291,93 +291,216 @@ function buildConfirmationEmailHTML(nombre: string): string {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
           body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2C1810;
+            line-height: 1.7;
+            background-color: #FFF8DC;
           }
           .container {
             max-width: 600px;
-            margin: 0;
-            background-color: #f9f9f9;
-            padding: 20px;
+            margin: 24px auto;
+            background-color: #FFF8DC;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.12);
           }
           .header {
-            background-color: #8B4513;
-            color: white;
-            padding: 20px;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #FFF8DC;
+            padding: 48px 32px 40px;
             text-align: center;
+            position: relative;
+          }
+          .header-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
           }
           .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: 600;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+          }
+          .header-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 8px;
+            font-weight: 400;
           }
           .content {
             background-color: white;
-            padding: 20px;
-            margin-top: 0;
+            padding: 40px 32px;
+          }
+          .greeting {
+            font-size: 20px;
+            color: #8B4513;
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: -0.3px;
           }
           .message {
-            font-size: 14px;
-            color: #333;
-            margin: 10px 0;
+            font-size: 16px;
+            color: #2C1810;
+            margin: 16px 0;
+            line-height: 1.7;
           }
           .info-box {
-            background-color: #f5f5f5;
-            border-left: 4px solid #8B4513;
-            padding: 15px;
-            margin: 15px 0;
+            background: linear-gradient(to right, #FFF8DC, #FFFBF0);
+            border: 1px solid #F4A460;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 28px 0;
+            position: relative;
+          }
+          .info-box-title {
+            margin: 0 0 12px;
+            font-weight: 600;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 13px;
+            color: #8B4513;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+          }
+          .info-box p {
+            margin: 0;
+            font-size: 15px;
+            color: #2C1810;
+            line-height: 1.6;
+          }
+          .cta-wrapper {
+            text-align: center;
+            margin: 32px 0 24px;
           }
           .cta-button {
             display: inline-block;
-            background-color: #8B4513;
-            color: white;
-            padding: 12px 30px;
+            background: linear-gradient(135deg, #D2691E 0%, #F4A460 100%);
+            color: #FFF8DC;
+            padding: 16px 40px;
             text-decoration: none;
-            border-radius: 4px;
-            margin-top: 15px;
+            border-radius: 8px;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(210, 105, 30, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+          }
+          .cta-button:hover {
+            box-shadow: 0 6px 16px rgba(210, 105, 30, 0.3);
           }
           .footer {
-            background-color: #f9f9f9;
-            padding: 15px;
+            background-color: #2C1810;
+            color: #FFF8DC;
+            padding: 32px 32px 28px;
             text-align: center;
             font-size: 12px;
-            color: #666;
-            border-top: 1px solid #ddd;
-            margin-top: 0;
+            line-height: 1.6;
+          }
+          .footer-brand {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: 0.5px;
+          }
+          .footer-tagline {
+            opacity: 0.9;
+            font-size: 13px;
+            margin-bottom: 12px;
+          }
+          .footer-text {
+            opacity: 0.7;
+            font-size: 11px;
+            margin-top: 8px;
+          }
+          .divider {
+            height: 1px;
+            background: linear-gradient(90deg, #F4A460 0%, transparent 100%);
+            margin: 24px 0;
+          }
+          @media (max-width: 600px) {
+            .container {
+              margin: 0;
+              border-radius: 0;
+              box-shadow: none;
+            }
+            .header {
+              padding: 36px 24px 32px;
+            }
+            .header h1 {
+              font-size: 24px;
+            }
+            .content {
+              padding: 24px;
+            }
+            .greeting {
+              font-size: 18px;
+            }
+            .message {
+              font-size: 15px;
+            }
+            .info-box {
+              padding: 20px;
+              margin: 24px 0;
+            }
+            .cta-button {
+              padding: 14px 36px;
+              font-size: 14px;
+            }
+            .footer {
+              padding: 24px 20px;
+            }
           }
         </style>
       </head>
       <body>
         <div class="container">
           <div class="header">
+            <span class="header-icon">🪵</span>
             <h1>Solicitud Recibida</h1>
+            <p class="header-subtitle">Confirmación de tu presupuesto</p>
           </div>
 
           <div class="content">
-            <p class="message">Hola ${escapeHTML(nombre)},</p>
+            <p class="greeting">Hola ${escapeHTML(nombre)},</p>
 
             <p class="message">
               Hemos recibido tu solicitud de presupuesto correctamente. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en menos de 24 horas.
             </p>
 
+            <div class="divider"></div>
+
             <div class="info-box">
-              <p style="margin: 0; font-weight: bold;">Siguiente paso</p>
-              <p style="margin: 5px 0 0 0;">Nos pondremos en contacto por correo electrónico con un presupuesto personalizado.</p>
+              <p class="info-box-title">✨ Siguiente paso</p>
+              <p>Nos pondremos en contacto por correo electrónico con un presupuesto personalizado adaptado a tu pieza.</p>
             </div>
 
             <p class="message">
-              Si necesitas añadir más información o tienes preguntas, puedes responder directamente a este email.
+              Si necesitas añadir más información o tienes preguntas, puedes responder directamente a este email. Estamos aquí para ayudarte.
             </p>
 
-            <center>
+            <div class="cta-wrapper">
               <a href="https://manosdecapa.es" class="cta-button">Visita nuestra web</a>
-            </center>
+            </div>
           </div>
 
           <div class="footer">
-            <p>Manos De Capa - Devolvemos la vida a la madera</p>
-            <p style="margin-top: 10px; color: #999; font-size: 11px;">Este es un email automatizado. Por favor, no respondas con datos sensibles.</p>
+            <div class="footer-brand">Manos De Capa</div>
+            <p class="footer-tagline">Devolvemos la vida a la madera</p>
+            <p class="footer-text">Este es un email automatizado. Por favor, no respondas con datos sensibles.</p>
           </div>
         </div>
       </body>
