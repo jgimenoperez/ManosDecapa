@@ -11,16 +11,20 @@ import { cn } from '@/lib/utils';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { motion } from 'framer-motion';
 
-const galleryPairs = [
-  { beforeId: 'gallery-1-before', afterId: 'gallery-1-after' },
-  { beforeId: 'gallery-2-before', afterId: 'gallery-2-after' },
-  { beforeId: 'gallery-3-before', afterId: 'gallery-3-after' },
-  { beforeId: 'gallery-4-before', afterId: 'gallery-4-after' },
-  { beforeId: 'gallery-5-before', afterId: 'gallery-5-after' },
-  { beforeId: 'gallery-6-before', afterId: 'gallery-6-after' },
-];
+interface GalleryImage {
+  id: string;
+  name: string;
+  beforeUrl: string;
+  beforeAlt: string;
+  afterUrl: string;
+  afterAlt: string;
+}
 
-export function GallerySection() {
+interface GallerySectionProps {
+  galleryData?: GalleryImage[];
+}
+
+export function GallerySection({ galleryData }: GallerySectionProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set());
@@ -29,10 +33,34 @@ export function GallerySection() {
     setIsMobile('ontouchstart' in window);
   }, []);
 
-  const images = galleryPairs.map(pair => ({
-    before: PlaceHolderImages.find(img => img.id === pair.beforeId),
-    after: PlaceHolderImages.find(img => img.id === pair.afterId),
-  }));
+  // Usar datos de Prismic si están disponibles, si no usar placeholder
+  const images = galleryData && galleryData.length > 0
+    ? galleryData.map(item => ({
+        before: {
+          imageUrl: item.beforeUrl,
+          description: item.beforeAlt,
+          imageHint: `${item.name} - antes del decapado`,
+        },
+        after: {
+          imageUrl: item.afterUrl,
+          description: item.afterAlt,
+          imageHint: `${item.name} - después del decapado`,
+        },
+      }))
+    : (() => {
+        const galleryPairs = [
+          { beforeId: 'gallery-1-before', afterId: 'gallery-1-after' },
+          { beforeId: 'gallery-2-before', afterId: 'gallery-2-after' },
+          { beforeId: 'gallery-3-before', afterId: 'gallery-3-after' },
+          { beforeId: 'gallery-4-before', afterId: 'gallery-4-after' },
+          { beforeId: 'gallery-5-before', afterId: 'gallery-5-after' },
+          { beforeId: 'gallery-6-before', afterId: 'gallery-6-after' },
+        ];
+        return galleryPairs.map(pair => ({
+          before: PlaceHolderImages.find(img => img.id === pair.beforeId),
+          after: PlaceHolderImages.find(img => img.id === pair.afterId),
+        }));
+      })();
 
   const toggleReveal = (index: number) => {
     if (!isMobile) return;

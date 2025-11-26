@@ -10,6 +10,14 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Suprimir advertencia de hydration mismatch en desarrollo (causado por extensiones del navegador)
+  experimental: {
+    isrMemoryCacheSize: 50 * 1024 * 1024, // 50MB
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 5,
+  },
   images: {
     // Con output: 'export', las imágenes remotas requieren unoptimized: true
     // Sin embargo, usamos Next.js Image component con configuración óptima
@@ -38,6 +46,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.prismic.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cdn.prismic.io',
         port: '',
         pathname: '/**',
       },
