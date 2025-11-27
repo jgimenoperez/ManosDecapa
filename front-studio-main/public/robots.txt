@@ -1,67 +1,8 @@
-# Robots.txt for Manos Decapa
-# Decapado profesional de muebles en Valencia
-# https://www.manosdecapa.es
-
-# Allow all robots by default
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /out/
-Disallow: /*.json$
-Disallow: /node_modules/
-Disallow: /.git/
+Disallow: /admin
+Disallow: /.next
+Disallow: /_next
+Disallow: /proyectos/
 
-# Crawl delay
-Crawl-delay: 1
-
-# Request rate
-Request-rate: 30/1m
-
-# Google Bot specific rules
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-Crawl-delay: 0
-
-# Bing Bot specific rules
-User-agent: Bingbot
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-Crawl-delay: 1
-
-# Yahoo Slurp
-User-agent: Slurp
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: YandexBot
-Disallow: /
-
-# Sitemap location
 Sitemap: https://www.manosdecapa.es/sitemap.xml
-
-# Host preference (optional - helps with canonicalization)
-# Host: https://www.manosdecapa.es

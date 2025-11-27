@@ -330,7 +330,7 @@ export default function UbicacionPage() {
           >
             <h2 className="text-2xl font-bold font-headline mb-4">¿Necesitas presupuesto?</h2>
             <p className="text-muted-foreground mb-6">
-              Contáctanos hoy mismo para solicitar un presupuesto sin compromiso en 24 horas.
+              Contáctanos hoy mismo para solicitar un presupuesto sin compromiso.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

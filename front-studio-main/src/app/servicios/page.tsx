@@ -251,7 +251,7 @@ export default function ServiciosPage() {
               {
                 step: 1,
                 title: 'Contacto y Presupuesto',
-                description: 'Contacta con nosotros vía teléfono, WhatsApp o email. Envía fotos de tu mueble y recibirás presupuesto sin compromiso en 24 horas.',
+                description: 'Contacta con nosotros vía teléfono, WhatsApp o email. Envía fotos de tu mueble y recibirás presupuesto sin compromiso.',
               },
               {
                 step: 2,
@@ -384,7 +384,7 @@ export default function ServiciosPage() {
               ¿Listo para Restaurar tu Mueble?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Solicita tu presupuesto personalizado sin compromiso. Respuesta en 24 horas.
+              Solicita tu presupuesto personalizado sin compromiso. Respuesta.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90">

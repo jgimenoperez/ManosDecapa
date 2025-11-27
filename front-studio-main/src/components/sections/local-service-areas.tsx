@@ -182,7 +182,7 @@ export function LocalServiceAreasSection() {
                 Presupuesto Gratis
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Presupuesto sin compromiso en 24 horas. Consulta nuestros
+                Presupuesto sin compromiso. Consulta nuestros
                 precios por metro cuadrado de decapado.
               </p>
             </CardContent>
@@ -200,7 +200,7 @@ export function LocalServiceAreasSection() {
                 Atención Rápida
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Tiempo de ejecución de 2-7 días según el trabajo. Garantía de
+                Tiempo de ejecución de 2-14 días según el trabajo. Garantía de
                 calidad en todos nuestros trabajos.
               </p>
             </CardContent>

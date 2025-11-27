@@ -45,7 +45,7 @@ const faqsByCategory: Record<string, FAQ[]> = {
     {
       question: '¿Cuánto cuesta decapar un mueble en Valencia?',
       answer:
-        'El precio del decapado varía según el tipo y tamaño del mueble. Nuestras tarifas orientativas: silla desde 35€, mesita desde 50€, cómoda desde 120€, puerta desde 80€. Ofrecemos presupuesto gratuito sin compromiso en 24 horas.',
+        'El precio del decapado varía según el tipo y tamaño del mueble. Nuestras tarifas orientativas: silla desde 35€, mesita desde 50€, cómoda desde 120€, puerta desde 80€. Ofrecemos presupuesto gratuito sin compromiso.',
       icon: <DollarSign className="w-5 h-5" />,
       category: 'Precios y Presupuesto',
     },

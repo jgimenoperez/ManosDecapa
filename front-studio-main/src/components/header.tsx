@@ -13,7 +13,7 @@ const navLinks = [
   { href: '/', label: 'Inicio' },
   { href: '/servicios', label: 'Servicios' },
   { href: '/proceso', label: 'Proceso' },
-  { href: '/proyectos', label: 'Proyectos' },
+  // { href: '/proyectos', label: 'Proyectos' }, // En desarrollo
   { href: '/testimonios', label: 'Testimonios' },
   { href: '/ubicacion', label: 'Ubicación' },
   { href: '/#gallery', label: 'Galería' },

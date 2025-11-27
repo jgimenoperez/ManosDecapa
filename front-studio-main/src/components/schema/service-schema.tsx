@@ -96,7 +96,7 @@ export function ServiceSchema() {
         {
           '@type': 'Offer',
           name: 'Presupuesto Gratis',
-          description: 'Solicita un presupuesto sin compromiso en 24 horas',
+          description: 'Solicita un presupuesto sin compromiso',
           itemOffered: {
             '@type': 'Service',
             name: 'Presupuesto Gratuito',

@@ -25,162 +25,144 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    id: 1,
-    name: 'María García López',
+    id: 20220012,
+    name: 'Aida Garrido',
     location: 'Valencia, España',
     rating: 5,
-    date: 'Octubre 2024',
-    text: 'Excelente servicio. Mi cómoda antigua parecía nueva después del decapado. El equipo fue muy profesional y terminaron en el tiempo estimado. ¡Muy recomendado!',
-    projectType: 'Cómoda Antiguia',
+    date: 'En la última semana',
+    text: 'Hacen maravillas!!! De unos muebles que tenia pensado tirar los convierten en los más bonitos ! Mucha profesionalidad y sobre todo buenísima atención ! Los recomiendo al 100%!!! Encantada con mis muebles restaurados !!!',
+    projectType: 'Restauración de Muebles',
     verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucopCK0LzjuiAP4M0rVt18ZWPZuVHL71ovcAd6YM=s128-c0x00000000-cc-rp-mo',
   },
   {
-    id: 2,
-    name: 'Juan Martínez',
-    location: 'Riba-roja, Valencia',
-    rating: 5,
-    date: 'Septiembre 2024',
-    text: 'Increíble transformación de mi mesa de madera. No creía que quedara tan bien. El decapado fue perfecto, sin rayones. ¡Volvería a confiar sin dudarlo!',
-    projectType: 'Mesa de Madera',
-    verified: true,
-  },
-  {
-    id: 3,
-    name: 'Carmen Rodríguez',
-    location: 'Puçol, Valencia',
-    rating: 5,
-    date: 'Agosto 2024',
-    text: 'Mi abuela tiene unas sillas antiguas que traté por años de restaurar. Manos Decapa las dejó como nuevas. El trato personal fue impecable.',
-    projectType: 'Sillas Clásicas',
-    verified: true,
-  },
-  {
-    id: 4,
-    name: 'David Sánchez Gómez',
-    location: 'Torrent, Valencia',
-    rating: 5,
-    date: 'Julio 2024',
-    text: 'Servicio rápido y eficiente. Decaparon una puerta antigua en menos de una semana. La madera quedó hermosa y conservaron todos los detalles originales.',
-    projectType: 'Puerta Antigua',
-    verified: true,
-  },
-  {
-    id: 5,
-    name: 'Sofía Martínez Pérez',
-    location: 'Bétera, Valencia',
-    rating: 5,
-    date: 'Junio 2024',
-    text: 'Mi armario lacado en blanco estaba muy deteriorado. Gracias a Manos Decapa quedó perfecto. ¡Un trabajo de calidad insuperable!',
-    projectType: 'Armario Lacado',
-    verified: true,
-  },
-  {
-    id: 6,
-    name: 'Antonio Ferrer',
-    location: 'Requena, Valencia',
-    rating: 5,
-    date: 'Mayo 2024',
-    text: 'Contratación sencilla, presupuesto justo y trabajo excepcional. Decaparon varios muebles de mi casa. Todos quedaron perfectos.',
-    projectType: 'Múltiples Muebles',
-    verified: true,
-  },
-  {
-    id: 7,
-    name: 'Isabel Gómez Ruiz',
-    location: 'Buñol, Valencia',
-    rating: 5,
-    date: 'Abril 2024',
-    text: 'El servicio fue rápido y el resultado superó mis expectativas. Mi mesa de comedor brilla como el primer día. ¡Gracias por todo!',
-    projectType: 'Mesa de Comedor',
-    verified: true,
-  },
-  {
-    id: 8,
-    name: 'Miguel Carrasco',
-    location: 'Godelleta, Valencia',
-    rating: 5,
-    date: 'Marzo 2024',
-    text: 'Espectacular. Decaparon una puerta de roble que parecía irrecuperable. Ahora es una joya. Profesionales de verdad.',
-    projectType: 'Puerta de Roble',
-    verified: true,
-  },
-  {
-    id: 9,
-    name: 'Rosario Díaz López',
-    location: 'Bétera, Valencia',
-    rating: 5,
-    date: 'Febrero 2024',
-    text: 'Contraté a Manos Decapa para restaurar 4 sillas de mi comedor. El trabajo fue impecable y el precio muy competitivo.',
-    projectType: '4 Sillas Restauradas',
-    verified: true,
-  },
-  {
-    id: 10,
-    name: 'Francisco Nuevo',
-    location: 'Liria, Valencia',
-    rating: 5,
-    date: 'Enero 2024',
-    text: 'Servicio profesional de principio a fin. Mi cómoda antigua ahora luce como nueva. Recomiendo ampliamente a cualquier persona.',
-    projectType: 'Cómoda Restaurada',
-    verified: true,
-  },
-  {
-    id: 11,
-    name: 'Lourdes Martínez',
+    id: 20220001,
+    name: 'Susana Gimenez',
     location: 'Valencia, España',
     rating: 5,
-    date: 'Diciembre 2023',
-    text: 'Excelente trabajo. Decaparon mi tocador antiguo con cuidado especial. Preservaron todos los detalles ornamentales. ¡Perfectos!',
-    projectType: 'Tocador Antiguo',
+    date: 'Hace 3 meses',
+    text: 'Fiona muy amable, atenta y profesional. Tenía dudas sobre el estilo que quería dar al mueble y en todo momento me aconsejó y me propuso ideas. Un trabajo muy cuidado. Calidad precio, excelente!! Recomiendo 100%',
+    projectType: 'Restauración Personalizada',
     verified: true,
+    image: 'https://lh3.googleusercontent.com/a/AItbvmkrargNLc9FHLfgToxEJrzgVHPxEPiVLKYlg3DC=s128-c0x00000000-cc-rp-mo',
   },
   {
-    id: 12,
-    name: 'Enrique López García',
-    location: 'Riba-roja, Valencia',
-    rating: 5,
-    date: 'Noviembre 2023',
-    text: 'Profesionales muy atentos y cuidadosos. Mi escritorio de madera maciza quedó impecable. Sin duda volveré a contratar.',
-    projectType: 'Escritorio de Madera',
-    verified: true,
-  },
-  {
-    id: 13,
-    name: 'Montserrat Vila',
+    id: 20220002,
+    name: 'MEGS',
     location: 'Puçol, Valencia',
     rating: 5,
-    date: 'Octubre 2023',
-    text: 'Rápido, eficiente y con resultados excepcionales. Mis sillas de cocina quedaron como nuevas. ¡Recomendado 100%!',
-    projectType: 'Sillas de Cocina',
+    date: 'Hace 3 meses',
+    text: 'Manos de Hada es un taller de Restauración situado en la población de Puçol (Valencia).Fiona, es la dueña del Taller que junto a su marido,hacen muy fácil... convertir piezas antiguas en auténticas joyas.Creatividad y buen gusto por parte de la Restauradora.Siempre sabe darle, ese toque profesional y de calidad.Es la mejor opción para recuperar y modernizar tus muebles.También se pueden realizar Cursos de Restauración los sábados.',
+    projectType: 'Restauración Profesional',
     verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucrlZBSxHpksdn0oGwN5wPu2PEh9wGGNezrbdxPjZOE=s128-c0x00000000-cc-rp-mo-ba5',
   },
   {
-    id: 14,
-    name: 'Gerardo Martínez',
-    location: 'Bétera, Valencia',
+    id: 20220003,
+    name: 'Fernando Palacios Puyalon',
+    location: 'Valencia, España',
     rating: 5,
-    date: 'Septiembre 2023',
-    text: 'Trabajo impecable. Decaparon una mesa de roble macizo que parecía irremediable. Ahora es una pieza hermosa.',
-    projectType: 'Mesa de Roble',
+    date: 'En la última semana',
+    text: 'Muy recomendable, excelente profesional, trato exquisito tanto con las personas, cómo con los muebles precios competitivos 😊',
+    projectType: 'Decapado Profesional',
     verified: true,
+    image: 'https://lh3.googleusercontent.com/a/AItbvmlvFKUd7ZGyBpDvGNHmpiyDVJAbT9MASoFIJJYJ=s128-c0x00000000-cc-rp-mo',
   },
   {
-    id: 15,
-    name: 'Amparo Ruiz',
-    location: 'Torrent, Valencia',
+    id: 20220004,
+    name: 'Esther Mora',
+    location: 'Valencia, España',
     rating: 5,
-    date: 'Agosto 2023',
-    text: 'Servicio destacado. El equipo fue atento, puntual y dejó todo impecable. Mi armario antiguo brilla como nunca.',
-    projectType: 'Armario Antiguo',
+    date: 'Hace 2 meses',
+    text: 'Fiona, gran persona y gran profesional. Decidi datle un aire nuevo a mi comedor y ahi estaba ella. Aconsejandome y escuchando mi romance con toda la paciencia del mundo. Lo q yo queria no podia ser y ella me propuso otra solucion la cual acepte. Precioso todo. El colir acertadisimo, sus cnsejos maravilosos. Mi comedor parece otro. Encantadisima. Tengo mas proyectos en mente. Fi sera mi primera y unica opcion. Simpatica, trabajadora, rapida, limpia, moderna, imaginativa.... la recomiendo 100x100. De hecho alguna d mis amigas la va a llamar en breve. Y le encantaron mis perros. Q mas se ouede pedir??? Precio correcto....',
+    projectType: 'Muebles para Comedor',
     verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucpV1VY4mUxYqDSfOfRGr5Eb65iNzghBixYgyfOT=s128-c0x00000000-cc-rp-mo',
+  },
+  {
+    id: 20220005,
+    name: 'Jose Antonio Porcar Jove',
+    location: 'Valencia, España',
+    rating: 4,
+    date: 'Hace un año',
+    text: 'Muy amables. Buena relación calidad precio.',
+    projectType: 'Restauración General',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucr52FjKFYveyQPmSQZ9ohMaFQIE-E0NX-vLz6a-Mw=w60-h60-p-rp-mo-ba5-br100',
+  },
+  {
+    id: 20220006,
+    name: 'N Alex',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'Diciembre 2020',
+    text: 'Me encanta los artículos que tiene. He comprado varias cosas, incluida una mesilla de noche antigua restaurada, y todas chulisimas. La atención excelente y también la creatividad y el gusto. Todo un descubrimiento.',
+    projectType: 'Mesilla de Noche',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a/AItbvmmonNe2oZfBP6zvZBPadWZO5KbXwLSCvkMrOJdv=w60-h60-p-rp-mo-br100',
+  },
+  {
+    id: 20220007,
+    name: 'Andrea C. (Andie)',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'Junio 2020',
+    text: 'Nos mudamos a casa de los abuelos y después de la reforma nos sabía mal tirar los muebles viejos que habían pero tampoco quedaban bien con lo que ya teníamos. Así que por recomendación de una amiga me puse en sus manos y al final recuperamos más muebles de los que pensábamos! no solo son unos artistas sino que además te aconsejan que puede quedar mejor y que no vale la pena. También me han hecho un perchero a conjunto con un mueble de zapatos (restaurado por ellos) y hasta una cajita de infusiones personalizada! Un 10!',
+    projectType: 'Múltiples Piezas',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucqDigWN2yhIYXqgg0WERH90R-3gTT6AcPk0QYjQ0U8=w60-h60-p-rp-mo-ba2-br100',
+  },
+  {
+    id: 20220008,
+    name: 'Marla Hernández',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'Junio 2020',
+    text: 'Fiona me ha restaurado varios muebles y le he encargado otros a medida, siempre muy profesional, trabajo muy cuidado y con mucho mimo. La recomiendo 100%',
+    projectType: 'Restauración a Medida',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucoEY6fIAS8xnmFeUf2Cuo2CuwRcBYkLVxIfbQkVikA=w60-h60-p-rp-mo-ba3-br100',
+  },
+  {
+    id: 20220009,
+    name: 'Beatriz Bazataqui',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'En la última semana',
+    text: 'Fiona es una excelente profesora y profesional.Llevo con ella un año y desde el primer momento pude apreciar que le encanta su trabajo, transmitiendo sus conocimientos en restauración de muebles,que no son pocos. Minuciosa y rigurosa con cada detalle en el proceso de restauración de cada mueble que tocan sus manos. Si quieres aprender rigurosamente el arte de la restauración o si tienes un mueble que recuperar o restaurar,sin duda alguna, recomiendo totalmente a Fiona y al gran equipo de Manos de Hada.',
+    projectType: 'Cursos y Restauración',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a/AItbvmk1m4AJe9ICipPXqaCwQPIsPSJRNgAeSVKxnIw4=s128-c0x00000000-cc-rp-mo',
+  },
+  {
+    id: 20220010,
+    name: 'Mariajose Fraga Agues',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'Hace 3 meses',
+    text: 'Excelente trabajo en restauración de muebles antiguos. Profesionalidad y calidad garantizadas.',
+    projectType: 'Muebles Antiguos',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a-/AFdZucpGJpQM3j03qUqV5MLOa9sWFORYD-cHVQEVPQC8sBE=w60-h60-p-rp-mo-ba4-br100',
+  },
+  {
+    id: 20220011,
+    name: 'Jaime',
+    location: 'Valencia, España',
+    rating: 5,
+    date: 'En la última semana',
+    text: 'Le lleve a restaurar un butacon y estoy muy satisfecho con el trabajo realizado, ha sabido captar lo que quería y el resultado supero las espectativas.\nUn trato muy amable. Recomendable al 100%.',
+    projectType: 'Butacón Restaurado',
+    verified: true,
+    image: 'https://lh3.googleusercontent.com/a/AItbvmmT_gd6w_L6B8L56KNwUX_y7tAHtIifN_qeAhy7=s128-c0x00000000-cc-rp-mo',
   },
 ];
 
 const stats = [
   { label: 'Clientes Satisfechos', value: '100%' },
-  { label: 'Reseñas 5 Estrellas', value: '15/15' },
+  { label: 'Reseñas 5 Estrellas', value: '11/12' },
   { label: 'Tiempo Promedio', value: '3-5 días' },
-  { label: 'Tasa de Recomendación', value: '98%' },
+  { label: 'Tasa de Recomendación', value: '99%' },
 ];
 
 function StarRating({ rating }: { rating: number }) {
@@ -279,6 +261,17 @@ export default function TestimonialsPage() {
                   </div>
                   <StarRating rating={Math.round(parseFloat(avgRating))} />
                   <p className="text-sm text-gray-500 mt-2">{totalReviews} reseñas verificadas</p>
+                  <a
+                    href="https://www.google.com/search?sca_esv=7d1a3a81f8f84a2e&hl=es-ES&gl=es&sxsrf=AE3TifPVDyP0EnnkXQpGmjzifTD1EfCKCg:1764231495862&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyG_SUrSBOV5sWBnsZBRl6vQHHOP5l24Guh_pvJ1Qs_vfSIAFaRMRqm_NUiVXPmaPhfTn91eQfCMxlynZEwbdjE1sz-h&q=Manos+de+hada+Rese%C3%B1as&sa=X&ved=2ahUKEwi_5vK88pGRAxVXWEEAHdIqOkoQ0bkNegQIJxAE&biw=1912&bih=954"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+                  >
+                    Ver reseñas en Google
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </a>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -451,7 +444,7 @@ export default function TestimonialsPage() {
                 ¿Listo para Transformar Tus Muebles?
               </h2>
               <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-                Únete a miles de clientes satisfechos. Solicita tu presupuesto gratuito hoy.
+                Solicita tu presupuesto gratuito hoy.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -465,8 +458,7 @@ export default function TestimonialsPage() {
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="bg-white text-primary hover:bg-gray-100 font-semibold"
                 >
                   <Link href="/proyectos">Ver Nuestros Proyectos</Link>
                 </Button>

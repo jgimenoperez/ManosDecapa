@@ -488,7 +488,7 @@ export default function ProyectosPage() {
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Solicita un presupuesto sin compromiso. Nuestro equipo analizará tu proyecto y te
-              dará un presupuesto personalizado en 24 horas.
+              dará un presupuesto personalizado.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90">

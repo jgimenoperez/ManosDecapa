@@ -151,7 +151,7 @@ export function HeroSection() {
               <div className="space-y-4">
                 {[
                   { icon: Wrench, text: "Proceso seguro sin químicos agresivos" },
-                  { icon: Zap, text: "Entrega rápida garantizada" },
+                  // { icon: Zap, text: "Entrega rápida garantizada" },
                   { icon: Award, text: "Avalados por Manos de Hada" }
                 ].map((item, i) => (
                   <motion.div

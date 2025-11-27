@@ -362,7 +362,7 @@ export default function ProcesoPage() {
               },
               {
                 title: 'Velocidad Eficiente',
-                description: 'Proceso optimizado sin sacrificar calidad. Entrega rápida garantizada.',
+                description: 'Proceso optimizado sin sacrificar calidad.',
               },
               {
                 title: 'Atención Personalizada',
