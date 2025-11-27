@@ -1,8 +1,25 @@
+# Allow all robots by default
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /.next
-Disallow: /_next
-Disallow: /proyectos/
 
+# Disallow admin and internal paths
+Disallow: /admin/
+Disallow: /.next/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /out/
+Disallow: /*.json$
+
+# Google Bot specific rules
+User-agent: Googlebot
+Allow: /
+
+# Bing Bot specific rules
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay and request rate
+Request-rate: 30/1m
+
+# Sitemap location
 Sitemap: https://www.manosdecapa.es/sitemap.xml

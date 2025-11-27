@@ -202,6 +202,13 @@ export function LocalBusinessSchema() {
         },
       ],
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.92',
+      reviewCount: '12',
+      bestRating: 5,
+      worstRating: 1,
+    },
   }
 
   return (
