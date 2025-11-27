@@ -112,8 +112,8 @@ export function ServiceSchema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '42',
+      ratingValue: '4.92',
+      reviewCount: '12',
       bestRating: '5',
       worstRating: '1',
     },
