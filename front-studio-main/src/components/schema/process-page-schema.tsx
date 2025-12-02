@@ -109,37 +109,6 @@ export function ProcessPageSchema() {
     ],
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: '¿Qué sucede después del decapado?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'El mueble se entrega listo para barnizar o pintar. Ofrecemos asesoramiento sobre el acabado más adecuado. La madera requiere un acabado para protegerse.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿Puede haber sorpresas durante el proceso?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ocasionalmente descubrimos daños que no eran visibles antes (grietas, tablillas sueltas). Estos se incluyen en presupuesto o se notifican inmediatamente.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿Cuándo entrego el mueble?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Recogemos en tu domicilio (según medidas y peso permitidos). Si prefieres traerlo, contacta para coordinar.',
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script
@@ -150,11 +119,6 @@ export function ProcessPageSchema() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        suppressHydrationWarning
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         suppressHydrationWarning
       />
     </>

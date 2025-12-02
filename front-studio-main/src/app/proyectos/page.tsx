@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Section } from '@/components/section';
@@ -151,18 +152,26 @@ function ProjectCard({
             {/* Before/After Slider Container */}
             <div className="relative w-full h-full group">
               {/* Before Image */}
-              <img
+              <Image
                 src={project.beforeImage}
                 alt={`Antes - ${project.title}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                quality={75}
+                loading="lazy"
               />
 
               {/* After Image (overlaid) */}
               <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-                <img
+                <Image
                   src={project.afterImage}
                   alt={`Después - ${project.title}`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                  quality={75}
+                  loading="lazy"
                   style={{ width: '200%' }}
                 />
               </div>
@@ -277,19 +286,29 @@ function ProjectModal({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <p className="text-sm font-semibold text-muted-foreground mb-2">ANTES</p>
-              <img
-                src={project.beforeImage}
-                alt={`Antes - ${project.title}`}
-                className="w-full h-80 object-cover rounded-lg"
-              />
+              <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                <Image
+                  src={project.beforeImage}
+                  alt={`Antes - ${project.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 500px"
+                  quality={85}
+                />
+              </div>
             </div>
             <div>
               <p className="text-sm font-semibold text-muted-foreground mb-2">DESPUÉS</p>
-              <img
-                src={project.afterImage}
-                alt={`Después - ${project.title}`}
-                className="w-full h-80 object-cover rounded-lg"
-              />
+              <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                <Image
+                  src={project.afterImage}
+                  alt={`Después - ${project.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 500px"
+                  quality={85}
+                />
+              </div>
             </div>
           </div>
 

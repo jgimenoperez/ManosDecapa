@@ -214,12 +214,16 @@ export function GallerySection({ galleryData }: GallerySectionProps) {
       <Dialog open={!!lightboxImage} onOpenChange={(open) => !open && setLightboxImage(null)}>
         <DialogContent className="max-w-5xl p-0 bg-black/95 border-0 [&_button]:w-10 [&_button]:h-10 [&_button]:flex [&_button]:items-center [&_button]:justify-center [&_button_svg]:w-6 [&_button_svg]:h-6 [&_button]:bg-white/30 [&_button]:hover:bg-white/50">
           <DialogTitle className="sr-only">Imagen ampliada de la galería</DialogTitle>
-          <div className="relative">
+          <div className="relative w-full max-h-[85vh] flex items-center justify-center">
             {lightboxImage && (
-              <img
+              <Image
                 src={lightboxImage}
-                alt="Vista ampliada"
+                alt="Vista ampliada de galería"
+                width={1200}
+                height={900}
                 className="w-full h-auto max-h-[85vh] object-contain"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, (max-width: 1920px) 90vw, 1200px"
               />
             )}
           </div>

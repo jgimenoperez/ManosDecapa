@@ -50,6 +50,21 @@ export function FAQSchema() {
       answer:
         'Garantizamos un trabajo de calidad profesional. La madera queda lista para un nuevo acabado (pintura, barniz, tinte). No incluimos el acabado final a menos que lo solicites específicamente.',
     },
+    {
+      question: '¿Qué sucede después del decapado?',
+      answer:
+        'El mueble se entrega listo para barnizar o pintar. Ofrecemos asesoramiento sobre el acabado más adecuado. La madera requiere un acabado para protegerse.',
+    },
+    {
+      question: '¿Puede haber sorpresas durante el proceso?',
+      answer:
+        'Ocasionalmente descubrimos daños que no eran visibles antes (grietas, tablillas sueltas). Estos se incluyen en presupuesto o se notifican inmediatamente.',
+    },
+    {
+      question: '¿Cuándo entrego el mueble?',
+      answer:
+        'Recogemos en tu domicilio (según medidas y peso permitidos). Si prefieres traerlo, contacta para coordinar.',
+    },
   ]
 
   const schema = {

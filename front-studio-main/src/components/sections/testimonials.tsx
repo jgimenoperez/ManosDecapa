@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Section } from '@/components/section';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
@@ -125,16 +126,15 @@ export function TestimonialsSection() {
 
                       {/* Author info */}
                       <div className="flex items-center gap-4 pt-4 border-t border-border">
-                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-primary flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-primary flex items-center justify-center relative">
                           {testimonial.avatar ? (
-                            <img
+                            <Image
                               src={testimonial.avatar}
                               alt={testimonial.name}
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                                e.currentTarget.parentElement!.textContent = testimonial.name.charAt(0);
-                              }}
+                              fill
+                              className="object-cover"
+                              sizes="48px"
+                              quality={75}
                             />
                           ) : (
                             <span className="text-white font-semibold text-lg">
