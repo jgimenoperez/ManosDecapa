@@ -22,7 +22,8 @@ export function WhatsAppButton() {
   }, []);
 
   const handleClick = () => {
-    window.open('https://wa.me/34000000000', '_blank');
+    const message = encodeURIComponent('Hola, quiero ponerme en contacto contacto con Manos Decapa');
+    window.open(`https://wa.me/34654496960?text=${message}`, '_blank');
   };
 
   return (
